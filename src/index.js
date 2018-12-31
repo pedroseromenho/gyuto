@@ -27,7 +27,7 @@ i18next.init({
 
 ReactDOM.render(
   <I18nextProvider i18n={i18next}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
     </BrowserRouter>
   </I18nextProvider>,

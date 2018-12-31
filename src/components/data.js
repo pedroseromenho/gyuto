@@ -264,107 +264,31 @@ export const videos = [{
 ];
 
 export const events = [{
-    id: "0",
-    title: "Festival Cinéma du Réel",
-    date: {
-        start: "10-09-2018",
-        end: "11-09-2018",
-    },
-    hour: {
-        start: "18h00",
-        end: "19h00",
-    },
-    adress: {
-        place: "Cinema Galeries",
-        number: "50",
-        street: "rue Joseph Claes",
-        zipcode: "1060",
-        city: "Brussels",
-        country: "Belgium"
-    },
-    description: {
-        fr: "Search for the keywords to learn more about each warning.",
-        en: "Search for the keywords to learn more about each warning."
-    },
-    image: "https://picsum.photos/800/600?random",
-    url: "https://pedroseromenho.com/"
-},
-{
-    id: "1",
-    title: "Festival Cinéma du Réel",
-    date: {
-        start: "10-09-2018",
-        end: "11-09-2018",
-    },
-    hour: {
-        start: "18h00",
-        end: "19h00",
-    },
-    adress: {
-        place: "Cinema Galeries",
-        number: "50",
-        street: "rue Joseph Claes",
-        zipcode: "1060",
-        city: "Brussels",
-        country: "Belgium"
-    },
-    description: {
-        fr: "Search for the keywords to learn more about each warning.",
-        en: "Search for the keywords to learn more about each warning."
-    },
-    image: "https://picsum.photos/600/400?random"
-},
-{
-    id: "2",
-    title: "Festival Cinéma du Réel",
-    date: {
-        start: "10-09-2018",
-        end: "11-09-2018",
-    },
-    hour: {
-        start: "18h00",
-        end: "19h00",
-    },
-    adress: {
-        place: "Cinema Galeries",
-        number: "50",
-        street: "rue Joseph Claes",
-        zipcode: "1060",
-        city: "Brussels",
-        country: "Belgium"
-    },
-    description: {
-        fr: "Search for the keywords to learn more about each warning.",
-        en: "Search for the keywords to learn more about each warning."
-    },
-    image: "https://picsum.photos/300/200?random"
-},
-{
-    id: "3",
-    title: "Festival Cinéma du Réel",
-    date: {
-        start: "10-09-2018",
-        end: "11-09-2018",
-    },
-    hour: {
-        start: "18h00",
-        end: "19h00",
-    },
-    adress: {
-        place: "Cinema Galeries",
-        number: "50",
-        street: "rue Joseph Claes",
-        zipcode: "1060",
-        city: "Brussels",
-        country: "Belgium"
-    },
-    description: {
-        fr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ex iste porro eveniet doloremque eius quod nihil aliquid magnam architecto delectus tenetur qui culpa placeat perspiciatis molestias similique sed ipsa, animi voluptas recusandae non? Praesentium aliquid saepe dolores at, perspiciatis ratione amet explicabo voluptatibus quam voluptates mollitia culpa, odit totam repellat eligendi. Nemo neque excepturi non facere corporis! Incidunt est consequuntur modi quo sapiente! Illum temporibus quisquam sunt magnam culpa?",
-        en: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, ex iste porro eveniet doloremque eius quod nihil aliquid magnam architecto delectus tenetur qui culpa placeat perspiciatis molestias similique sed ipsa, animi voluptas recusandae non? Praesentium aliquid saepe dolores at, perspiciatis ratione amet explicabo voluptatibus quam voluptates mollitia culpa, odit totam repellat eligendi. Nemo neque excepturi non facere corporis! Incidunt est consequuntur modi quo sapiente! Illum temporibus quisquam sunt magnam culpa?"
-    },
-    image: "https://picsum.photos/1000/600?random"
-}
-];
+    // id: "0",
+    // title: "Festival Cinéma du Réel",
+    // date: {
+    //     start: "10-09-2018",
+    //     end: "11-09-2018",
+    // },
+    // hour: {
+    //     start: "18h00",
+    //     end: "19h00",
+    // },
+    // adress: {
+    //     place: "Cinema Galeries",
+    //     number: "50",
+    //     street: "rue Joseph Claes",
+    //     zipcode: "1060",
+    //     city: "Brussels",
+    //     country: "Belgium"
+    // },
+    // description: {
+    //     fr: "Search for the keywords to learn more about each warning.",
+    //     en: "Search for the keywords to learn more about each warning."
+    // },
+    // image: "https://picsum.photos/800/600?random",
+    // url: "https://pedroseromenho.com/"
+}];
 
 export const images = [
     {
