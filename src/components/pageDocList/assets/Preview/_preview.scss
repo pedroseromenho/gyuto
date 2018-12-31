@@ -1,0 +1,56 @@
+.previewContainer{
+    margin-top: 30px;
+    margin-left: 30px;
+    font-family: $font-content;
+    .gif{
+        width: 100%;
+        height: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+    img{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    h2{
+        margin-top: 15px;
+        font-family: $font-heading;
+        font-size: 1rem;
+    }
+
+    p{
+        margin-top: 5px;
+        font-size: 0.9rem;
+    }
+
+    .video{
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: 0;
+        overflow: hidden;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+}
+
+.animation{
+     animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

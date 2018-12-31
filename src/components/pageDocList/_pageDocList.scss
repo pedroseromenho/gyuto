@@ -1,0 +1,30 @@
+@import "assets/DocList/_docList";
+@import "assets/Preview/_preview";
+
+.docListPageContainer{
+    display: flex;
+    padding-bottom: 50px;
+   
+    @media #{$smartphone} {
+        padding-top: 30px;
+        flex-direction: row;
+    }
+
+    .docListContainer{
+        flex:1;
+        display: block;
+        
+        .docListCol{
+            padding-left: 0px !important;
+        }
+    }
+
+    .previewContainer{
+        flex:1;
+        display: block;
+        
+        @media #{$smartphone} {
+            display: none;
+          }
+    }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.393 14.815">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Tracé_66" data-name="Tracé 66" class="cls-1" d="M0-226.208H23.393v14.815H0Z" transform="translate(0 226.208)"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_142" data-name="Groupe 142" transform="translate(23.393 -211.393) rotate(180)">
+    <g id="Groupe_140" data-name="Groupe 140" class="cls-2" transform="translate(0 -226.208)">
+      <g id="Groupe_139" data-name="Groupe 139" transform="translate(0 0)">
+        <path id="Tracé_65" data-name="Tracé 65" d="M-3.127-113.348l6.238,6.628a.781.781,0,0,0,1.1.03.8.8,0,0,0,.03-1.1L-.763-113.1h20.03a.78.78,0,0,0,.78-.78.78.78,0,0,0-.78-.78H-.763l5.008-5.312a.816.816,0,0,0-.03-1.1.781.781,0,0,0-1.1.03l-6.238,6.628a.766.766,0,0,0,0,1.072" transform="translate(3.346 121.292)"/>
+      </g>
+    </g>
+  </g>
+</svg>

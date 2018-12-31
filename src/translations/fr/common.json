@@ -1,0 +1,37 @@
+{
+    "nav": {
+        "info": "Info",
+        "music": "Musique",
+        "images": "Images",
+        "events": "Évenements",
+        "doclist": "Doc List",
+        "random": "Aléatoire",
+        "back": "Retour",
+        "notFound": "Article non trouvé…",
+        "backToWebsite": "Retour vers le site",
+        "soon": "Bientôt…",
+        "doclistPage": "Page Doc List",
+        "moreInfo": "Plus d'informations",
+        "pageNotFound": "Page non trouvée…",
+        "rights": "© Tous les droits réservés,"
+    },
+    "categories": {
+        "stories": "Histoires",
+        "testimonials": "Témoignages",
+        "music": "Musique"
+    },
+    "eventsString": {
+        "from": "Du",
+        "to": "au",
+        "in": "à",
+        "fromBis": "de",
+        "toBis": "à",
+        "place": "Lieu"
+    },
+    "musicPage": {
+        "concert": "Concert",
+        "albums": "Albums",
+        "musics": "Musiques",
+        "order": "Commander"
+    }
+}
