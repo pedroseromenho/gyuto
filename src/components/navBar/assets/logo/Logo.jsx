@@ -10,7 +10,7 @@ class Logo extends Component {
   }
 
   loadHome(){
-    window.location.href="http://gyuto-movie.com/";
+    window.location.href="https://pedroseromenho.github.io/gyuto/";
 }
 
   render() {
