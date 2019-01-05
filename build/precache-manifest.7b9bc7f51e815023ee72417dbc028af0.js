@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/gyuto/static/css/1.294d6fde.chunk.css"
   },
   {
-    "revision": "bac21148bc7a988d369b164469349595",
+    "revision": "dd725ca09a657e1ef60fa3112fe13650",
     "url": "/gyuto/index.html"
   }
 ];
