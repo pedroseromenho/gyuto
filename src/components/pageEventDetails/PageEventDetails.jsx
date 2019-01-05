@@ -48,7 +48,7 @@ class PageEventDetails extends Component {
           <ul className="navigationMobile">
             <NavLink to={"/events/" + prev} className="snapCursor js-click" data-snap-scale="3.5">
               <li>
-                <img src="/assets/images/right-arrow.svg" alt="prev" width={20} />
+                <img src="./assets/images/right-arrow.svg" alt="prev" width={20} />
               </li>
             </NavLink>
             <NavLink to="/events" className="itemsColor snapCursor js-click" data-snap-scale="3.5">
@@ -57,7 +57,7 @@ class PageEventDetails extends Component {
             {events[id + 1] &&
               <NavLink to={"/events/" + next} className="snapCursor js-click" data-snap-scale="3.5">
                 <li style={{ paddingRight: "15px" }}>
-                  <img src="/assets/images/left-arrow.svg" alt="prev" width={20} />
+                  <img src="./assets/images/left-arrow.svg" alt="prev" width={20} />
                 </li>
               </NavLink>
             }

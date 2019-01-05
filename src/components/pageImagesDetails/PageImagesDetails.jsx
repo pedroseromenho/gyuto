@@ -68,9 +68,9 @@ class PageImagesDetails extends Component {
                                         <p>{images[id].galery.image[this.state.activeIndex].legend.fr}</p>
                                     </div>
                                     <ul className="navigationMobile">
-                                        <li onClick={this.onPreviousPic}><img src="/assets/images/right-arrow.svg" alt="prev" width={20} /></li>
+                                        <li onClick={this.onPreviousPic}><img src="./assets/images/right-arrow.svg" alt="prev" width={20} /></li>
                                         <li onClick={this.goBack}>{this.props.t('nav.back')}</li>
-                                        <li onClick={this.onNextPic} style={{ paddingRight: "15px" }}><img src="/assets/images/left-arrow.svg" alt="prev" width={20} /></li>
+                                        <li onClick={this.onNextPic} style={{ paddingRight: "15px" }}><img src="./assets/images/left-arrow.svg" alt="prev" width={20} /></li>
                                     </ul>
                                 </div>
                             </Col>
@@ -80,7 +80,7 @@ class PageImagesDetails extends Component {
                         <Fragment>
                             <Row>
                                 <Col xs={0} sm={0} md={1} lg={1} style={{ alignItems: "center", display: "flex", justifyContent: "center" }} className="colImagesDetails">
-                                    <img src="/assets/images/left.svg" alt="prev" onClick={this.onPreviousPic} width={40} className="snapCursor" data-snap-scale="3.5" />
+                                    <img src="./assets/images/left.svg" alt="prev" onClick={this.onPreviousPic} width={40} className="snapCursor" data-snap-scale="3.5" />
                                 </Col>
                                 <Col xs={12} sm={12} md={10} lg={10}>
                                     <div className="pageImageWrapper">
@@ -92,7 +92,7 @@ class PageImagesDetails extends Component {
                                     </div>
                                 </Col>
                                 <Col xs={0} sm={0} md={1} lg={1} style={{ alignItems: "center", display: "flex", justifyContent: "center" }} className="colImagesDetails">
-                                    <img src='/assets/images/right.svg' alt="next" width={40} onClick={this.onNextPic} className="snapCursor" data-snap-scale="3.5" />
+                                    <img src='./assets/images/right.svg' alt="next" width={40} onClick={this.onNextPic} className="snapCursor" data-snap-scale="3.5" />
                                 </Col>
                             </Row>
                             <ul className="navigationMobile">

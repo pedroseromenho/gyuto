@@ -70,9 +70,9 @@ class Musique extends Component {
                                                                 <div className="musicData">
                                                                     <p>{music.duration}</p>
                                                                     <a href={music.url} download className="snapCursor" data-snap-scale="3.5">
-                                                                        <img src="/assets/images/download.svg" alt="download" />
+                                                                        <img src="./assets/images/download.svg" alt="download" />
                                                                     </a>
-                                                                    <img src={(this.state.selectedId === album.id + music.id && this.state.playing === true) ? '/assets/images/pause.svg' : '/assets/images/play.svg'} className="status snapCursor" onClick={() => this.playAudio(music.url, album.id + music.id)} alt="play" />
+                                                                    <img src={(this.state.selectedId === album.id + music.id && this.state.playing === true) ? './assets/images/pause.svg' : './assets/images/play.svg'} className="status snapCursor" onClick={() => this.playAudio(music.url, album.id + music.id)} alt="play" />
                                                                 </div>
                                                             </li>
                                                         )
@@ -106,9 +106,9 @@ class Musique extends Component {
                                                                 <div className="musicData">
                                                                     <p>{music.duration}</p>
                                                                     <a href={music.url} download className="snapCursor" data-snap-scale="2">
-                                                                        <img src="/assets/images/download.svg" alt="download" />
+                                                                        <img src="./assets/images/download.svg" alt="download" />
                                                                     </a>
-                                                                    <img src={(this.state.selectedId === album.id + music.id && this.state.playing === true) ? '/assets/images/pause.svg' : '/assets/images/play.svg'} className="status snapCursor" onClick={() => this.playAudio(music.url, album.id + music.id)} data-snap-scale="2" alt="play" />
+                                                                    <img src={(this.state.selectedId === album.id + music.id && this.state.playing === true) ? './assets/images/pause.svg' : './assets/images/play.svg'} className="status snapCursor" onClick={() => this.playAudio(music.url, album.id + music.id)} data-snap-scale="2" alt="play" />
                                                                 </div>
                                                             </li>
                                                         )

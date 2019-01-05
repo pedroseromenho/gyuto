@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/gyuto/static/js/runtime~main.991325ca.js"
   },
   {
-    "revision": "52ff079d4c1fcf5a2c5c",
-    "url": "/gyuto/static/js/main.52ff079d.chunk.js"
+    "revision": "ef581c305a3cfed2c851",
+    "url": "/gyuto/static/js/main.ef581c30.chunk.js"
   },
   {
     "revision": "79adb2a56d13a2a5e1e6",
     "url": "/gyuto/static/js/1.79adb2a5.chunk.js"
   },
   {
-    "revision": "52ff079d4c1fcf5a2c5c",
+    "revision": "ef581c305a3cfed2c851",
     "url": "/gyuto/static/css/main.689d985e.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/gyuto/static/css/1.294d6fde.chunk.css"
   },
   {
-    "revision": "5b8a66584a576974679e3e1be3748f51",
+    "revision": "789ca0b17dfe9de8a79a7e1dfdac755e",
     "url": "/gyuto/index.html"
   }
 ];

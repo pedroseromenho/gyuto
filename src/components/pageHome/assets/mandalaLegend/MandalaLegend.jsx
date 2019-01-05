@@ -86,7 +86,7 @@ class MandalaLegend extends Component {
                         opacity: this.state.opacityHistoires,
                     }}
                     >
-                        <input type="image" id="stories" alt="stories" onClick={this.filterSymboles.bind(this)} src="/assets/images/1.svg" value="stories" width={this.state.widthSymbole} />
+                        <input type="image" id="stories" alt="stories" onClick={this.filterSymboles.bind(this)} src="./assets/images/1.svg" value="stories" width={this.state.widthSymbole} />
                         <label
                             htmlFor="stories"
                         >{this.props.t('categories.stories')}</label>
@@ -95,7 +95,7 @@ class MandalaLegend extends Component {
                         transition: 'opacity 0.3s ease',
                         opacity: this.state.opacityTemoignages,
                     }}>
-                        <input type="image" id="testimonials" alt="testimonials" onClick={this.filterSymboles.bind(this)} src="/assets/images/2.svg" value="testimonials" width={this.state.widthSymbole} />
+                        <input type="image" id="testimonials" alt="testimonials" onClick={this.filterSymboles.bind(this)} src="./assets/images/2.svg" value="testimonials" width={this.state.widthSymbole} />
                         <label
                             htmlFor="testimonials"
                         >{this.props.t('categories.testimonials')}</label>
@@ -105,7 +105,7 @@ class MandalaLegend extends Component {
                         opacity: this.state.opacityMusique,
                     }}
                     >
-                        <input type="image" id="music" alt="music" onClick={this.filterSymboles.bind(this)} src="/assets/images/3.svg" value="music" width={this.state.widthSymbole} />
+                        <input type="image" id="music" alt="music" onClick={this.filterSymboles.bind(this)} src="./assets/images/3.svg" value="music" width={this.state.widthSymbole} />
                         <label
                             htmlFor="music"
                         >{this.props.t('categories.music')}</label>
