@@ -77,7 +77,7 @@ class App extends Component {
                 classNames="fade"
               >
                 <Switch location={location}>
-                  <Route exact path={process.env.PUBLIC_URL + '/'} render={(props) =>
+                  <Route exact path="/" render={(props) =>
                     <PageHome {...props}
                       onOpenModal={this.onOpenModal.bind(this)}
                       onOpenModalIntroduction={this.onOpenModalIntroduction.bind(this)}
