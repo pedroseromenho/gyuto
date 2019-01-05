@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/gyuto/static/css/main.b3ffbeb6.chunk.css"
   },
   {
-    "revision": "a49f62a4d62f86bcb5b7c8fcf562e032",
-    "url": "/gyuto/static/media/c52bd02c-0b41-4f39-a147-9a3d6b6566ab.a49f62a4.woff2"
+    "revision": "9c9554be803e11154e7fb8e6bdcbe5fc",
+    "url": "/gyuto/static/media/dfb9fc23-4c66-4cd5-86f4-63509a1872e2.9c9554be.ttf"
   },
   {
     "revision": "79adb2a56d13a2a5e1e6",
@@ -32,24 +32,24 @@ self.__precacheManifest = [
     "url": "/gyuto/static/js/main.64b0a9de.chunk.js"
   },
   {
-    "revision": "8a073b5e6a6dee10cbc718faa8a75f5c",
-    "url": "/gyuto/static/media/ef2017d6-1ae1-4dec-bb89-b9b1760e89e9.8a073b5e.woff"
-  },
-  {
     "revision": "f47f05056f35a4937963a282443e0262",
     "url": "/gyuto/static/media/17ef16de-af2a-4a80-8c34-986fd09346cb.f47f0505.eot"
   },
   {
-    "revision": "9c9554be803e11154e7fb8e6bdcbe5fc",
-    "url": "/gyuto/static/media/dfb9fc23-4c66-4cd5-86f4-63509a1872e2.9c9554be.ttf"
+    "revision": "a49f62a4d62f86bcb5b7c8fcf562e032",
+    "url": "/gyuto/static/media/c52bd02c-0b41-4f39-a147-9a3d6b6566ab.a49f62a4.woff2"
+  },
+  {
+    "revision": "481554d7651da0ac639c6490591515fd",
+    "url": "/gyuto/static/media/9f697132-3f27-43b3-9f19-86d661fccace.481554d7.woff"
   },
   {
     "revision": "d6f4332c1df42552607699c2dfd12504",
     "url": "/gyuto/static/media/5dc4445d-f87c-4974-9ef8-54eefe8d4e1c.d6f4332c.ttf"
   },
   {
-    "revision": "481554d7651da0ac639c6490591515fd",
-    "url": "/gyuto/static/media/9f697132-3f27-43b3-9f19-86d661fccace.481554d7.woff"
+    "revision": "8a073b5e6a6dee10cbc718faa8a75f5c",
+    "url": "/gyuto/static/media/ef2017d6-1ae1-4dec-bb89-b9b1760e89e9.8a073b5e.woff"
   },
   {
     "revision": "79adb2a56d13a2a5e1e6",
