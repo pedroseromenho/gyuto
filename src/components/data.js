@@ -1353,19 +1353,19 @@ export const music = [{
         cover: "./data/music/kailash/kailash.png",
         musics: [{
             id: "1",
-            url: "/data/music/kailash/kailash.mp3",
+            url: "./data/music/kailash/kailash.mp3",
             title: "Kailash",
             duration: "14'18"
         },
         {
             id: "2",
-            url: "/data/music/kailash/lhasa.mp3",
+            url: "./data/music/kailash/lhasa.mp3",
             title: "Lhasa",
             duration: "8'42"
         },
         {
             id: "3",
-            url: "/data/music/kailash/tantric-college.mp3",
+            url: "./data/music/kailash/tantric-college.mp3",
             title: "Tantric college",
             duration: "19'59"
         }]
@@ -1377,25 +1377,25 @@ export const music = [{
         cover: "./data/music/tantric-college/cover-tantric-college.png",
         musics: [{
             id: "1",
-            url: "/data/music/tantric-college/dalai-lama-long-life.mp3",
+            url: "./data/music/tantric-college/dalai-lama-long-life.mp3",
             title: "Dalai lama long life",
             duration: "5'38"
         },
         {
             id: "2",
-            url: "/data/music/tantric-college/heart-sutra-(day 1).mp3",
+            url: "./data/music/tantric-college/heart-sutra-(day 1).mp3",
             title: "Heart sutra (day 1)",
             duration: "4'16"
         },
         {
             id: "3",
-            url: "/data/music/tantric-college/kundun.mp3",
+            url: "./data/music/tantric-college/kundun.mp3",
             title: "Kundun",
             duration: "8'41"
         },
         {
             id: "4",
-            url: "/data/music/tantric-college/le-grand-noir.mp3",
+            url: "./data/music/tantric-college/le-grand-noir.mp3",
             title: "Le grand noir",
             duration: "5'41"
         }]

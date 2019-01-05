@@ -77,19 +77,19 @@ class App extends Component {
                 classNames="fade"
               >
                 <Switch location={location}>
-                  <Route exact path="/" render={(props) =>
+                  <Route exact path={process.env.PUBLIC_URL + '/'} render={(props) =>
                     <PageHome {...props}
                       onOpenModal={this.onOpenModal.bind(this)}
                       onOpenModalIntroduction={this.onOpenModalIntroduction.bind(this)}
                     />}
                   />
-                  <Route path="/info" component={PageInfo} />
-                  <Route path="/music" component={PageMusique} />
-                  <Route exact path="/events" component={PageEvents} />
-                  <Route path="/events/:id" component={PageEventDetails} />
-                  <Route exact path="/images" component={PageImages} />
-                  <Route path="/images/:id" component={PageImagesDetails} />
-                  <Route path="/doclist" render={(props) => <PageDocList {...props} onOpenModal={this.onOpenModal.bind(this)} />} />
+                  <Route path={process.env.PUBLIC_URL + '/info'} component={PageInfo} />
+                  <Route path={process.env.PUBLIC_URL + '/music'} component={PageMusique} />
+                  <Route exact path={process.env.PUBLIC_URL + '/events'} component={PageEvents} />
+                  <Route path={process.env.PUBLIC_URL + '/events/:id'} component={PageEventDetails} />
+                  <Route exact path={process.env.PUBLIC_URL + '/images'} component={PageImages} />
+                  <Route path={process.env.PUBLIC_URL + '/images/:id'} component={PageImagesDetails} />
+                  <Route path={process.env.PUBLIC_URL + '/doclist'} render={(props) => <PageDocList {...props} onOpenModal={this.onOpenModal.bind(this)} />} />
                   <Route component={NoMatch} />
                 </Switch>
               </CSSTransition>
