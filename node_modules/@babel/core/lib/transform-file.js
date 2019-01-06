@@ -23,8 +23,6 @@ var _transformation = require("./transformation");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-({});
-
 const transformFile = function transformFile(filename, opts, callback) {
   let options;
 
