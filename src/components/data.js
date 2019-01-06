@@ -301,7 +301,7 @@ export const images = [
             image: [
                 {
                     id: "0",
-                    url: "./data/images/gyuto-monastery/1.JPG",
+                    url: "../data/images/gyuto-monastery/1.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -313,7 +313,7 @@ export const images = [
                 },
                 {
                     id: "1",
-                    url: "./data/images/gyuto-monastery/2.JPG",
+                    url: "../data/images/gyuto-monastery/2.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -325,7 +325,7 @@ export const images = [
                 },
                 {
                     id: "2",
-                    url: "./data/images/gyuto-monastery/3.JPG",
+                    url: "../data/images/gyuto-monastery/3.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -337,7 +337,7 @@ export const images = [
                 },
                 {
                     id: "3",
-                    url: "./data/images/gyuto-monastery/4.JPG",
+                    url: "../data/images/gyuto-monastery/4.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -349,7 +349,7 @@ export const images = [
                 },
                 {
                     id: "4",
-                    url: "./data/images/gyuto-monastery/5.JPG",
+                    url: "../data/images/gyuto-monastery/5.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -361,7 +361,7 @@ export const images = [
                 },
                 {
                     id: "5",
-                    url: "./data/images/gyuto-monastery/6.JPG",
+                    url: "../data/images/gyuto-monastery/6.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -373,7 +373,7 @@ export const images = [
                 },
                 {
                     id: "6",
-                    url: "./data/images/gyuto-monastery/7.JPG",
+                    url: "../data/images/gyuto-monastery/7.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -385,7 +385,7 @@ export const images = [
                 },
                 {
                     id: "7",
-                    url: "./data/images/gyuto-monastery/8.JPG",
+                    url: "../data/images/gyuto-monastery/8.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -397,7 +397,7 @@ export const images = [
                 },
                 {
                     id: "8",
-                    url: "./data/images/gyuto-monastery/9.JPG",
+                    url: "../data/images/gyuto-monastery/9.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -421,7 +421,7 @@ export const images = [
             image: [
                 {
                     id: "0",
-                    url: "./data/images/gyuto-school/1.JPG",
+                    url: "../data/images/gyuto-school/1.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -433,7 +433,7 @@ export const images = [
                 },
                 {
                     id: "1",
-                    url: "./data/images/gyuto-school/2.JPG",
+                    url: "../data/images/gyuto-school/2.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -445,7 +445,7 @@ export const images = [
                 },
                 {
                     id: "2",
-                    url: "./data/images/gyuto-school/3.JPG",
+                    url: "../data/images/gyuto-school/3.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -457,7 +457,7 @@ export const images = [
                 },
                 {
                     id: "3",
-                    url: "./data/images/gyuto-school/4.JPG",
+                    url: "../data/images/gyuto-school/4.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -469,7 +469,7 @@ export const images = [
                 },
                 {
                     id: "4",
-                    url: "./data/images/gyuto-school/5.JPG",
+                    url: "../data/images/gyuto-school/5.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -481,7 +481,7 @@ export const images = [
                 },
                 {
                     id: "5",
-                    url: "./data/images/gyuto-school/6.JPG",
+                    url: "../data/images/gyuto-school/6.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -493,7 +493,7 @@ export const images = [
                 },
                 {
                     id: "6",
-                    url: "./data/images/gyuto-school/7.JPG",
+                    url: "../data/images/gyuto-school/7.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -505,7 +505,7 @@ export const images = [
                 },
                 {
                     id: "7",
-                    url: "./data/images/gyuto-school/8.JPG",
+                    url: "../data/images/gyuto-school/8.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -517,7 +517,7 @@ export const images = [
                 },
                 {
                     id: "8",
-                    url: "./data/images/gyuto-school/9.JPG",
+                    url: "../data/images/gyuto-school/9.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -529,7 +529,7 @@ export const images = [
                 },
                 {
                     id: "9",
-                    url: "./data/images/gyuto-school/10.JPG",
+                    url: "../data/images/gyuto-school/10.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -541,7 +541,7 @@ export const images = [
                 },
                 {
                     id: "10",
-                    url: "./data/images/gyuto-school/11.JPG",
+                    url: "../data/images/gyuto-school/11.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -553,7 +553,7 @@ export const images = [
                 },
                 {
                     id: "11",
-                    url: "./data/images/gyuto-school/12.JPG",
+                    url: "../data/images/gyuto-school/12.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -565,7 +565,7 @@ export const images = [
                 },
                 {
                     id: "12",
-                    url: "./data/images/gyuto-school/13.JPG",
+                    url: "../data/images/gyuto-school/13.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -577,7 +577,7 @@ export const images = [
                 },
                 {
                     id: "13",
-                    url: "./data/images/gyuto-school/14.JPG",
+                    url: "../data/images/gyuto-school/14.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -589,7 +589,7 @@ export const images = [
                 },
                 {
                     id: "14",
-                    url: "./data/images/gyuto-school/15.JPG",
+                    url: "../data/images/gyuto-school/15.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -601,7 +601,7 @@ export const images = [
                 },
                 {
                     id: "15",
-                    url: "./data/images/gyuto-school/16.JPG",
+                    url: "../data/images/gyuto-school/16.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -625,7 +625,7 @@ export const images = [
             image: [
                 {
                     id: "0",
-                    url: "./data/images/mandala-de-terre/1.JPG",
+                    url: "../data/images/mandala-de-terre/1.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -637,7 +637,7 @@ export const images = [
                 },
                 {
                     id: "1",
-                    url: "./data/images/mandala-de-terre/2.JPG",
+                    url: "../data/images/mandala-de-terre/2.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -649,7 +649,7 @@ export const images = [
                 },
                 {
                     id: "2",
-                    url: "./data/images/mandala-de-terre/3.JPG",
+                    url: "../data/images/mandala-de-terre/3.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -661,7 +661,7 @@ export const images = [
                 },
                 {
                     id: "3",
-                    url: "./data/images/mandala-de-terre/4.JPG",
+                    url: "../data/images/mandala-de-terre/4.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -673,7 +673,7 @@ export const images = [
                 },
                 {
                     id: "4",
-                    url: "./data/images/mandala-de-terre/5.JPG",
+                    url: "../data/images/mandala-de-terre/5.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -685,7 +685,7 @@ export const images = [
                 },
                 {
                     id: "5",
-                    url: "./data/images/mandala-de-terre/6.JPG",
+                    url: "../data/images/mandala-de-terre/6.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -697,7 +697,7 @@ export const images = [
                 },
                 {
                     id: "6",
-                    url: "./data/images/mandala-de-terre/7.JPG",
+                    url: "../data/images/mandala-de-terre/7.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -709,7 +709,7 @@ export const images = [
                 },
                 {
                     id: "7",
-                    url: "./data/images/mandala-de-terre/8.JPG",
+                    url: "../data/images/mandala-de-terre/8.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -721,7 +721,7 @@ export const images = [
                 },
                 {
                     id: "8",
-                    url: "./data/images/mandala-de-terre/9.JPG",
+                    url: "../data/images/mandala-de-terre/9.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -733,7 +733,7 @@ export const images = [
                 },
                 {
                     id: "9",
-                    url: "./data/images/mandala-de-terre/10.JPG",
+                    url: "../data/images/mandala-de-terre/10.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -745,7 +745,7 @@ export const images = [
                 },
                 {
                     id: "10",
-                    url: "./data/images/mandala-de-terre/11.JPG",
+                    url: "../data/images/mandala-de-terre/11.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -757,7 +757,7 @@ export const images = [
                 },
                 {
                     id: "11",
-                    url: "./data/images/mandala-de-terre/12.JPG",
+                    url: "../data/images/mandala-de-terre/12.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -769,7 +769,7 @@ export const images = [
                 },
                 {
                     id: "12",
-                    url: "./data/images/mandala-de-terre/13.JPG",
+                    url: "../data/images/mandala-de-terre/13.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -781,7 +781,7 @@ export const images = [
                 },
                 {
                     id: "13",
-                    url: "./data/images/mandala-de-terre/14.JPG",
+                    url: "../data/images/mandala-de-terre/14.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -793,7 +793,7 @@ export const images = [
                 },
                 {
                     id: "14",
-                    url: "./data/images/mandala-de-terre/15.JPG",
+                    url: "../data/images/mandala-de-terre/15.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -805,7 +805,7 @@ export const images = [
                 },
                 {
                     id: "15",
-                    url: "./data/images/mandala-de-terre/16.JPG",
+                    url: "../data/images/mandala-de-terre/16.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -817,7 +817,7 @@ export const images = [
                 },
                 {
                     id: "16",
-                    url: "./data/images/mandala-de-terre/17.JPG",
+                    url: "../data/images/mandala-de-terre/17.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -829,7 +829,7 @@ export const images = [
                 },
                 {
                     id: "17",
-                    url: "./data/images/mandala-de-terre/18.JPG",
+                    url: "../data/images/mandala-de-terre/18.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -841,7 +841,7 @@ export const images = [
                 },
                 {
                     id: "18",
-                    url: "./data/images/mandala-de-terre/19.JPG",
+                    url: "../data/images/mandala-de-terre/19.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -865,7 +865,7 @@ export const images = [
             image: [
                 {
                     id: "0",
-                    url: "./data/images/portraits/1.png",
+                    url: "../data/images/portraits/1.png",
                     title: {
                         fr: "",
                         en: ""
@@ -877,7 +877,7 @@ export const images = [
                 },
                 {
                     id: "1",
-                    url: "./data/images/portraits/2.JPG",
+                    url: "../data/images/portraits/2.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -889,7 +889,7 @@ export const images = [
                 },
                 {
                     id: "2",
-                    url: "./data/images/portraits/3.JPG",
+                    url: "../data/images/portraits/3.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -901,7 +901,7 @@ export const images = [
                 },
                 {
                     id: "3",
-                    url: "./data/images/portraits/4.JPG",
+                    url: "../data/images/portraits/4.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -913,7 +913,7 @@ export const images = [
                 },
                 {
                     id: "4",
-                    url: "./data/images/portraits/5.JPG",
+                    url: "../data/images/portraits/5.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -925,7 +925,7 @@ export const images = [
                 },
                 {
                     id: "5",
-                    url: "./data/images/portraits/6.JPG",
+                    url: "../data/images/portraits/6.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -937,7 +937,7 @@ export const images = [
                 },
                 {
                     id: "6",
-                    url: "./data/images/portraits/7.JPG",
+                    url: "../data/images/portraits/7.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -949,7 +949,7 @@ export const images = [
                 },
                 {
                     id: "8",
-                    url: "./data/images/portraits/9.JPG",
+                    url: "../data/images/portraits/9.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -961,7 +961,7 @@ export const images = [
                 },
                 {
                     id: "9",
-                    url: "./data/images/portraits/10.JPG",
+                    url: "../data/images/portraits/10.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -973,7 +973,7 @@ export const images = [
                 },
                 {
                     id: "10",
-                    url: "./data/images/portraits/11.JPG",
+                    url: "../data/images/portraits/11.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -985,7 +985,7 @@ export const images = [
                 },
                 {
                     id: "11",
-                    url: "./data/images/portraits/12.JPG",
+                    url: "../data/images/portraits/12.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -997,7 +997,7 @@ export const images = [
                 },
                 {
                     id: "12",
-                    url: "./data/images/portraits/13.JPG",
+                    url: "../data/images/portraits/13.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1009,7 +1009,7 @@ export const images = [
                 },
                 {
                     id: "13",
-                    url: "./data/images/portraits/14.JPG",
+                    url: "../data/images/portraits/14.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1021,7 +1021,7 @@ export const images = [
                 },
                 {
                     id: "14",
-                    url: "./data/images/portraits/15.JPG",
+                    url: "../data/images/portraits/15.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1033,7 +1033,7 @@ export const images = [
                 },
                 {
                     id: "15",
-                    url: "./data/images/portraits/16.JPG",
+                    url: "../data/images/portraits/16.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1045,7 +1045,7 @@ export const images = [
                 },
                 {
                     id: "16",
-                    url: "./data/images/portraits/17.JPG",
+                    url: "../data/images/portraits/17.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1057,7 +1057,7 @@ export const images = [
                 },
                 {
                     id: "17",
-                    url: "./data/images/portraits/18.JPG",
+                    url: "../data/images/portraits/18.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1069,7 +1069,7 @@ export const images = [
                 },
                 {
                     id: "18",
-                    url: "./data/images/portraits/19.JPG",
+                    url: "../data/images/portraits/19.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1081,7 +1081,7 @@ export const images = [
                 },
                 {
                     id: "19",
-                    url: "./data/images/portraits/20.JPG",
+                    url: "../data/images/portraits/20.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1093,7 +1093,7 @@ export const images = [
                 },
                 {
                     id: "20",
-                    url: "./data/images/portraits/21.JPG",
+                    url: "../data/images/portraits/21.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1105,7 +1105,7 @@ export const images = [
                 },
                 {
                     id: "21",
-                    url: "./data/images/portraits/22.JPG",
+                    url: "../data/images/portraits/22.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1117,7 +1117,7 @@ export const images = [
                 },
                 {
                     id: "22",
-                    url: "./data/images/portraits/23.JPG",
+                    url: "../data/images/portraits/23.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1129,7 +1129,7 @@ export const images = [
                 },
                 {
                     id: "23",
-                    url: "./data/images/portraits/24.JPG",
+                    url: "../data/images/portraits/24.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1141,7 +1141,7 @@ export const images = [
                 },
                 {
                     id: "24",
-                    url: "./data/images/portraits/25.JPG",
+                    url: "../data/images/portraits/25.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1153,7 +1153,7 @@ export const images = [
                 },
                 {
                     id: "25",
-                    url: "./data/images/portraits/26.JPG",
+                    url: "../data/images/portraits/26.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1165,7 +1165,7 @@ export const images = [
                 },
                 {
                     id: "26",
-                    url: "./data/images/portraits/27.JPG",
+                    url: "../data/images/portraits/27.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1177,7 +1177,7 @@ export const images = [
                 },
                 {
                     id: "27",
-                    url: "./data/images/portraits/28.JPG",
+                    url: "../data/images/portraits/28.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1189,7 +1189,7 @@ export const images = [
                 },
                 {
                     id: "28",
-                    url: "./data/images/portraits/29.JPG",
+                    url: "../data/images/portraits/29.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1201,7 +1201,7 @@ export const images = [
                 },
                 {
                     id: "29",
-                    url: "./data/images/portraits/30.JPG",
+                    url: "../data/images/portraits/30.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1213,7 +1213,7 @@ export const images = [
                 },
                 {
                     id: "30",
-                    url: "./data/images/portraits/31.JPG",
+                    url: "../data/images/portraits/31.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1225,7 +1225,7 @@ export const images = [
                 },
                 {
                     id: "31",
-                    url: "./data/images/portraits/32.JPG",
+                    url: "../data/images/portraits/32.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1237,7 +1237,7 @@ export const images = [
                 },
                 {
                     id: "32",
-                    url: "./data/images/portraits/33.JPG",
+                    url: "../data/images/portraits/33.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1249,7 +1249,7 @@ export const images = [
                 },
                 {
                     id: "33",
-                    url: "./data/images/portraits/34.JPG",
+                    url: "../data/images/portraits/34.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1261,7 +1261,7 @@ export const images = [
                 },
                 {
                     id: "34",
-                    url: "./data/images/portraits/35.JPG",
+                    url: "../data/images/portraits/35.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1273,7 +1273,7 @@ export const images = [
                 },
                 {
                     id: "35",
-                    url: "./data/images/portraits/36.JPG",
+                    url: "../data/images/portraits/36.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1285,7 +1285,7 @@ export const images = [
                 },
                 {
                     id: "36",
-                    url: "./data/images/portraits/37.JPG",
+                    url: "../data/images/portraits/37.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1297,7 +1297,7 @@ export const images = [
                 },
                 {
                     id: "37",
-                    url: "./data/images/portraits/38.JPG",
+                    url: "../data/images/portraits/38.JPG",
                     title: {
                         fr: "",
                         en: ""
@@ -1309,7 +1309,7 @@ export const images = [
                 },
                 {
                     id: "38",
-                    url: "./data/images/portraits/39.JPG",
+                    url: "../data/images/portraits/39.JPG",
                     title: {
                         fr: "",
                         en: ""

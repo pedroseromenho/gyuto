@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Row, Col } from "react-flexbox-grid";
 import InfoIndex from "./assets/infoIndex/InfoIndex";
 import InfoText from "./assets/infoText/InfoText";
@@ -28,14 +28,14 @@ class PageInfo extends Component {
   render() {
     return (
       <Fragment>
-        {/* <Helmet>
+        <Helmet>
           <title>{this.props.t('nav.info')}</title>
           <style>
             {
               "body {background-color: #f5f5f5 !important;} a.itemsColor{color: black} .cursor{display:none}"
             }
           </style>
-        </Helmet> */}
+        </Helmet>
         <Media
           query="(max-width: 700px)"
           render={() =>
