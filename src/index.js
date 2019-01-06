@@ -25,6 +25,15 @@ i18next.init({
 });
 
 
+function noop() { }
+
+if (process.env.NODE_ENV !== 'development') {
+  console.log = noop;
+  console.warn = noop;
+  console.error = noop;
+}
+
+
 ReactDOM.render(
   <I18nextProvider i18n={i18next}>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
