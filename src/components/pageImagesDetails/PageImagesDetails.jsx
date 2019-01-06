@@ -56,7 +56,7 @@ class PageImagesDetails extends Component {
             <Fragment>
                 <Helmet>
                     <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
-                    <title>{this.props.t('nav.images')}</title>
+                    {/* <title>{this.props.t('nav.images')}</title> */}
                 </Helmet>
                 <Media query="(max-width: 769px)" render={() => (
                     <Row>

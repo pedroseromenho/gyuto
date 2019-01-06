@@ -10,7 +10,7 @@ class PageHomeMobile extends Component {
         return (
             <Fragment>
                 <Helmet>
-                    <title>Gyütö</title>
+                    {/* <title>Gyütö</title> */}
                     <style>{'body { background-color: #f5f5f5; } a.itemsColor{color: black}'}</style>
                 </Helmet>
                 <Row>

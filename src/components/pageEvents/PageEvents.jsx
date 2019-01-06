@@ -43,7 +43,7 @@ class PageEvents extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>{this.props.t('nav.events')}</title>
+          {/* <title>{this.props.t('nav.events')}</title> */}
           <style>{'body { background-color: #f5f5f5 !important;} a.itemsColor{color: black} .cursor{display:none}'}</style>
         </Helmet>
         <Row className="rowMax">{listEvents}</Row>

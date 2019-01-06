@@ -44,7 +44,7 @@ class PageImages extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>{this.props.t('nav.images')}</title>
+          {/* <title>{this.props.t('nav.images')}</title> */}
           <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
         </Helmet>
         <Row className="imagesRow">{listGaleries}</Row>

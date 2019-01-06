@@ -29,7 +29,7 @@ class PageInfo extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>{this.props.t('nav.info')}</title>
+          {/* <title>{this.props.t('nav.info')}</title> */}
           <style>
             {
               "body {background-color: #f5f5f5 !important;} a.itemsColor{color: black} .cursor{display:none}"

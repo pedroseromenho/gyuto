@@ -18,7 +18,7 @@ class PageEventDetails extends Component {
       <Fragment>
         <Helmet>
           <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
-          <title>{this.props.t('nav.events')}</title>
+          {/* <title>{this.props.t('nav.events')}</title> */}
         </Helmet>
         <Row>
           <Col xs={0} sm={0} md={2} lg={3} />

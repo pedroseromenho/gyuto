@@ -36,7 +36,7 @@ class PageDoclist extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>{this.props.t('nav.doclist')}</title>
+          {/* <title>{this.props.t('nav.doclist')}</title> */}
           <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
         </Helmet>
         <div className="docListPageContainer">
