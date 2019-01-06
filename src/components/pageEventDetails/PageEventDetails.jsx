@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { events } from "../data";
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { Row, Col } from "react-flexbox-grid";
 import { NavLink } from "react-router-dom";
 
@@ -16,10 +16,10 @@ class PageEventDetails extends Component {
     // if (events[id]) {
     return (
       <Fragment>
-        <Helmet>
+        {/* <Helmet>
           <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
-          {/* <title>{this.props.t('nav.events')}</title> */}
-        </Helmet>
+          <title>{this.props.t('nav.events')}</title>
+        </Helmet> */}
         <Row>
           <Col xs={0} sm={0} md={2} lg={3} />
           <Col xs={12} sm={12} md={8} lg={6} className="colEventDetails">

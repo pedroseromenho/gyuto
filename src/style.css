@@ -1647,8 +1647,13 @@ a {
   text-decoration: none;
 }
 
+a.itemsColor {
+  color: black;
+}
+
 body {
   min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
 .buttonContainer {

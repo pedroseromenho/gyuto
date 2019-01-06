@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { events } from "../data";
 import Event from "./assets/Event";
 import { Row, Col } from "react-flexbox-grid";
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { Link, NavLink } from "react-router-dom";
 import { withNamespaces } from 'react-i18next';
 
@@ -42,10 +42,10 @@ class PageEvents extends Component {
 
     return (
       <Fragment>
-        <Helmet>
-          {/* <title>{this.props.t('nav.events')}</title> */}
+        {/* <Helmet>
+          <title>{this.props.t('nav.events')}</title>
           <style>{'body { background-color: #f5f5f5 !important;} a.itemsColor{color: black} .cursor{display:none}'}</style>
-        </Helmet>
+        </Helmet> */}
         <Row className="rowMax">{listEvents}</Row>
       </Fragment>
     );
