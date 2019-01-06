@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <title>Gyütö</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <style>
+    @media screen and (min-width: 701px) {
+      * {
+        cursor: -webkit-image-set(url(./assets/images/cursor.png) 1x, url(./assets/images/cursorx2.png) 2x) 3 3, pointer !important;
+      }
+
+      html {
+        -webkit-tap-highlight-color: transparent;
+        background-color: #f5f5f5 !important;
+      }
+
+
+      .cursor {
+        pointer-events: none;
+        display: none;
+      }
+
+      .cursor__ball {
+        position: fixed;
+        top: 0;
+        left: 0;
+        mix-blend-mode: difference;
+        z-index: 1000;
+      }
+
+      .cursor__ball circle {
+        fill: white;
+
+      }
+
+      .cursor__ball--small circle {
+        fill: transparent;
+      }
+
+
+      .light {
+        mix-blend-mode: screen;
+      }
+
+      .light-inner {
+        background: rgb(221, 0, 0);
+      }
+
+      .shadow-inner {
+        background: transparent;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .light,
+      .shadow,
+      .lightclick {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate3d(var(--x, 150px), var(--y, -150px), 0);
+        pointer-events: none;
+        height: 0px;
+        width: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        backface-visibility: hidden;
+        z-index: 1100;
+      }
+
+      .light-inner,
+      .shadow-inner {
+        opacity: 1;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        transform: translateZ(0) scale(var(--scale, 1));
+        z-index: 1100;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out 0.5s;
+        transition: transform 0.5s cubic-bezier(0.07, 0.08, 0.16, 0.99), opacity 0.5s ease-out 0.5s;
+        transform-origin: 50% 50%;
+        backface-visibility: hidden;
+      }
+
+      .lightclick {
+        display: none;
+      }
+
+      .lightclick-inner {
+        opacity: 0;
+        backface-visibility: hidden;
+        transform-origin: 50% 50%;
+        transform: scale(0);
+        transition: transform 0.5s cubic-bezier(0.07, 0.08, 0.16, 0.99), opacity 0.5s ease-out 0.5s;
+        border-radius: 50%;
+        box-sizing: border-box;
+        height: 70px;
+        width: 70px;
+        margin-top: -35px;
+        margin-left: -35px;
+        border: 35px solid red;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+
+      .light,
+      .shadow,
+      .lightclick,
+      .cursor {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <div class="cursor">
+    <div class="cursor__ball cursor__ball--big ">
+      <svg height="30" width="30">
+        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+      </svg>
+    </div>
+
+    <div class="cursor__ball cursor__ball--small">
+      <svg height="10" width="10">
+        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <div class="light">
+    <div class="light-inner" style="--scale:1;"></div>
+  </div>
+  <div class="shadow">
+    <div class="shadow-inner" style="--scale:1;"></div>
+  </div>
+  <div class="lightclick">
+    <div class="lightclick-inner"></div>
+  </div>
+  <div id="root"></div>
+
+  <script>
+    (function (document, $) {
+      var body = document.querySelector('body');
+      var scene = document.querySelector('#root');
+      var light = document.querySelector('.light');
+      var lightInner = document.querySelector('.light-inner');
+      var shadow = document.querySelector('.shadow');
+      var shadowInner = document.querySelector('.shadow-inner');
+      var lightclick = document.querySelector('.lightclick');
+      var lightclickInner = document.querySelector('.lightclick-inner');
+      var links = document.querySelectorAll('a');
+      var animation = false;
+
+      var settings = {
+        smoothness: 4,
+        snapScale: 1.8,
+        maxSnapScale: 6,
+        defaultScale: 50
+      }
+
+      var state = {
+        movementSmoothness: 4,
+        rotation: 0,
+        currentX: 0,
+        currentY: 0,
+        currentScale: 1,
+        clientX: 0,
+        clientY: 0,
+        clientScale: 1,
+        target: null,
+        targetScaleMultiplier: 0
+      };
+
+      function move(e) {
+        if (!animation && (e.clientX)) {
+          var mouseX = (e.clientX);
+          var mouseY = (e.clientY);
+
+          if (state.transition) {
+            state.clientScale = state.transition;
+          }
+          else if (state.target) {
+            state.clientScale = state.target.scale;
+          }
+          else {
+            state.clientScale = 1;
+          }
+
+          state.clientX = state.target ? state.target.x : (mouseX);
+          state.clientY = state.target ? state.target.y : (mouseY);
+
+        }
+      }
+      function moveScroll(e) {
+        state.clientX = state.rawClientX;
+        state.clientY = state.rawClientY;
+      }
+
+      function snap(e) {
+        var offset = $(this).offset();
+        var scrollX = window.pageXOffset;
+        var scrollY = window.pageYOffset;
+
+        var scale = Math.min(Math.max(this.offsetWidth, this.offsetHeight) / settings.defaultScale * settings.snapScale, settings.maxSnapScale);
+
+        if ($(this).data('snap-scale') !== undefined) {
+          scale = $(this).data('snap-scale')
+        }
+
+        state.movementSmoothness = settings.smoothness;
+        state.target = {
+          x: (offset.left + (this.offsetWidth / 2) - scrollX),
+          y: (offset.top + (this.offsetHeight / 2) - scrollY),
+          scale: scale
+        }
+        state.clientX = state.target.x;
+        state.clientY = state.target.y;
+        state.clientScale = state.target.scale;
+      }
+      function unsnap(e) {
+        state.target = null;
+        setTimeout(function () {
+          state.movementSmoothness = 4;
+        }, 500);
+      }
+
+      function click(e) {
+        $(lightclickInner).addClass('active');
+
+        var isSafariMac = /^((?!chrome|android).)*safari/i.test(navigator.userAgent) && (navigator.appVersion.indexOf("Mac") != -1);
+
+        if ($(this).hasClass('js-upscale') && !isSafariMac) {
+
+          state.transition = 50;
+          $(lightInner).removeClass('downscaling').addClass('upscaling');
+          $(shadowInner).removeClass('downscaling').addClass('upscaling');
+          state.clientScale = state.transition;
+          setTimeout(function () {
+            $(lightInner).removeClass('upscaling').addClass('downscaling');
+            $(shadowInner).removeClass('upscaling').addClass('downscaling');
+            setTimeout(function () {
+              $(lightInner).removeClass('downscaling');
+              $(shadowInner).removeClass('downscaling');
+              state.transition = 0;
+              state.clientScale = 1;
+            }, 1000)
+          }, 1250);
+        }
+
+        setTimeout(unsnap, 500);
+        setTimeout(function () {
+          $(lightclickInner).removeClass('active');
+        }, 1000);
+      }
+
+
+      unsnap();
+
+      setTimeout(function () {
+        state.transition = 0;
+        state.clientScale = 0.01;
+      }, 1500);
+      var supportsCssVariables = (window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0));
+
+      function repeatOften() {
+        state.currentX = +(state.currentX + (state.clientX - state.currentX) / state.movementSmoothness).toFixed(2);
+        state.currentY = +(state.currentY + (state.clientY - state.currentY) / state.movementSmoothness).toFixed(2);
+
+        state.currentScale = state.clientScale;
+        if (supportsCssVariables) {
+
+          light.style.setProperty('--x', state.currentX + 'px');
+          light.style.setProperty('--y', state.currentY + 'px');
+          lightInner.style.setProperty('--scale', (state.currentScale).toFixed(2));
+
+
+          shadow.style.setProperty('--x', state.currentX + 'px');
+          shadow.style.setProperty('--y', state.currentY + 'px');
+          shadowInner.style.setProperty('--scale', (state.currentScale).toFixed(2));
+
+
+          lightclick.style.setProperty('--x', state.currentX + 'px');
+          lightclick.style.setProperty('--y', state.currentY + 'px');
+
+        } else {
+          light.style.transform = 'translate3d(' + state.currentX + 'px,' + state.currentY + 'px,0)';
+          lightInner.style.transform = 'scale(' + (state.currentScale).toFixed(2) + ')';
+
+          shadow.style.transform = 'translate3d(' + state.currentX + 'px,' + state.currentY + 'px,0)';
+          shadowInner.style.transform = 'scale(' + (state.currentScale).toFixed(2) + ')';
+
+          lightclick.style.transform = 'translate3d(' + state.currentX + 'px,' + state.currentY + 'px,0)';
+        }
+
+        requestAnimationFrame(repeatOften);
+      }
+
+      requestAnimationFrame(repeatOften);
+
+      function init() {
+        $('.light,.shadow,.lightclick').show();
+        if (window.PointerEvent) {
+          body.removeEventListener('pointermove', init);
+        } else {
+          body.removeEventListener('mousemove', init);
+        }
+      }
+
+      if (window.PointerEvent) {
+        body.addEventListener('pointermove', init);
+        body.addEventListener('pointermove', move);
+      } else {
+        body.addEventListener('mousemove', init);
+        body.addEventListener('mousemove', move);
+      }
+
+      $('body').delegate('.snapCursor', 'mouseenter', snap);
+      $('body').delegate('.snapCursor', 'mouseleave', unsnap);
+      $('body').delegate('.snapCursor, .js-upscale', 'click', click);
+      $('body').delegate('.snapCursor', 'focus', snap);
+      $('body').delegate('.snapCursor', 'blur', unsnap);
+
+      $('.light,.shadow,.lightclick').one('pointermove', function () {
+        this.style.display = 'block';
+      })
+
+      $('body').bind('unsnap', function (e) {
+        unsnap();
+      });
+
+    })(document, jQuery);
+  </script>
+  <script>
+    $(document).ready(function () {
+      var obj = document.createElement("audio");
+      obj.src = "./assets/son/click.wav";
+      obj.volume = 0.6;
+      obj.autoPlay = false;
+      obj.preLoad = true;
+      obj.controls = true;
+
+      $(".js-click").click(function () {
+        obj.play();
+        // obj.pause();
+      });
+    });
+
+  </script>
+</body>
+
+</html>

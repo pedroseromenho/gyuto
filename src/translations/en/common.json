@@ -1,0 +1,37 @@
+{
+    "nav": {
+        "info": "Info",
+        "music": "Music",
+        "images": "Images",
+        "events": "Events",
+        "doclist": "Doc List",
+        "random": "Random",
+        "back": "Back",
+        "notFound": "Article not found…",
+        "backToWebsite": "Back to the website",
+        "soon": "Coming soon…",
+        "doclistPage": "Doc List Page",
+        "moreInfo": "More informations",
+        "pageNotFound": "Page not found…",
+        "rights": "© All rights reserved,"
+    },
+    "categories": {
+        "stories": "Stories",
+        "testimonials": "Testimonials",
+        "music": "Music"
+    },
+    "eventsString": {
+        "from": "From",
+        "to": "to",
+        "in": "in",
+        "fromBis": "from",
+        "toBis": "to",
+        "place": "Place"
+    },
+    "musicPage": {
+        "concert": "Concert",
+        "albums": "Albums",
+        "musics": "Musics",
+        "order": "Order"
+    }
+}

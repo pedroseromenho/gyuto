@@ -1,0 +1,31 @@
+$color-white: #f5f5f5;
+$color-black: #000000;
+$color-red: #ef0000;
+
+$font-content: "Begum W01 Regular", sans-serif;
+$font-heading: "Begum W01 Medium", sans-serif;
+
+$padding-top-mobile: 50px;
+
+$max-width: 1160px;
+
+$smartphone-size: 700px;
+
+$pc: "screen and (min-width: " + $smartphone-size + ")";
+$smartphone: "screen and (max-width: " + $smartphone-size + ")";
+$smartphone-h: $smartphone + " and (orientation: landscape)";
+$smartphone-v: $smartphone + " and (orientation: portrait)";
+
+
+@font-face {
+  font-family: "Begum W01 Regular";
+  src: local('Begum W01 Regular'), url("./assets/fonts/2168919/29db3a14-468e-4562-ba4f-4baadf4c24c2.eot?#iefix");
+  src: local('Begum W01 Regular'), url("./assets/fonts/2168919/29db3a14-468e-4562-ba4f-4baadf4c24c2.eot?#iefix") format("eot"), url("./assets/fonts/2168919/77c88cc7-7400-4de9-ad89-00b63e4bc669.woff2") format("woff2"), url("./assets/fonts/2168919/ef2017d6-1ae1-4dec-bb89-b9b1760e89e9.woff") format("woff"), url("./assets/fonts/2168919/dfb9fc23-4c66-4cd5-86f4-63509a1872e2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Begum W01 Medium";
+  src: local('Begum W01 Medium'), url("./assets/fonts/2169035/17ef16de-af2a-4a80-8c34-986fd09346cb.eot?#iefix");
+  src: local('Begum W01 Medium'), url("./assets/fonts/2169035/17ef16de-af2a-4a80-8c34-986fd09346cb.eot?#iefix") format("eot"), url("./assets/fonts/2169035/c52bd02c-0b41-4f39-a147-9a3d6b6566ab.woff2") format("woff2"), url("./assets/fonts/2169035/9f697132-3f27-43b3-9f19-86d661fccace.woff") format("woff"), url("./assets/fonts/2169035/5dc4445d-f87c-4974-9ef8-54eefe8d4e1c.ttf") format("truetype");
+}
+

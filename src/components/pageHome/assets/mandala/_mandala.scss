@@ -1,0 +1,99 @@
+#background {
+    background-color: transparent;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+
+#contenair {
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    @media screen and (max-height: 600px) {
+        width: 400px;
+        height: 400px;
+    }
+
+    @media screen and (min-width: 1500px) {
+        width: 700px;
+        height: 700px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 800px;
+        height: 800px;
+    }
+    
+    #border {
+        background-color: transparent;
+        width: 550px;
+        height: 550px;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+
+        @media screen and (max-height: 600px) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media screen and (min-width: 1500px) {
+            width: 700px;
+            height: 700px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            width: 800px;
+            height: 800px;
+        }
+    }
+    
+    .mandala {
+        background-color: transparent;
+        width: 550px;
+        height: 550px;
+        animation-name: fadeIn;
+        animation-duration: 5s;
+
+        @media screen and (max-height: 600px) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media screen and (min-width: 1500px) {
+            width: 700px;
+            height: 700px;
+        }
+
+        @media screen and (min-width: 1650px) {
+            width: 800px;
+            height: 800px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
+  

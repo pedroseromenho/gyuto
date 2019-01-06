@@ -1,0 +1,45 @@
+{
+  "name": "gyuto-web",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://gyuto-movie.com/",
+  "dependencies": {
+    "@u-wave/react-vimeo": "^0.5.0",
+    "bulma": "^0.7.2",
+    "gsap": "^2.0.2",
+    "i18next": "^13.0.0",
+    "i18next-browser-languagedetector": "^2.2.4",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-flexbox-grid": "^2.1.2",
+    "react-helmet": "^5.2.0",
+    "react-i18next": "^8.4.0",
+    "react-media": "^1.8.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-page-transition": "^3.1.0",
+    "react-scripts": "2.0.5",
+    "react-transition-group": "^2.5.0",
+    "rodal": "^1.6.3",
+    "yarn": "^1.12.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0"
+  }
+}
