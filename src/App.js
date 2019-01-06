@@ -7,7 +7,7 @@ import PageEvents from "./components/pageEvents/PageEvents";
 import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/footer/Footer";
 import PageImages from "./components/pageImages/PageImages";
-import PageInfo from "./components/pageInfo/PageInfo";
+// import PageInfo from "./components/pageInfo/PageInfo";
 import PageMusique from "./components/pageMusique/PageMusique";
 import PageDocList from "./components/pageDocList/PageDocList";
 import PageEventDetails from "./components/pageEventDetails/PageEventDetails";
@@ -83,7 +83,7 @@ class App extends Component {
                       onOpenModalIntroduction={this.onOpenModalIntroduction.bind(this)}
                     />}
                   />
-                  <Route path="/info" component={PageInfo} />
+                  {/* <Route path="/info" component={PageInfo} /> */}
                   <Route path="/music" component={PageMusique} />
                   <Route exact path="/events" component={PageEvents} />
                   <Route path="/events/:id" component={PageEventDetails} />
@@ -95,7 +95,6 @@ class App extends Component {
               </CSSTransition>
             </TransitionGroup>
           )} />
-
           <Footer onOpenModal={this.onOpenModal.bind(this)} />
 
         </Grid>
