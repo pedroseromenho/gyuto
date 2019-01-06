@@ -25,17 +25,13 @@ class PageInfo extends Component {
     });
   };
 
+  componentDidMount() {
+    document.title = this.props.t('nav.info');
+  }
+
   render() {
     return (
       <Fragment>
-        {/* <Helmet>
-          <title>{this.props.t('nav.info')}</title>
-          <style>
-            {
-              "body {background-color: #f5f5f5 !important;} a.itemsColor{color: black} .cursor{display:none}"
-            }
-          </style>
-        </Helmet> */}
         <Media
           query="(max-width: 700px)"
           render={() =>

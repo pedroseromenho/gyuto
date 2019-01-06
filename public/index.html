@@ -37,7 +37,6 @@
       }
 
       .cursor__ball circle {
-        /* fill: #DC143C; */
         fill: white;
 
       }
@@ -124,15 +123,12 @@
   </style>
 </head>
 
-<!-- <body> -->
-
-<body onresize="loadHome();">
+<body>
 
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
 
-  <!--CURSOR-->
   <div class="cursor">
     <div class="cursor__ball cursor__ball--big ">
       <svg height="30" width="30">
@@ -146,7 +142,6 @@
       </svg>
     </div>
   </div>
-  <!--! CURSOR-->
 
   <div class="light">
     <div class="light-inner" style="--scale:1;"></div>
@@ -172,7 +167,6 @@
       var links = document.querySelectorAll('a');
       var animation = false;
 
-      console.log(links)
       var settings = {
         smoothness: 4,
         snapScale: 1.8,
@@ -366,19 +360,6 @@
         // obj.pause();
       });
     });
-
-  </script>
-  <script>
-
-    $(document).ready(function () {
-      if ($(window).width() > 480) {
-
-        function loadHome() {
-          window.location.href = "http://gyuto-movie.com/";
-        }
-      }
-    });
-
 
   </script>
 </body>

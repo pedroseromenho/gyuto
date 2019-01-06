@@ -12,7 +12,7 @@ class DocList extends Component {
                 <Media query="(max-width: 700px)" render={() => (
                     <ToggleBox title={this.props.videoObject.title.fr} duration={this.props.videoObject.duration} id={this.props.videoObject.id}>
                         <div className="containerVideoConcert">
-                            <Vimeo video={this.props.videoObject.url.fr} className="video" volume={1} />
+                            <Vimeo video={this.props.videoObject.url.fr} className="video" volume={1} showPortrait={false} showTitle={false} showByline={false}/>
                         </div>
                         <h2>{this.props.videoObject.quote.fr}</h2>
                         <p>{this.props.videoObject.legend.fr}</p>

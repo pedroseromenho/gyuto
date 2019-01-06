@@ -29,6 +29,9 @@ class Preview extends Component {
                                 video={introduction.url}
                                 className="video"
                                 volume={1}
+                                showPortrait={false}
+                                showTitle={false}
+                                showByline={false}
                             />
                             <h2>{introduction.quote.fr}</h2>
                             <p>{introduction.legend.fr}</p>

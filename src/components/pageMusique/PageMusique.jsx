@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-// import { Helmet } from 'react-helmet';
 import { music } from "../data";
 import { Row, Col } from "react-flexbox-grid";
 import Concert from "./assets/concert/Concert";
@@ -17,6 +16,10 @@ class PageMusique extends Component {
   }
   getAlbum(albumsId) {
     this.setState({ selectAlbum: albumsId })
+  }
+
+  componentDidMount() {
+    document.title = this.props.t('nav.music');
   }
 
   render() {
@@ -38,10 +41,6 @@ class PageMusique extends Component {
     });
     return (
       <Fragment>
-        {/* <Helmet>
-          <title>{this.props.t('nav.music')}</title>
-          <style>{'body { background-color: #f5f5f5 !important;} a.itemsColor{color: black} .cursor{display:none}'}</style>
-        </Helmet> */}
         {musicPage}
       </Fragment>
     );
