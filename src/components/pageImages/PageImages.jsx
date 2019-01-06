@@ -5,7 +5,7 @@ import { Row, Col } from "react-flexbox-grid";
 import { Link, NavLink } from "react-router-dom";
 import Image from "./assets/Image";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class PageImages extends Component {
   render() {
@@ -53,4 +53,4 @@ class PageImages extends Component {
   }
 }
 
-export default translate('common')(PageImages);
+export default withNamespaces('common')(PageImages);

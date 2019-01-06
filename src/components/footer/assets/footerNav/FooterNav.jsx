@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class FooterNav extends Component {
 
@@ -26,4 +26,4 @@ class FooterNav extends Component {
   }
 }
 
-export default translate('common')(FooterNav);
+export default withNamespaces('common')(FooterNav);

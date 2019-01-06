@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import Media from "react-media";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class Navigation extends Component {
 
@@ -25,6 +25,7 @@ class Navigation extends Component {
       selectOpen: !this.state.selectOpen
     })
   }
+
 
   render() {
     const { i18n } = this.props;
@@ -80,4 +81,4 @@ class Navigation extends Component {
   }
 }
 
-export default translate('common')(Navigation);
+export default withNamespaces('common')(Navigation);

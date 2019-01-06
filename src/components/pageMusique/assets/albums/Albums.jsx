@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { music } from "../../../data.js";
 import ToggleBox from "../../../toggleBox/ToggleBox";
 import Media from "react-media";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 class Albums extends Component {
 
     render() {
@@ -52,4 +52,4 @@ class Albums extends Component {
     }
 }
 
-export default translate('common')(Albums);
+export default withNamespaces('common')(Albums);

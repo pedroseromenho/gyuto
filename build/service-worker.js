@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/gyuto/precache-manifest.1430f9897d1e440ce2482e99fbf9737d.js"
+  "/gyuto/precache-manifest.2b4b5ed207ae0b6e6b00f345379c37ce.js"
 );
 
 workbox.clientsClaim();

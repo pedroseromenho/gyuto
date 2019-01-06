@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { newAnim, stop } from "../mandala/functions";
 import { videos } from "../../../data";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class MandalaLegend extends Component {
     constructor(props) {
@@ -116,4 +116,4 @@ class MandalaLegend extends Component {
     }
 }
 
-export default translate('common')(MandalaLegend);
+export default withNamespaces('common')(MandalaLegend);

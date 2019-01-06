@@ -16,7 +16,7 @@ import ModalPlayVideo from "./components/modalPlayVideo/ModalPlayVideo";
 import ModalPlayVideoIntroduction from "./components/modalPlayVideo/ModalPlayVideoIntroduction";
 import { Helmet } from 'react-helmet';
 import NoMatch from "./components/noMatch/NoMatch";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class App extends Component {
   constructor(props) {
@@ -114,4 +114,4 @@ class App extends Component {
   }
 }
 
-export default translate('common')(App); 
+export default withNamespaces('common')(App); 

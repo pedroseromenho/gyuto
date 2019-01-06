@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Row, Col } from "react-flexbox-grid";
 import { NavLink } from "react-router-dom";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class PageEventDetails extends Component {
 
@@ -88,4 +88,4 @@ class PageEventDetails extends Component {
   }
 }
 
-export default translate('common')(PageEventDetails);
+export default withNamespaces('common')(PageEventDetails);

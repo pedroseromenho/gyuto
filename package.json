@@ -2,9 +2,10 @@
   "name": "gyuto-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://pedroseromenho.github.io/gyuto",
+  "homepage": "https://pedroseromenho.github.io/gyuto",
   "dependencies": {
     "@u-wave/react-vimeo": "^0.5.0",
+    "auditjs": "^3.0.10",
     "bulma": "^0.7.2",
     "gh-pages": "^2.0.1",
     "gsap": "^2.0.2",

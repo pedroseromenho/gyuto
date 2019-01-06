@@ -4,7 +4,7 @@ import Event from "./assets/Event";
 import { Row, Col } from "react-flexbox-grid";
 import { Helmet } from 'react-helmet';
 import { Link, NavLink } from "react-router-dom";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 
 class PageEvents extends Component {
@@ -52,4 +52,4 @@ class PageEvents extends Component {
   }
 }
 
-export default translate('common')(PageEvents);
+export default withNamespaces('common')(PageEvents);

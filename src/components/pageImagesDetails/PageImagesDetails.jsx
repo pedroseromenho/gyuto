@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import Media from "react-media";
 import { NavLink } from "react-router-dom";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class PageImagesDetails extends Component {
     constructor(props) {
@@ -123,4 +123,4 @@ class PageImagesDetails extends Component {
     }
 }
 
-export default translate('common')(PageImagesDetails);
+export default withNamespaces('common')(PageImagesDetails);

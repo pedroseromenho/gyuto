@@ -8,7 +8,7 @@ import ToggleBox from "../toggleBox/ToggleBox";
 import ToggleBoxChild from "../toggleBox/ToggleBoxChild";
 import Media from "react-media";
 
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 
 class PageInfo extends Component {
@@ -152,4 +152,4 @@ class PageInfo extends Component {
   }
 }
 
-export default translate('common')(PageInfo);
+export default withNamespaces('common')(PageInfo);

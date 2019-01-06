@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { NavLink } from "react-router-dom";
 import { Helmet } from 'react-helmet';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 class NoMatch extends Component {
     render() {
@@ -23,4 +23,4 @@ class NoMatch extends Component {
     }
 }
 
-export default translate('common')(NoMatch);
+export default withNamespaces('common')(NoMatch);
