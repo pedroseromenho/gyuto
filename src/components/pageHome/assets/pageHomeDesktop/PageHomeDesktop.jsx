@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import { Col, Row } from "react-flexbox-grid";
 import Mandala from "../mandala/Mandala";
 import MandalaHoverLegend from "../madalaHoverLegend/MandalaHoverLegend";
@@ -100,10 +100,10 @@ class PageHomeDesktop extends Component {
     render() {
         return (
             <Fragment>
-                <Helmet>
+                {/* <Helmet>
                     <title>Gyütö</title>
                     <style>{' html{background-color: black;} body{ background-color: black; max-height: 100vh} a.itemsColor{color: #f5f5f5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .light{mix-blend-mode: exclusion} .light-inner{background: #f5f5f5 !important} li:nth-child(2)::before{color: #f5f5f5} .containerFooter{background-color: transparent} .menu li:last-child:after{background-image: url("./assets/images/chevron-down-solid-white.svg")}  .light, .shadow, .lightclick{ display: none !important} .select{color: #f5f5f5; font-weight: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}'}</style>
-                </Helmet>
+                </Helmet> */}
                 <Fragment>
                     <Row>
                         <Media query="(min-width: 1111px)" render={() => (

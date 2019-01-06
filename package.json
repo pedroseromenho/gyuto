@@ -5,9 +5,7 @@
   "homepage": "https://pedroseromenho.github.io/gyuto",
   "dependencies": {
     "@u-wave/react-vimeo": "^0.5.0",
-    "auditjs": "^3.0.10",
     "bulma": "^0.7.2",
-    "gh-pages": "^2.0.1",
     "gsap": "^2.0.2",
     "i18next": "^13.0.0",
     "i18next-browser-languagedetector": "^2.2.4",
@@ -21,7 +19,8 @@
     "react-router-page-transition": "^3.1.0",
     "react-scripts": "2.0.5",
     "react-transition-group": "^2.5.0",
-    "rodal": "^1.6.3"
+    "rodal": "^1.6.3",
+    "yarn": "^1.12.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,6 +40,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "file-loader": "^3.0.1",
     "node-sass": "^4.9.4",
     "sass-loader": "^7.1.0"
   }

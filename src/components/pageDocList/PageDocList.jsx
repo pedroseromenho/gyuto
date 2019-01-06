@@ -3,7 +3,7 @@ import { videos } from "../data";
 import { Col } from "react-flexbox-grid";
 import DocList from "./assets/DocList/DocList";
 import Preview from "./assets/Preview/Preview";
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 
 import { translate } from 'react-i18next';
 class PageDoclist extends Component {
@@ -35,10 +35,10 @@ class PageDoclist extends Component {
 
     return (
       <Fragment>
-        <Helmet>
+        {/* <Helmet>
           <title>{this.props.t('nav.doclist')}</title>
           <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
-        </Helmet>
+        </Helmet> */}
         <div className="docListPageContainer">
           <div className="docListContainer">
             {listVideos}

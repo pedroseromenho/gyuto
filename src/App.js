@@ -14,7 +14,7 @@ import PageEventDetails from "./components/pageEventDetails/PageEventDetails";
 import PageImagesDetails from "./components/pageImagesDetails/PageImagesDetails";
 import ModalPlayVideo from "./components/modalPlayVideo/ModalPlayVideo";
 import ModalPlayVideoIntroduction from "./components/modalPlayVideo/ModalPlayVideoIntroduction";
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import NoMatch from "./components/noMatch/NoMatch";
 import { withNamespaces } from 'react-i18next';
 
@@ -98,7 +98,7 @@ class App extends Component {
           <Footer onOpenModal={this.onOpenModal.bind(this)} />
 
         </Grid>
-        {this.state.visible &&
+        {/* {this.state.visible &&
           <Helmet>
             <style>{'.light, .shadow, .lightclick, .cursor {display: none}'}</style>
           </Helmet>
@@ -107,7 +107,7 @@ class App extends Component {
           <Helmet>
             <style>{'.light, .shadow, .lightclick, .cursor {display: none}'}</style>
           </Helmet>
-        }
+        } */}
       </div>
     );
   }

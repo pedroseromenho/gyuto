@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { images } from "../data";
 import { Row, Col } from "react-flexbox-grid";
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import Media from "react-media";
 import { NavLink } from "react-router-dom";
 
@@ -54,10 +54,10 @@ class PageImagesDetails extends Component {
         if (images[id]) {
             return (
                 <Fragment>
-                    <Helmet>
+                    {/* <Helmet>
                         <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
                         <title>{this.props.t('nav.images')}</title>
-                    </Helmet>
+                    </Helmet> */}
                     <Media query="(max-width: 769px)" render={() => (
                         <Row>
                             <Col xs={12} sm={12} md={12} lg={12}>
@@ -107,10 +107,10 @@ class PageImagesDetails extends Component {
         } else {
             return (
                 <Fragment>
-                    <Helmet>
+                    {/* <Helmet>
                         <style>{'body { background-color: #f5f5f5 !important; } a.itemsColor{color: black} .cursor{display:none}'}</style>
                         <title>{this.props.t('nav.images')}</title>
-                    </Helmet>
+                    </Helmet> */}
                     <div className="pageNotFoundCtr">
                         <p>{this.props.t('nav.notFound')}</p>
                         <p><NavLink to={"/images"} className="snapCursor js-click" data-snap-scale="3.5">

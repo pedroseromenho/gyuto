@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import Vimeo from '@u-wave/react-vimeo';
 import { introduction } from "../../../data.js";
 import { Col, Row } from "react-flexbox-grid";
@@ -9,10 +9,10 @@ class PageHomeMobile extends Component {
     render() {
         return (
             <Fragment>
-                <Helmet>
+                {/* <Helmet>
                     <title>Gyütö</title>
                     <style>{'body { background-color: #f5f5f5; } a.itemsColor{color: black}'}</style>
-                </Helmet>
+                </Helmet> */}
                 <Row>
                     <Col xs={12} sm={12} md={0} lg={0} key={introduction.id} className="containerMobile">
                         <Vimeo
