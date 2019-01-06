@@ -264,30 +264,30 @@ export const videos = [{
 ];
 
 export const events = [{
-    // id: "0",
-    // title: "Festival Cinéma du Réel",
-    // date: {
-    //     start: "10-09-2018",
-    //     end: "11-09-2018",
-    // },
-    // hour: {
-    //     start: "18h00",
-    //     end: "19h00",
-    // },
-    // adress: {
-    //     place: "Cinema Galeries",
-    //     number: "50",
-    //     street: "rue Joseph Claes",
-    //     zipcode: "1060",
-    //     city: "Brussels",
-    //     country: "Belgium"
-    // },
-    // description: {
-    //     fr: "Search for the keywords to learn more about each warning.",
-    //     en: "Search for the keywords to learn more about each warning."
-    // },
-    // image: "https://picsum.photos/800/600?random",
-    // url: "https://pedroseromenho.com/"
+    id: "0",
+    title: "Festival Cinéma du Réel",
+    date: {
+        start: "10-09-2018",
+        end: "11-09-2018",
+    },
+    hour: {
+        start: "18h00",
+        end: "19h00",
+    },
+    adress: {
+        place: "Cinema Galeries",
+        number: "50",
+        street: "rue Joseph Claes",
+        zipcode: "1060",
+        city: "Brussels",
+        country: "Belgium"
+    },
+    description: {
+        fr: "Search for the keywords to learn more about each warning.",
+        en: "Search for the keywords to learn more about each warning."
+    },
+    image: "https://picsum.photos/800/600?random",
+    url: "https://pedroseromenho.com/"
 }];
 
 export const images = [
