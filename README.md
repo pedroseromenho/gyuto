@@ -1,10 +1,10 @@
 # Gyuto
 ### Web app for a film documentary by Filipa Cardoso.
-![img](http://www.gyuto-movie.com/images/synopsis-image.jpg)
+![img](assets/front-end/1.JPG)
 
 > « To hear the sound of the ocean in the Himalayas… This unlikely wish takes a film director and her three curious girls to Gyuto, a Tibetan Buddhist monastery echoing day and night the sacred tantric chants of meditation, which the monks say, “sound like the waves of the ocean" » 
 
-[Site Web V1](http://gyuto-movie.com/)
+[VOIR SITE V1](http://gyuto-movie.com/)
 
 ## TODO v2
 1. **Création d'une plateforme d'admin du site + base de données.** [VOIR MOCKUP BACKEND](assets/back-end/wire_frames-backend.pdf). La première version du backend a été réalisé par Liliane Mamane en Laravel, mais pas terminé. Au choix de continuer son travail ou de refaire dans un autre stack.
