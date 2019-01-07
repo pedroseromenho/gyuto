@@ -19,7 +19,7 @@ class PageHomeDesktop extends Component {
             playedIntroduction: false
         }
 
-        this.url = "./assets/son/musicPageHome.wav";
+        this.url = "../assets/son/musicPageHome.wav";
         this.audio = new Audio(this.url);
     }
 

@@ -41,7 +41,6 @@ class PageImages extends Component {
       }
     })
 
-
     return (
       <Fragment>
         <Row className="imagesRow">{listGaleries}</Row>

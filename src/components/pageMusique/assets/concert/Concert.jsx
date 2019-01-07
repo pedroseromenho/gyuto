@@ -7,7 +7,8 @@ class Concert extends Component {
     render() {
         return (
             <Fragment>
-                <h3>{this.props.t('musicPage.concert')}</h3>
+                <h3>&nbsp;</h3>
+                {/* <h3>{this.props.t('musicPage.concert')}</h3> */}
                 <div className="containerVideoConcert">
                     <Vimeo video={this.props.musicObject.video.url.fr} className="video" volume={1} showPortrait={false} showTitle={false} showByline={false} />
                 </div>

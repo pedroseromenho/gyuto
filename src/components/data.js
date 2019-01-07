@@ -7,7 +7,7 @@ export const admin = {
 
 export const introduction = {
     id: 0,
-    url: "https://player.vimeo.com/video/208166794",
+    url: "https://player.vimeo.com/video/292753847",
     gif: "https://picsum.photos/800/500?random",
     quote: {
         fr: "“Le son de l’océan dans l’Himalaya”",
@@ -260,6 +260,116 @@ export const videos = [{
     },
     gif: "./data/video/Transmission.png",
     duration: "4'40"
+},
+{
+    id: "12",
+    title: {
+        fr: "Dkhyil-khor",
+        en: ""
+    },
+    category: "testimonials",
+    quote: {
+        fr: "Mandala se dit dkhyil-khor,ce qui signifie prendre l'essence ... l'initiation consiste à s'identifier à la déité principale du mandala",
+        en: ""
+    },
+    legend: {
+        fr: "interview du vice-abbé",
+        en: ""
+    },
+    url: {
+        fr: "https://player.vimeo.com/video/280975092",
+        en: ""
+    },
+    gif: "./data/video/Dkhyil-khor.png",
+    duration: "5'44"
+},
+{
+    id: "13",
+    title: {
+        fr: "Ultimate happiness 3/5",
+        en: ""
+    },
+    category: "testimonials",
+    quote: {
+        fr: "Quand le Bouddha Shakyamuni a enseigné les principes tantriques, il a choisi ses disciples les plus intelligents, ceux qui seraient capables de comprendre...Ces enseignements étaient secrets",
+        en: ""
+    },
+    legend: {
+        fr: "interview du guéshé Lobsang Yongden",
+        en: ""
+    },
+    url: {
+        fr: "https://player.vimeo.com/video/291471439",
+        en: ""
+    },
+    gif: "./data/video/Ultimate-happiness-3-5.png",
+    duration: "2'18"
+},
+{
+    id: "14",
+    title: {
+        fr: "Ultimate happiness 4/5",
+        en: ""
+    },
+    category: "testimonials",
+    quote: {
+        fr: "...j'ai passé 22 ans à débattre...la moitié de ma vie ! ",
+        en: ""
+    },
+    legend: {
+        fr: "interview du guéshé Lobsang Yongden",
+        en: ""
+    },
+    url: {
+        fr: "https://player.vimeo.com/video/291479699",
+        en: ""
+    },
+    gif: "./data/video/Ultimate-happiness-4-5.png",
+    duration: "4'48"
+},
+{
+    id: "15",
+    title: {
+        fr: "Becoming Buddha 1/8",
+        en: ""
+    },
+    category: "testimonials",
+    quote: {
+        fr: "When we were in this chinese bus, they didn't know that we were actually escaping ! …",
+        en: ""
+    },
+    legend: {
+        fr: "interview du gueshe Lobsang Tinhal",
+        en: ""
+    },
+    url: {
+        fr: "https://player.vimeo.com/video/293353056",
+        en: ""
+    },
+    gif: "./data/video/Becoming-Buddha-1-8.png",
+    duration: "3'12"
+},
+{
+    id: "16",
+    title: {
+        fr: "Becoming Buddha 5/8",
+        en: ""
+    },
+    category: "testimonials",
+    quote: {
+        fr: "Quand on construit un mandala, il nous laisse son empreinte ... on visualise Bouddha, et on devient Bouddha, le mandala c'est comme notre maison, la maison de Bouddha, donc un jour on deviendra peut-être un vrai bouddha",
+        en: ""
+    },
+    legend: {
+        fr: "gueshe lobsang tinhal",
+        en: ""
+    },
+    url: {
+        fr: "https://player.vimeo.com/video/293607299",
+        en: ""
+    },
+    gif: "./data/video/Becoming-Buddha-5-8.png",
+    duration: "3'08"
 },
 ];
 
@@ -2503,7 +2613,7 @@ export const info = [
                 },
                 text: {
                     fr:
-                        "Ce film est dédié à toutes les personnes victimes de torture et de sévices. Nous témoignons notre profonde reconnaissance à celles et ceux qui nous ont permis de réaliser ce film, patients et thérapeutes qui se retrouvent ou non dans le film.",
+                        "",
                     en:
                         ""
                 },
@@ -2524,7 +2634,7 @@ export const info = [
                 id: "1",
                 text: {
                     fr:
-                        "Nous tenons plus particulièrement à remercier Les centres Appartenances de Lausanne, Genève, Vevey et Yverdon (Suisse) Françoise Sironi, Les cabinets Dr. Mona Cserveny et Dr. Jean-Claude Métraux (Lausanne)",
+                        "Images: Filipa Cardoso",
                     en:
                         ""
                 }
@@ -2533,7 +2643,7 @@ export const info = [
                 id: "2",
                 text: {
                     fr:
-                        "Les centres Exil et D'ici et d'ailleurs (Bruxelles), N. S. et la famille B. (Klučj / Bosnie-Herzégovine), Zojka Bubloz, Mr. Tony Kranh (Directeur par intérim de l’administration des Chambres Extraordinaires au sein des Tribunaux Cambodgiens), Sovannarom Dim (porte-parole des Chambres Extraordinaires au sein des Tribunaux Cambodgiens)",
+                        "Son: Bo Van der Werf",
                     en:
                         ""
                 }
@@ -2542,7 +2652,7 @@ export const info = [
                 id: "3",
                 text: {
                     fr:
-                        "Réalisation: Vincent Detours et Dominique Henry",
+                        "Front-end Development: Baptiste Firket, Pedro Seromenho & Geoffrey Poelmans",
                     en:
                         ""
                 }
@@ -2551,7 +2661,7 @@ export const info = [
                 id: "4",
                 text: {
                     fr:
-                        "Image: Dominique Henry",
+                        "Back-end Development: Liliane Mamane",
                     en:
                         ""
                 }
@@ -2560,7 +2670,7 @@ export const info = [
                 id: "5",
                 text: {
                     fr:
-                        "Image: Dominique Henry",
+                        "Mandala Development: Geoffrey Poelmans",
                     en:
                         ""
                 }
@@ -2569,7 +2679,7 @@ export const info = [
                 id: "6",
                 text: {
                     fr:
-                        "Son: Marc Von Stürler, Vincent Detours",
+                        "UX/UI Design: Pedro Seromenho",
                     en:
                         ""
                 }
@@ -2578,7 +2688,7 @@ export const info = [
                 id: "7",
                 text: {
                     fr:
-                        "Montage image: Luc Plantier",
+                        "Typeface: Begum, designed by Manushi Parikh, Indian Type Foudry",
                     en:
                         ""
                 }
@@ -2587,7 +2697,7 @@ export const info = [
                 id: "8",
                 text: {
                     fr:
-                        "Montage son: Pascale Schaer",
+                        "Illustrations: Mandala designed by Firma 103 & Shrivatsa designed by Alexandre Plennevaux",
                     en:
                         ""
                 }
@@ -2596,103 +2706,13 @@ export const info = [
                 id: "9",
                 text: {
                     fr:
-                        "Mixage / Etalonnage",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "10",
-                text: {
-                    fr:
-                        "Stagiaire réalisation: Turat Bektenov",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "11",
-                text: {
-                    fr:
-                        "Transcriptions: Nathalie Pimpurniaux, Catherine Montondo,Dominique Henry, Philippe Cotte",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "12",
-                text: {
-                    fr:
-                        "Télétitrage / Traductions: Catherine Montondo",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "13",
-                text: {
-                    fr:
-                        "Front-end Development: Baptiste Firket, Pedro Seromenho & Geoffrey Poelmans",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "14",
-                text: {
-                    fr:
-                        "Back-end Development: Liliane Mamane",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "15",
-                text: {
-                    fr:
-                        "Mandala Development: Geoffrey Poelmans",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "16",
-                text: {
-                    fr:
-                        "UX/UI Design: Pedro Seromenho",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "17",
-                text: {
-                    fr:
-                        "Typeface: Begum, designed by Manushi Parikh, Indian Type Foudry",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "18",
-                text: {
-                    fr:
-                        "Illustrations: Mandala designed by Firma 103 & Shrivatsa designed by Alexandre Plennevaux",
-                    en:
-                        ""
-                }
-            },
-            {
-                id: "19",
-                text: {
-                    fr:
                         "Technologies: React, Laravel, GSAP, JQuery",
                     en:
                         ""
                 }
             },
             {
-                id: "20",
+                id: "10",
                 text: {
                     fr:
                         "Projet created at BeCode coding school. Thanks to Bertrand Marlair for his precious help with React Environment.",
