@@ -9,6 +9,7 @@
 
 
 
+
 ## TODO v2
 1. **Création d'une plateforme d'admin du site + base de données.** [VOIR MOCKUP BACKEND](assets/back-end/wire_frames-backend.pdf). La première version du backend a été réalisé par Liliane Mamane en Laravel, mais pas terminé. Au choix de continuer son travail ou de refaire dans un autre stack.
 
