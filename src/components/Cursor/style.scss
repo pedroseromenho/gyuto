@@ -1,0 +1,24 @@
+@import "~styles/config";
+
+.cursor {
+    pointer-events: none;
+    .cursor__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      circle {
+        fill: $color-light;
+      }
+  }
+  .cursor__ball--big{
+    mix-blend-mode: difference;
+  }
+    .cursor__ball--small circle {
+      fill: $color-cursor;
+    }
+  }
+
+  .videoOpen{
+    cursor: initial;
+  }

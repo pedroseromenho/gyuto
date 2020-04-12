@@ -1,0 +1,33 @@
+@import "~styles/config";
+
+.container{
+    padding: 15px;
+    padding-bottom: 0px;
+    @media screen and (min-width: $max-720) {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        @media screen and (min-width: 1500px) {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+    }
+    main{
+        margin-top: 45px;
+        @media screen and (min-width: 1500px) {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

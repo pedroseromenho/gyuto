@@ -1,76 +1,68 @@
-# Gyuto
-### Web app for a film documentary by Filipa Cardoso.
-![img](assets/front-end/1.JPG)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> « To hear the sound of the ocean in the Himalayas… This unlikely wish takes a film director and her three curious girls to Gyuto, a Tibetan Buddhist monastery echoing day and night the sacred tantric chants of meditation, which the monks say, “sound like the waves of the ocean" » 
+## Available Scripts
 
+In the project directory, you can run:
 
-[VOIR LE SITE](http://gyuto-movie.com/)
+### `yarn start`
 
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
+### `yarn test`
 
-## TODO v2
-1. **Création d'une plateforme d'admin du site + base de données.** [VOIR MOCKUP BACKEND](assets/back-end/wire_frames-backend.pdf). La première version du backend a été réalisé par Liliane Mamane en Laravel, mais pas terminé. Au choix de continuer son travail ou de refaire dans un autre stack.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. **Fetch data dans l'ensemble des composants react où le fichier `data.js` est importé.** Faire appel au json généré par le backend (fr / en) dans le `componentDidMount` de ces mêmes composants.
+### `yarn build`
 
-1. **Switcher les langues du site.** Le switch des langues a été réalisé pour les navigations grâce à la librarie `i18next`. Avec cette même librarie faudrait appeler les json (fr / en) dans le `fetch` pour afficher les données dans le bon langage. Le switch des langues se trouve dans le composant `Navigation.jsx` (components/navBar/assets/Navigation.jsx), désactivé, en mode commentaires.
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-***Pour continuer le projet, faudrait merger la branche master avec votre nouvelle branche.***
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-## Ressources
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- [Mockup Back-end](assets/back-end/wire_frames-backend.pdf)
-- [Data.js](assets/back-end/data.js)
-- [Back-end Laravel](https://github.com/lilianem/gyuto)
-- [Base de données SQL](assets/back-end/gyuto.sql)
+### `yarn eject`
 
-## Architecture
-![architecture](assets/front-end/architecture.png)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Mockup
-![desktop](assets/front-end/desktop.png)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Config
-- NPM version 6.4
-- PHP version 7.2
-- LARAVEL 5.6
-- SASS
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Crédits Developpement v1
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- **Front-end Development:** 
-[Baptiste Firket](https://github.com/baptistefkt), [Pedro Seromenho](https://pedroseromenho.com/) & [Geoffrey Poelmans](https://github.com/geoffrey-poelmans)
+## Learn More
 
-- **Back-end Development:**
-[Liliane Mamane](https://github.com/lilama)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- **Mandala Development:**
-[Geoffrey Poelmans](https://github.com/geoffrey-poelmans)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- **UX/UI Design:**
-[Pedro Seromenho](https://pedroseromenho.com/)
+### Code Splitting
 
-## Crédits Généraux
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-- **Typeface:** 
-Begum, designed by Manushi Parikh, [Indian Type Foudry](https://www.indiantypefoundry.com/)
+### Analyzing the Bundle Size
 
-- **Illustrations:** 
-Mandala designed by [Firma 103](https://www.103.be/) 
-& Shrivatsa designed by [Alexandre Plennevaux](https://pixeline.be/)
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-- **Technologies:**
-React, Laravel, GSAP, JQuery
+### Making a Progressive Web App
 
-Projet created at [Becode coding school](https://becode.org).
-Thanks to Bertrand Marlair for his help with React Environment.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
+### Advanced Configuration
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-##### With :heart: from us, at [becode]() oct-nov 2018.
+### Deployment
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
+### `yarn build` fails to minify
 
-
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

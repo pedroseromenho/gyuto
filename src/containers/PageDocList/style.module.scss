@@ -1,0 +1,28 @@
+@import "~styles/config";
+
+.container{
+    @include flex-row;
+    &__wrapper{
+        flex: 1;
+        position: relative;
+        margin: 0 auto;
+        &__list{
+            @include fit;
+            height: 100%;
+            overflow-y: scroll;
+            &__item{
+                border-bottom: 1px solid $color-light;
+                &__wrapper{
+                    @include flex-row;
+                    justify-content: space-between;
+                    h3{
+    
+                    }
+                }
+            }
+        }
+    }
+    &__preview{
+        flex: 1;
+    }
+}

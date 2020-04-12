@@ -1,0 +1,25 @@
+@import "~styles/config";
+
+.container{
+    @include flex-row;
+    justify-content: space-between;
+    padding: 15px;
+    @media screen and (min-width: 1500px) {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    &__background {
+        @media screen and (min-width: $max-720) {
+            background-color: $color-dark;
+        }
+    }
+    ul{
+        li{
+            margin-right: 10px;
+            font-size: $font-size-min;
+            svg{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

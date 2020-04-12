@@ -1,0 +1,41 @@
+
+@import "~styles/config";
+
+#mandala-container {
+    @include flex-row;
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 50%;
+    @media screen and (max-height: 600px) {
+        width: 400px;
+        height: 400px;
+    }
+    @media screen and (min-width: 1500px) {
+        width: 700px;
+        height: 700px;
+    }
+    @media screen and (min-width: 1600px) {
+        width: 800px;
+        height: 800px;
+    }
+    .mandala {
+        background-color: transparent;
+        width: 550px;
+        height: 550px;
+        @media screen and (max-height: 600px) {
+            width: 400px;
+            height: 400px;
+        }
+        @media screen and (min-width: 1500px) {
+            width: 650px;
+            height: 650px;
+        }
+
+        @media screen and (min-width: 1650px) {
+            width: 700px;
+            height: 700px;
+        }
+    }
+}

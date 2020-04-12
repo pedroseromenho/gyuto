@@ -1,0 +1,66 @@
+@-ms-viewport {
+    width: device-width;
+  }
+  
+  @-o-viewport {
+    width: device-width;
+  }
+  
+  @viewport {
+    width: device-width;
+  }
+  
+  html,
+  body {
+    min-height: 100vh;
+    background: $color-dark;
+    color: $color-light;
+    cursor: none;
+  }
+  
+  html {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    position: relative;
+    margin: 0;
+    font-family: $regular;
+    counter-reset: heading-counter;
+    text-size-adjust: 100%;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a{
+    text-decoration: none;
+    color: $color-dark;
+  }
+
+  button{
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: $font-size;
+    text-transform: uppercase;
+    font-family: $regular;
+}
+
+ul{
+  @include reset-ul;
+}

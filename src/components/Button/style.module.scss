@@ -1,0 +1,17 @@
+@import "~styles/config";
+
+.container{
+    color: $color-light;
+    border: 1px solid $color-light;
+    padding: 6px 10px;
+    background: transparent;
+    font-size: 0.8rem;
+    text-transform: inherit;
+    cursor: pointer;
+    &:hover{
+        background-color: $color-light;
+        opacity: 0.8;
+        transition: background-color 0.2s ease-in;
+        color: $color-dark;
+    }
+}
