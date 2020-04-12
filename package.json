@@ -20,7 +20,7 @@
     "react-scripts": "2.0.5",
     "react-transition-group": "^2.5.0",
     "rodal": "^1.6.3",
-    "yarn": "^1.12.3"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
