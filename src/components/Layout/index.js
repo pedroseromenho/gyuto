@@ -25,12 +25,12 @@ const Layout = ({
   }, [video]);
 
   return(
-    <>
+    <div className={s.container}>
       <Media queries={{
         small: "(max-width: 719px)"
       }}>
         {matches => (
-          <div className={s.container}>
+          <>
             <header>{header}</header>
             <main>{main}</main>
             <footer>{footer}</footer>
@@ -40,10 +40,10 @@ const Layout = ({
             {video === null && !matches.small && (
               <Cursor />
             )}
-          </div>
+          </>
         )}
       </Media>
-    </>
+    </div>
   )}
 
 Layout.propTypes = {

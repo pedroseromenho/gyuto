@@ -25,29 +25,33 @@
             padding-right: 5px;
             @include scroll-bar-default;
             &__item{
+                &__info{
+                    @include flex-row;
+                    justify-content: space-between;
+                    &:first-child,
+                    &:last-child{
+                        align-items: baseline; 
+                    }
+                    h3{
+                        font-size: 1.4rem;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
                 &:not(:last-child){
                     border-bottom: 1px solid $color-light;
                 }
                 &:first-child{
-                    &__wrapper{
-                        align-items: baseline;
-                        h3{
-                            margin-top: 0;
-                        }
+                    h3{
+                        margin-top: 0;
                     }
                 }
                 &:last-child{
-                    &__wrapper{
-                        align-items: baseline;
-                        h3{
-                            margin-bottom: 0;
-                        }
+                    h3{
+                        margin-bottom: 0;
                     }
                 }
-                &__info{
-                    @include flex-row;
-                    justify-content: space-between;
-                }
+
             }
         }
     }
