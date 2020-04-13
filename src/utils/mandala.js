@@ -34,3 +34,20 @@ export function onClickPoint(callbackCoords, el) {
   }
   callbackCoords(currentCoords, prevCoords);
 }
+
+export function setLsCoords (coords, x, y){
+  localStorage.setItem("coords", JSON.stringify(coords));
+  localStorage.setItem("lastCoordX", x);
+  localStorage.setItem("lastCoordY", y);
+}
+
+
+export function drawLine(currentCx, currentCy, x1, y1, x2, y2, prevCx, prevCy, setLs = false){
+  if(setLs){
+    return (
+      `<circle style='pointer-events: none' fill='red' cx="${currentCx}" cy="${currentCy}" r='0.95' />`
+          + `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" style='stroke:red; stroke-width:0.6;'/>`
+          + `<circle style='pointer-events: none' fill='red' cx="${prevCx}" cy="${prevCy}" r='0.95' /> `
+    )
+  } return `<circle style='pointer-events: none' fill='red' cx="${currentCx}" cy="${currentCy}" r='0.95' />`
+}
