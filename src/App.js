@@ -21,6 +21,8 @@ class App extends Component {
       video: null,
       playIntro: false,
     }
+    this.openModalVideo = this.openModalVideo.bind(this)
+    this.closeModalVideo = this.closeModalVideo.bind(this)
   }
 
   componentDidMount(){
@@ -62,18 +64,22 @@ class App extends Component {
             <Switch>
               <Route exact path="/" render={(props) =>
                 <PageHome {...props}
-                  openModalVideo={this.openModalVideo.bind(this)}
+                  openModalVideo={this.openModalVideo}
                 />}
               />
               <Route path="/info" component={PageInfo}/>
               <Route path="/images" component={PageImages}/>
               <Route path="/music" component={PageMusic}/>
-              <Route path="/doclist" component={PageDocList}/>
+              <Route path="/doclist" render={(props) => 
+                <PageDocList {...props}
+                  openModalVideo={this.openModalVideo}
+                />
+              }/>
               <Route path="/credits" component={PageCredits}/>
             </Switch>
           )}
           footer={<Footer/>}
-          closeModalVideo={this.closeModalVideo.bind(this)}
+          closeModalVideo={this.closeModalVideo}
           video={video}
           playIntro={playIntro}
         />

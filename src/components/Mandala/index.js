@@ -13,11 +13,13 @@ class Mandala extends Component {
     this.state = {
       userCoords: [],
     };
+    this.handleMandala = this.handleMandala.bind(this)
+    this.getCoords = this.getCoords.bind(this)
   }
 
   componentDidMount(){
     const { videos } = this.props;
-    mandala(this.handleMandala.bind(this), videos);
+    mandala(this.handleMandala, videos);
 
     const lsCoords = localStorage.getItem("coords");
     lsCoords && this.setState({
@@ -67,7 +69,7 @@ class Mandala extends Component {
     const {getSelectedId, getSelectedVideo, videos} = this.props;
     getSelectedId(id);
     if (event === "click") {
-      onClickPoint(this.getCoords.bind(this), coords);
+      onClickPoint(this.getCoords, coords);
       getSelectedVideo(videos[id]);
     }
   }
