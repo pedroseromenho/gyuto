@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Media from 'react-media';
 import Nav from '../Nav';
 import { FiMenu, FiX } from "react-icons/fi";
+import { routes } from "../../utils/routes";
 import s from './style.module.scss';
 
 const Header = ({ history, location }) => {
@@ -30,23 +31,6 @@ const Header = ({ history, location }) => {
     )
   }
 
-  const getPageTitle = () => {
-    switch(location.pathname){
-    case '/info':
-      return t('info');
-    case '/music':
-      return t('music');
-    case '/images':
-      return t('images');
-    case '/doclist':
-      return t('docList');
-    case '/credits':
-      return t('credits');
-    default:
-      return null;
-    }
-  }
-
   return(
     <div 
       className={classNames(
@@ -64,7 +48,11 @@ const Header = ({ history, location }) => {
           {t('title')}
         </h1>
         {location.pathname !== '/' && (
-          <h2>{getPageTitle()}</h2>
+          <h2>
+            {routes(t)
+              .filter(i => i.pathname === location.pathname)
+              .map(i => i.name)}
+          </h2>
         )}
       </div>
       <Media queries={{
@@ -77,9 +65,9 @@ const Header = ({ history, location }) => {
                 <MenuBurger/>
               )
               : <Nav />}
-            {openMenu && matches.small && (
-              <Nav isMobile closeMenu={() => setOpenMenu(false)}/>
-            )}
+            {(openMenu && matches.small && (
+              <Nav closeMenu={() => setOpenMenu(false)}/>
+            ))}
           </>
         )}
       </Media>
