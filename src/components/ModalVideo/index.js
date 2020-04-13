@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import YouTube from 'react-youtube';
-import Button from "../Button"
-import s from './style.module.scss';
 import { FiX } from 'react-icons/fi';
+
+import Button from "components/Button";
+
+import s from './style.module.scss';
 
 const ModalVideo = ({link, close, playIntro}) => {
   const { t } = useTranslation('common');
@@ -14,7 +16,6 @@ const ModalVideo = ({link, close, playIntro}) => {
       autoplay: 1,
       rel: 0,
       showinfo: 0,
-      ecver: 2,
       mute: playIntro ? 1 : 0,
     },
   };

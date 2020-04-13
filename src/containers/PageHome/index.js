@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import Media from 'react-media';
-import Mandala from '../../components/Mandala';
-import {videos} from '../../data/videos';
+import { videos } from 'data/videos';
+
+import Mandala from 'components/Mandala';
+
 import s from './style.module.scss';
 
 class PageHome extends Component {

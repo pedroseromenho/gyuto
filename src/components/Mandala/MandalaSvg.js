@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */ // eslint-disable-line
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+
 import './style.scss';
 
 const MandalaSvg = ({ coords }) => {

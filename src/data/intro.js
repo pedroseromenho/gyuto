@@ -1,7 +1,7 @@
 export const intro = {
   id: 0,
   url: "gKaFVqp_dVY",
-  gif: "",
+  img: "",
   quote: {
     fr: "Le son de la grande montagne qui craque. Le son des vagues dans l'océan",
     en: "The sound of the big mountain cracking, the sound of the waves in the ocean"

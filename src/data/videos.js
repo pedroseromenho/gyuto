@@ -107,8 +107,8 @@ export const videos = [
   {
     id: "5",
     title: {
-      fr: "Ant without shadow",
-      en: "Fourmi sans ombre"
+      fr: "Fourmi sans ombre",
+      en: "Ant without shadow",
     },
     quote: {
       fr: "...dissolution is inherent to all forms,...",

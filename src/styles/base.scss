@@ -12,10 +12,15 @@
   
   html,
   body {
-    min-height: 100vh;
     background: $color-dark;
     color: $color-light;
     cursor: none;
+    min-height: 100vh;
+    height: 100%;
+    @media screen and (min-width: $max-720) {
+      max-height: 100vh;
+      overflow: hidden;
+    }
   }
   
   html {

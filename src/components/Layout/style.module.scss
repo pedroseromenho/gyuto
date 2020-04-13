@@ -3,10 +3,7 @@
 .container{
     padding: 15px;
     padding-bottom: 0px;
-    @media screen and (min-width: $max-720) {
-        max-height: 100vh;
-        overflow: hidden;
-    }
+    height: 100%;
     header{
         position: fixed;
         top: 0;
@@ -18,7 +15,9 @@
         }
     }
     main{
-        margin-top: 45px;
+        height: 100%;
+        padding-top: 45px;
+        padding-bottom: 45px;
         @media screen and (min-width: 1500px) {
             padding-left: 2%;
             padding-right: 2%;

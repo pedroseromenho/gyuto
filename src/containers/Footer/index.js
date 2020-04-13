@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
-import classNames from 'classnames';
-import Lang from '../Lang';
-import Media from 'react-media';
 import { useTranslation } from 'react-i18next';
-import ListItem from '../../components/ListItem';
+import classNames from 'classnames';
 import { FaFacebook } from "react-icons/fa";
-import { routes } from "../../utils/routes";
+import { routes } from "utils/routes";
+import Media from 'react-media';
+
+import Lang from 'components/Lang';
+import ListItem from 'components/ListItem';
+
 import s from './style.module.scss';
 
 const Footer = ({location, history}) => {

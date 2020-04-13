@@ -2,27 +2,78 @@
 
 .container{
     @include flex-row;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     &__wrapper{
         flex: 1;
         position: relative;
         margin: 0 auto;
+        height: 100%;
+        padding-right: 10px;
+        &:hover 
+        &__scrollBar{
+            @include scroll-bar-display;
+        }
+        &__scrollBar{
+            @include scroll-bar;
+        }
         &__list{
             @include fit;
             height: 100%;
             overflow-y: scroll;
+            padding-right: 5px;
+            @include scroll-bar-default;
             &__item{
-                border-bottom: 1px solid $color-light;
-                &__wrapper{
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-light;
+                }
+                &:first-child{
+                    &__wrapper{
+                        align-items: baseline;
+                        h3{
+                            margin-top: 0;
+                        }
+                    }
+                }
+                &:last-child{
+                    &__wrapper{
+                        align-items: baseline;
+                        h3{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &__info{
                     @include flex-row;
                     justify-content: space-between;
-                    h3{
-    
-                    }
                 }
             }
         }
     }
     &__preview{
         flex: 1;
+        display: flex;
+        align-self: baseline;
+        padding-left: 10px;
+        &__info{
+            width: 100%;
+            &__video{
+                @include video-responsive;
+                background-color: $color-gray;
+            }
+            &__img{
+                background-color: $color-gray;
+            }
+            &__text{
+                h5{
+                    font-size: $font-size;
+                    margin: 15px 0 10px 0;
+                }
+                p{
+                    font-size: $font-size-min;
+                }
+            }
+        }
     }
 }

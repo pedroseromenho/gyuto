@@ -4,9 +4,11 @@ import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
-import Nav from '../Nav';
 import { FiMenu, FiX } from "react-icons/fi";
-import { routes } from "../../utils/routes";
+import { routes } from "utils/routes";
+
+import Nav from 'containers/Nav';
+
 import s from './style.module.scss';
 
 const Header = ({ history, location }) => {

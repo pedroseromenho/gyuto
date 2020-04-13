@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
-import ModalVideo from '../ModalVideo';
+
+import ModalVideo from 'components/ModalVideo';
+import Cursor from 'components/Cursor';
+
 import s from './style.module.scss';
-import Cursor from '../Cursor';
 
 const Layout = ({
   header, 

@@ -2,9 +2,11 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
-import ListItem from '../../components/ListItem';
 import { useTranslation } from 'react-i18next';
-import { routes } from "../../utils/routes";
+import { routes } from "utils/routes";
+
+import ListItem from 'components/ListItem';
+
 import s from './style.module.scss';
 
 const Nav = ({ 
