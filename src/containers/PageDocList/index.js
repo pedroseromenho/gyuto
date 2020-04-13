@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import YouTube from 'react-youtube';
 import { useTranslation } from 'react-i18next';
 import { selectedLang } from 'utils/lang';
-import {videos} from 'data/videos';
-import {intro} from 'data/intro';
+import { videos } from 'data/videos';
+import { intro } from 'data/intro';
 
 import ListItem from 'components/ListItem';
 

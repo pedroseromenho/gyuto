@@ -34,11 +34,11 @@ const Layout = ({
             <header>{header}</header>
             <main>{main}</main>
             <footer>{footer}</footer>
-            {video && !matches.small && (
-              <ModalVideo link={video} close={closeModalVideo} playIntro={playIntro} />
+            {video !== null && !matches.small && (
+              <ModalVideo video={video} close={closeModalVideo} playIntro={playIntro} />
             )}
-            {!video && !matches.small && (
-              <Cursor isVideo={video}/>
+            {video === null && !matches.small && (
+              <Cursor />
             )}
           </div>
         )}

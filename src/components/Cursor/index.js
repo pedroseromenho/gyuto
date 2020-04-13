@@ -5,7 +5,7 @@ import TweenMax from 'gsap';
 
 import './style.scss';
 
-const Cursor = ({isVideo, location}) => {
+const Cursor = ({location}) => {
 
   useEffect(() => {
     let $bigBall = document.querySelector('.cursor__ball--big');
@@ -35,19 +35,20 @@ const Cursor = ({isVideo, location}) => {
         scale: 1
       });
     }
-    if(!isVideo){
-      document.body.addEventListener('mousemove', onMouseMove);
-      for (let i = 0; i < $hoverables.length; i++) {
-        $hoverables[i].addEventListener('mouseenter', onMouseHover);
-        $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-      }
-      document.body.addEventListener('mousemove', onMouseMove);
-      for (let j = 0; j < $homelinkhover.length; j++) {
-        $homelinkhover[j].addEventListener('mouseenter', onMouseHover);
-        $homelinkhover[j].addEventListener('mouseleave', onMouseHoverOut);
-      }
+    
+    document.body.addEventListener('mousemove', onMouseMove);
+    for (let i = 0; i < $hoverables.length; i++) {
+      $hoverables[i].addEventListener('mouseenter', onMouseHover);
+      $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
     }
-  }, [location.pathname, isVideo]);
+    document.body.addEventListener('mousemove', onMouseMove);
+    for (let j = 0; j < $homelinkhover.length; j++) {
+      $homelinkhover[j].addEventListener('mouseenter', onMouseHover);
+      $homelinkhover[j].addEventListener('mouseleave', onMouseHoverOut);
+    }
+
+  }, [location.pathname]);
+
   return(
     <div className="cursor">
       <div className="cursor__ball cursor__ball--big ">
@@ -64,12 +65,7 @@ const Cursor = ({isVideo, location}) => {
   )}
 
 Cursor.propTypes = {
-  isVideo: PropTypes.any,
   location: PropTypes.any.isRequired,
 };
-
-Cursor.defaultProps = {
-  video: null,
-}
 
 export default withRouter(Cursor);

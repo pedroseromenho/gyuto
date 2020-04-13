@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import { mandala, onClickPoint, setLsCoords, drawLine } from 'utils/mandala';
-import { selectedLang } from 'utils/lang';
 
 import MandalaSvg from './MandalaSvg';
 
@@ -65,11 +64,11 @@ class Mandala extends Component {
   }
 
   handleMandala(id, event, coords){
-    const {getSelectedId, getSelectedVideo, videos, i18n} = this.props;
+    const {getSelectedId, getSelectedVideo, videos} = this.props;
     getSelectedId(id);
     if (event === "click") {
       onClickPoint(this.getCoords.bind(this), coords);
-      getSelectedVideo(selectedLang(i18n, videos[id].url.en, videos[id].url.fr));
+      getSelectedVideo(videos[id]);
     }
   }
 

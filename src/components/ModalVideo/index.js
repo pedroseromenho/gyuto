@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import YouTube from 'react-youtube';
 import { FiX } from 'react-icons/fi';
+import { selectedLang } from 'utils/lang';
 
 import Button from "components/Button";
 
 import s from './style.module.scss';
 
-const ModalVideo = ({link, close, playIntro}) => {
-  const { t } = useTranslation('common');
+const ModalVideo = ({video, close, playIntro}) => {
+  const { t, i18n } = useTranslation('common');
 
   const opts = {
     playerVars: {
@@ -36,7 +37,10 @@ const ModalVideo = ({link, close, playIntro}) => {
       )}
       <div className={s.container__video}>
         <YouTube 
-          videoId={link} 
+          videoId={playIntro 
+            ? video.url 
+            : selectedLang(i18n, video.url.en, video.url.fr)
+          } 
           opts={opts}
           onEnd={() => close()}
         />
@@ -47,7 +51,7 @@ const ModalVideo = ({link, close, playIntro}) => {
 
 ModalVideo.propTypes = {
   close: PropTypes.func.isRequired,
-  link: PropTypes.string.isRequired,
+  video: PropTypes.object.isRequired,
   playIntro: PropTypes.bool.isRequired,
 };
 

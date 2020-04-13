@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 import Media from 'react-media';
 import { videos } from 'data/videos';
+import { selectedLang } from 'utils/lang';
 
 import Mandala from 'components/Mandala';
 
@@ -25,15 +26,15 @@ class PageHome extends Component {
     }
   }
 
-  getSelectedVideo(params) {
+  getSelectedVideo(video) {
     const { openModalVideo } = this.props;
-    openModalVideo(params);
+    openModalVideo(video);
   }
 
   render() {
     const { selectedId } = this.state;
     const { i18n } = this.props;
-    const isEnglish = (i18n.language === 'en');
+
     return (
       <div className={s.container}>
         <Media queries={{
@@ -48,9 +49,9 @@ class PageHome extends Component {
                   <div className={s.container__legend}>
                     {selectedId !== "" && (
                       <>
-                        <h2>{isEnglish ? videos[selectedId].title.en : videos[selectedId].title.fr}</h2>
-                        <h4>{isEnglish ? videos[selectedId].quote.en : videos[selectedId].quote.fr}</h4>
-                        <p>{isEnglish ? videos[selectedId].legend.en : videos[selectedId].legend.fr} / {videos[selectedId].duration}</p>
+                        <h2>{selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}</h2>
+                        <h4>{`"${selectedLang(i18n, videos[selectedId].quote.en, videos[selectedId].quote.fr)}"`}</h4>
+                        <p>{`${selectedLang(i18n, videos[selectedId].legend.en, videos[selectedId].legend.fr)} / ${videos[selectedId].duration}`}</p>
                       </>
                     )}
                   </div>
@@ -65,7 +66,7 @@ class PageHome extends Component {
                     {selectedId !== "" && (
                       <img 
                         src={videos[selectedId].img} 
-                        alt={isEnglish ? videos[selectedId].title.fr : videos[selectedId].title.fr} 
+                        alt={selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)} 
                       />
                     )}
                   </div>

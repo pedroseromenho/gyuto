@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { intro } from './data/intro';
+
 import Layout from './components/Layout';
 import Header from './containers/Header';
 import PageHome from './containers/PageHome';
@@ -9,14 +11,14 @@ import PageMusic from './containers/PageMusic';
 import PageCredits from './containers/PageCredits';
 import PageDocList from './containers/PageDocList';
 import Footer from './containers/Footer';
-import { intro } from './data/intro';
+
 import './App.module.scss';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      video: '',
+      video: null,
       playIntro: false,
     }
   }
@@ -25,24 +27,26 @@ class App extends Component {
     const lsIntro = localStorage.getItem('intro');
     if(lsIntro === null){
       this.setState({
-        video: intro.url,
+        video: intro,
         playIntro: true,
       });
     }
-    
   }
 
-  openModalVideo(video) {
-    this.setState({ video })
+  openModalVideo(selectedVideo) {
+    const { video } = this.state;
+    if(video === null){
+      this.setState({video: selectedVideo});
+    }
   }
 
   closeModalVideo() {
     const lsIntro = localStorage.getItem('intro');
-    this.setState({ video: ''})
+    this.setState({ video: null})
     if(lsIntro === null){
       localStorage.setItem("intro", true);
       this.setState({ 
-        video: '',
+        video: null,
         playIntro: false,
       })
     }
