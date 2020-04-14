@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { mandala, onClickPoint, setLsCoords, drawLine } from 'utils/mandala';
+import { onClickPoint, setLsCoords, drawLine } from 'utils/mandalaCoords';
 
 import MandalaSvg from './MandalaSvg';
 
 import './style.scss';
 
-const Mandala = ({ getSelectedVideo, getSelectedId, videos }) => {
+const Mandala = ({ getSelectedVideo, getSelectedId, selectedId, videos }) => {
   const [userCoords, setUserCoords] = useState([]);
 
   const getCoords = useCallback((currentCoords, prevCoords) => {
@@ -50,13 +50,29 @@ const Mandala = ({ getSelectedVideo, getSelectedId, videos }) => {
   }, [getSelectedId]); // eslint-disable-line
 
   useEffect(() => {
-    mandala(handleMandala, videos);
+    const videoLink =  document.getElementsByClassName('hoverable');
+    for (let index = 0, order = 76; index < videos.length; index++ , order--) {
+      videoLink[order].setAttribute("r", 0.9);
+      videoLink[order].setAttribute("stroke", "transparent");
+      videoLink[order].setAttribute("stroke-width", "10");
+      videoLink[order].addEventListener('mouseenter', () => {
+        if(videoLink[order] !== selectedId){
+          handleMandala(index, 'hover', videoLink[order]);
+        }
+      });
+      videoLink[order].addEventListener('click', () => {
+        handleMandala(index, 'click', videoLink[order]);
+      });
+    }
 
+  }, [selectedId]) // eslint-disable-line
+
+  useEffect(() => {
     const lsCoords = localStorage.getItem("coords");
     const parsedCoords = JSON.parse(localStorage.getItem('coords'));
     lsCoords && setUserCoords(parsedCoords);
 
-  }, [handleMandala, videos]);
+  }, [videos]);
 
   return <MandalaSvg coords={userCoords}/>
 }
@@ -65,6 +81,11 @@ Mandala.propTypes = {
   getSelectedId: PropTypes.func.isRequired,
   getSelectedVideo: PropTypes.func.isRequired,
   videos: PropTypes.any.isRequired,
+  selectedId: PropTypes.any,
+};
+
+Mandala.defaultProps = {
+  selectedId: undefined,
 };
 
 export default Mandala;

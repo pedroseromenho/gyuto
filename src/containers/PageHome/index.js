@@ -12,7 +12,7 @@ import Mandala from 'components/Mandala';
 import s from './style.module.scss';
 
 const PageHome = ({openModalVideo, location }) => {
-  const [selectedId, setSelectedId] = useState("");
+  const [selectedId, setSelectedId] = useState(null);
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -27,8 +27,6 @@ const PageHome = ({openModalVideo, location }) => {
     }
   }
 
-  console.log(selectedId);
-
   return (
     <div className={s.container}>
       <Media queries={{
@@ -41,7 +39,7 @@ const PageHome = ({openModalVideo, location }) => {
             ) : (
               <Fragment>
                 <div className={s.container__legend}>
-                  {selectedId !== "" && (
+                  {selectedId && (
                     <>
                       <h2 className="tweenMax-video-title">{selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}</h2>
                       <h4>{`"${selectedLang(i18n, videos[selectedId].quote.en, videos[selectedId].quote.fr)}"`}</h4>
@@ -50,17 +48,21 @@ const PageHome = ({openModalVideo, location }) => {
                   )}
                 </div>
                 <div 
+                  className={s.container__background}
+                  onMouseEnter={setSelectedId !== null ? () => setSelectedId(null) : undefined}
+                />
+                <div 
                   className={s.container__mandala}
-                  // onMouseOut={() => setSelectedId("")}
                 >
                   <Mandala
                     getSelectedVideo={openModalVideo}
                     getSelectedId={getSelectedId}
                     videos={videos}
+                    selectedId={selectedId}
                   />
                 </div>
                 <div className={s.container__img}>
-                  {selectedId !== "" && (
+                  {selectedId && (
                     <img 
                       src={videos[selectedId].img} 
                       alt={selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)} 

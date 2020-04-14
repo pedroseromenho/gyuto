@@ -30,13 +30,6 @@
         flex: 2;
         @include flex-row;
         justify-content: center;
-        &__background{
-            height: 100%;
-            width: 100%;
-            background: black;
-            position: absolute;
-            z-index: 0;
-        }
     }
     &__img{
         flex: 1;
@@ -51,5 +44,12 @@
             width: 100%;
             background-color: $color-gray;
         }
+    }
+    &__background{
+        height: 100%;
+        width: 100%;
+        background: $color-dark;
+        position: absolute;
+        z-index: 0;
     }
 }

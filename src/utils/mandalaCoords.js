@@ -1,23 +1,3 @@
-
-export function mandala(callback, data) {
-  const videoLink =  document.getElementsByClassName('hoverable');
-  for (let index = 0, order = 76; index < data.length; index++ , order--) {
-    videoLink[order].setAttribute("r", 0.9);
-    videoLink[order].setAttribute("stroke", "transparent");
-    videoLink[order].setAttribute("stroke-width", "10");
-    videoLink[order].addEventListener('mouseenter', () => {
-      callback(index, 'hover', videoLink[order]);
-    });
-    videoLink[order].addEventListener('click', () => {
-      callback(index, 'click', videoLink[order]);
-    });
-    // TODO: Fix too mutch setState
-    // videoLink[order].addEventListener('mouseleave', () => {
-    //   callback("", 'mouseout');
-    // });
-  }
-}
-
 let currentCoords = [];
 let prevCoords = [];
 
