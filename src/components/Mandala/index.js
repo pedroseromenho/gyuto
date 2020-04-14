@@ -1,34 +1,15 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { withTranslation } from 'react-i18next';
 import { mandala, onClickPoint, setLsCoords, drawLine } from 'utils/mandala';
 
 import MandalaSvg from './MandalaSvg';
 
 import './style.scss';
 
-class Mandala extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userCoords: [],
-    };
-    this.handleMandala = this.handleMandala.bind(this)
-    this.getCoords = this.getCoords.bind(this)
-  }
+const Mandala = ({ getSelectedVideo, getSelectedId, videos }) => {
+  const [userCoords, setUserCoords] = useState([]);
 
-  componentDidMount(){
-    const { videos } = this.props;
-    mandala(this.handleMandala, videos);
-
-    const lsCoords = localStorage.getItem("coords");
-    lsCoords && this.setState({
-      userCoords: JSON.parse(localStorage.getItem('coords'))
-    })
-  }
-
-  getCoords(currentCoords, prevCoords) {
-    const { userCoords } = this.state;
+  const getCoords = useCallback((currentCoords, prevCoords) => {
     const lsCoords = localStorage.getItem("coords");
     const lsPrevXCoord = localStorage.getItem("lastCoordX");
     const lsPrevYCoord = localStorage.getItem("lastCoordY");
@@ -41,50 +22,49 @@ class Mandala extends Component {
 
     if(lsCoords){
       coords = drawLine(currentX, currentY, currentX, currentY, lsPrevXCoord, lsPrevYCoord, lsPrevXCoord, lsPrevYCoord, true);
-      this.setState({
-        userCoords : userCoords + coords,
-      })
+      setUserCoords(userCoords + coords);
       parsedCoords = [...parsedCoords, coords];
       setLsCoords(parsedCoords, currentX, currentY);
     } else{
       if (prevX === "0" && prevY === "0") {
         coords = drawLine(currentX, currentY);
-        this.setState({
-          userCoords : coords,
-        })
+        setUserCoords(coords);
         parsedCoords = [coords];
         setLsCoords(parsedCoords, currentX, currentY);
       } else{
         coords = drawLine(currentX, currentY, currentX, currentY, prevX, prevY, prevX, prevY, true);
-        this.setState({
-          userCoords : userCoords + coords,
-        })
+        setUserCoords(userCoords + coords);
         parsedCoords = [...parsedCoords, coords];
         setLsCoords(parsedCoords, currentX, currentY);
       }
     }
-  }
+  }, [userCoords]);
 
-  handleMandala(id, event, coords){
-    const {getSelectedId, getSelectedVideo, videos} = this.props;
+
+  const handleMandala = useCallback((id, event, coords) => {
     getSelectedId(id);
     if (event === "click") {
-      onClickPoint(this.getCoords, coords);
+      onClickPoint(getCoords, coords);
       getSelectedVideo(videos[id]);
     }
-  }
+  }, [getSelectedId]); // eslint-disable-line
 
-  render(){
-    const { userCoords } = this.state;
-    return <MandalaSvg coords={userCoords}/>
-  }
+  useEffect(() => {
+    mandala(handleMandala, videos);
+
+    const lsCoords = localStorage.getItem("coords");
+    const parsedCoords = JSON.parse(localStorage.getItem('coords'));
+    lsCoords && setUserCoords(parsedCoords);
+
+  }, [handleMandala, videos]);
+
+  return <MandalaSvg coords={userCoords}/>
 }
 
 Mandala.propTypes = {
   getSelectedId: PropTypes.func.isRequired,
   getSelectedVideo: PropTypes.func.isRequired,
   videos: PropTypes.any.isRequired,
-  i18n: PropTypes.any.isRequired,
 };
 
-export default withTranslation()(Mandala);
+export default Mandala;

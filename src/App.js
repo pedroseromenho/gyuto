@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { intro } from './data/intro';
 
@@ -14,78 +14,59 @@ import Footer from './containers/Footer';
 
 import './App.module.scss';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      video: null,
-      playIntro: false,
-    }
-    this.openModalVideo = this.openModalVideo.bind(this)
-    this.closeModalVideo = this.closeModalVideo.bind(this)
-  }
-
-  componentDidMount(){
+const App = () => {
+  const [video, setVideo] = useState(null);
+  const [playIntro, setPlayIntro] = useState(false);
+  
+  useEffect(() => {
     const lsIntro = localStorage.getItem('intro');
     if(lsIntro === null){
-      this.setState({
-        video: intro,
-        playIntro: true,
-      });
+      setVideo(intro);
+      setPlayIntro(true);
     }
-  }
+  }, [])
 
-  openModalVideo(selectedVideo) {
-    const { video } = this.state;
+  const openModalVideo = (selectedVideo) => {
     if(video === null){
-      this.setState({video: selectedVideo});
+      setVideo(selectedVideo);
     }
   }
 
-  closeModalVideo() {
+  const closeModalVideo = () =>{
     const lsIntro = localStorage.getItem('intro');
-    this.setState({ video: null})
+    setVideo(null);
     if(lsIntro === null){
       localStorage.setItem("intro", true);
-      this.setState({ 
-        video: null,
-        playIntro: false,
-      })
+      setVideo(null);
+      setPlayIntro(false);
     }
   }
 
-  render() {
-    const { video, playIntro } = this.state;
-    return (
-      <Router>
-        <Layout 
-          header={<Header />}
-          main={(
-            <Switch>
-              <Route exact path="/" render={(props) =>
-                <PageHome {...props}
-                  openModalVideo={this.openModalVideo}
-                />}
-              />
-              <Route path="/info" component={PageInfo}/>
-              <Route path="/images" component={PageImages}/>
-              <Route path="/music" component={PageMusic}/>
-              <Route path="/doclist" render={(props) => 
-                <PageDocList {...props}
-                  openModalVideo={this.openModalVideo}
-                />
-              }/>
-              <Route path="/credits" component={PageCredits}/>
-            </Switch>
-          )}
-          footer={<Footer/>}
-          closeModalVideo={this.closeModalVideo}
-          video={video}
-          playIntro={playIntro}
-        />
-      </Router>
-    );
-  }
+  return(
+    <Router>
+      <Layout 
+        header={<Header />}
+        main={(
+          <Switch>
+            <Route exact path="/" component={() => (
+              <PageHome openModalVideo={openModalVideo}/> 
+            )} />
+            <Route path="/info" component={PageInfo}/>
+            <Route path="/images" component={PageImages}/>
+            <Route path="/music" component={PageMusic}/>
+            <Route path="/doclist" component={() => (
+              <PageDocList openModalVideo={openModalVideo}/>
+            )}/>
+            <Route path="/credits" component={PageCredits}/>
+          </Switch>
+        )}
+        footer={<Footer/>}
+        closeModalVideo={closeModalVideo}
+        video={video}
+        playIntro={playIntro}
+      />
+    </Router>
+  )
 }
 
-export default App; 
+export default App;

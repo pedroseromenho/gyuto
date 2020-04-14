@@ -11,9 +11,10 @@ export function mandala(callback, data) {
     videoLink[order].addEventListener('click', () => {
       callback(index, 'click', videoLink[order]);
     });
-    videoLink[order].addEventListener('mouseleave', () => {
-      callback("", 'mouseout');
-    });
+    // TODO: Fix too mutch setState
+    // videoLink[order].addEventListener('mouseleave', () => {
+    //   callback("", 'mouseout');
+    // });
   }
 }
 
