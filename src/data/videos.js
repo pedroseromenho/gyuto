@@ -1,6 +1,6 @@
 export const videos = [
   {
-    id: "0",
+    id: 0,
     title: {
       fr: "Devenir Bouddha 1/4",
       en: "Becoming Buddha 1/4"
@@ -21,7 +21,7 @@ export const videos = [
     duration: "3'14"
   },
   {
-    id: "1",
+    id: 1,
     title: {
       fr: "Devenir Bouddha 2/4",
       en: "Becoming Buddha 2/4"
@@ -42,7 +42,7 @@ export const videos = [
     duration: "3'02"
   },
   {
-    id: "2",
+    id: 2,
     title: {
       fr: "Devenir Bouddha 3/4",
       en: "Becoming Buddha 3/4"
@@ -63,7 +63,7 @@ export const videos = [
     duration: "4'09"
   },
   {
-    id: "3",
+    id: 3,
     title: {
       fr: "Devenir Bouddha 4/4",
       en: "Becoming Buddha 4/4"
@@ -84,7 +84,7 @@ export const videos = [
     duration: "3'09"
   },
   {
-    id: "4",
+    id: 4,
     title: {
       fr: "Transmission",
       en: "Transmission"
@@ -105,7 +105,7 @@ export const videos = [
     duration: "4'32"
   },
   {
-    id: "5",
+    id: 5,
     title: {
       fr: "Fourmi sans ombre",
       en: "Ant without shadow",
@@ -126,7 +126,7 @@ export const videos = [
     duration: "2'52"
   },
   {
-    id: "6",
+    id: 6,
     title: {
       fr: "Bonheur ultime 1/4",
       en: "Ultimate happiness 1/4"
@@ -147,7 +147,7 @@ export const videos = [
     duration: "2'58"
   },
   {
-    id: "7",
+    id: 7,
     title: {
       fr: "Bonheur ultime 2/4",
       en: "Ultimate happiness 2/4"
@@ -168,7 +168,7 @@ export const videos = [
     duration: "4'55"
   },
   {
-    id: "8",
+    id: 8,
     title: {
       fr: "Bonheur ultime 3/4",
       en: "Ultimate happiness 3/4"
@@ -189,7 +189,7 @@ export const videos = [
     duration: "2'19"
   },
   {
-    id: "9",
+    id: 9,
     title: {
       fr: "Bonheur ultime 4/4",
       en: "Ultimate happiness 4/4"
@@ -210,7 +210,7 @@ export const videos = [
     duration: "4'50"
   },
   {
-    id: "10",
+    id: 10,
     title: {
       fr: "Kundun",
       en: "Kundun"
@@ -231,7 +231,7 @@ export const videos = [
     duration: "10'43"
   },
   {
-    id: "11",
+    id: 11,
     title: {
       fr: "Nouvelle Réalité",
       en: "New Reality"
@@ -252,7 +252,7 @@ export const videos = [
     duration: "2'57"
   },
   {
-    id: "12",
+    id: 12,
     title: {
       fr: "Les êtres du Samsara 1/4",
       en: "The Samsara beings 1/4"
@@ -273,7 +273,7 @@ export const videos = [
     duration: "4'14"
   },
   {
-    id: "13",
+    id: 13,
     title: {
       fr: "Les êtres du Samsara 2/4",
       en: "The Samsara beings 2/4"
@@ -294,7 +294,7 @@ export const videos = [
     duration: "4'19"
   },
   {
-    id: "14",
+    id: 14,
     title: {
       fr: "Les êtres du Samsara 3/4",
       en: "The Samsara beings 3/4"
@@ -315,7 +315,7 @@ export const videos = [
     duration: "5'30"
   },
   {
-    id: "15",
+    id: 15,
     title: {
       fr: "Les êtres du Samsara 4/4",
       en: "The Samsara beings 4/4"
@@ -337,7 +337,7 @@ export const videos = [
     duration: "2'55"
   },
   {
-    id: "16",
+    id: 16,
     title: {
       fr: "Interdépendance",
       en: "Interdependence"
@@ -358,7 +358,7 @@ export const videos = [
     duration: "8'09"
   },
   {
-    id: "17",
+    id: 17,
     title: {
       fr: "Dkhyil-khor",
       en: "Dkhyil-khor"
@@ -379,7 +379,7 @@ export const videos = [
     duration: "5'45"
   },
   {
-    id: "18",
+    id: 18,
     title: {
       fr: "Renki",
       en: "Renki"

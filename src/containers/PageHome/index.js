@@ -2,10 +2,12 @@ import React, { useState, useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 import Media from 'react-media';
 import { videos } from 'data/videos';
 import { selectedLang } from 'utils/lang';
 import { TweenMax } from 'gsap';
+import { linesEnter, infoEnter, infoLeave } from 'animations/home';
 
 import Mandala from 'components/Mandala';
 
@@ -17,15 +19,33 @@ const PageHome = ({openModalVideo, location }) => {
 
   useEffect(() => {
     const lines = document.querySelector('.tweenMax-lines');
-    TweenMax.set(lines, {autoAlpha:0});
-    TweenMax.to(lines, 1, {autoAlpha: 0.8});
+    linesEnter(lines);
   }, [location.pathname])
+
+  useEffect(() => {
+    const title = document.querySelector('.tweenMax-video-title');
+    const quote = document.querySelector('.tweenMax-video-quote');
+    const legend = document.querySelector('.tweenMax-video-legend');
+    const img = document.querySelector(`.tweenMax-video-img`);
+    infoEnter(title, quote, legend, img);
+  }, [selectedId])
 
   const getSelectedId = (id) => {
     if(selectedId !== id){
       setSelectedId(id);
     }
   }
+
+  const hideInfo = () => {
+    const title = document.querySelector('.tweenMax-video-title');
+    const quote = document.querySelector('.tweenMax-video-quote');
+    const legend = document.querySelector('.tweenMax-video-legend');
+    const img = document.querySelector(`.tweenMax-video-img`);
+    if(setSelectedId !== null ){
+      infoLeave(title, quote, legend, img);
+      TweenMax.delayedCall(0.5, () => setSelectedId(null));
+    }
+  };
 
   return (
     <div className={s.container}>
@@ -39,21 +59,25 @@ const PageHome = ({openModalVideo, location }) => {
             ) : (
               <Fragment>
                 <div className={s.container__legend}>
-                  {selectedId && (
+                  {selectedId !== null && (
                     <>
-                      <h2 className="tweenMax-video-title">{selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}</h2>
-                      <h4>{`"${selectedLang(i18n, videos[selectedId].quote.en, videos[selectedId].quote.fr)}"`}</h4>
-                      <p>{`${selectedLang(i18n, videos[selectedId].legend.en, videos[selectedId].legend.fr)} / ${videos[selectedId].duration}`}</p>
+                      <h2 className="tweenMax-video-title">
+                        {selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}
+                      </h2>
+                      <h4 className="tweenMax-video-quote">
+                        {`"${selectedLang(i18n, videos[selectedId].quote.en, videos[selectedId].quote.fr)}"`}
+                      </h4>
+                      <p className="tweenMax-video-legend">
+                        {`${selectedLang(i18n, videos[selectedId].legend.en, videos[selectedId].legend.fr)} / ${videos[selectedId].duration}`}
+                      </p>
                     </>
                   )}
                 </div>
                 <div 
                   className={s.container__background}
-                  onMouseEnter={setSelectedId !== null ? () => setSelectedId(null) : undefined}
+                  onMouseOver={() => hideInfo()}
                 />
-                <div 
-                  className={s.container__mandala}
-                >
+                <div className={classNames(s.container__mandala, "tweenMax-mandala")}>
                   <Mandala
                     getSelectedVideo={openModalVideo}
                     getSelectedId={getSelectedId}
@@ -62,10 +86,11 @@ const PageHome = ({openModalVideo, location }) => {
                   />
                 </div>
                 <div className={s.container__img}>
-                  {selectedId && (
+                  {selectedId !== null && (
                     <img 
                       src={videos[selectedId].img} 
                       alt={selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)} 
+                      className="tweenMax-video-img"
                     />
                   )}
                 </div>

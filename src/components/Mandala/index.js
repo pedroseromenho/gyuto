@@ -85,7 +85,7 @@ Mandala.propTypes = {
 };
 
 Mandala.defaultProps = {
-  selectedId: undefined,
+  // selectedId: undefined,
 };
 
 export default Mandala;

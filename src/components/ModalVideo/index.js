@@ -5,7 +5,8 @@ import classNames from 'classnames';
 import YouTube from 'react-youtube';
 import { FiX } from 'react-icons/fi';
 import { selectedLang } from 'utils/lang';
-import { TweenMax, Power2 } from 'gsap';
+import { TweenMax } from 'gsap';
+import { modalLeave, modalEnter } from 'animations/modalVideo';
 
 import Button from "components/Button";
 
@@ -24,31 +25,13 @@ const ModalVideo = ({video, close, playIntro}) => {
   };
 
   useEffect(() => {
-    const modalVideo = document.querySelector('.tweenMax-modalVideo');
-    TweenMax.to(modalVideo, 0.1, {
-      css: { 
-        scaleX: 0.1,
-        scaleY: 0.1, 
-      }
-    });
-    TweenMax.to(modalVideo, 0.5, {
-      css: { 
-        scaleX: 1,
-        scaleY: 1,
-        transformOrigin: "center bottom",
-        autoAlpha: 1 }, 
-      ease: Power2.easeOut });
+    const modal = document.querySelector('.tweenMax-modalVideo');
+    modalEnter(modal);
   }, [video]);
 
   const closeModal = () => {
-    const modalVideo = document.querySelector('.tweenMax-modalVideo');
-    TweenMax.to(modalVideo, 0.4, {
-      css: {        
-        scaleX: 0.1,
-        scaleY: 0.1, 
-        transformOrigin: "center center",
-        autoAlpha: 0 }, 
-      ease: Power2.easeOut });
+    const modal = document.querySelector('.tweenMax-modalVideo');
+    modalLeave(modal);
     TweenMax.delayedCall(0.5, close);
   }
 
