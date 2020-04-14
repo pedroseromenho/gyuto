@@ -5,6 +5,7 @@
     @include flex-row;
     justify-content: space-between;
     background-color: $color-dark;
+    z-index: 2;
     button{
         position: fixed;
         top: 15px;

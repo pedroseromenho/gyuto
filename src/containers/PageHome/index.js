@@ -4,6 +4,7 @@ import { withTranslation } from 'react-i18next';
 import Media from 'react-media';
 import { videos } from 'data/videos';
 import { selectedLang } from 'utils/lang';
+import { TweenMax } from 'gsap';
 
 import Mandala from 'components/Mandala';
 
@@ -17,11 +18,18 @@ class PageHome extends Component {
     }
   }
 
+  componentDidMount(){
+    const lines = document.querySelector('.tweenMax-lines');
+    TweenMax.set(lines, {autoAlpha:0});
+    TweenMax.to(lines, 1, {autoAlpha:1});
+  }
+
   getSelectedId(id) {
     const { selectedId } = this.state;
     if(selectedId !== id){
       this.setState({
-        selectedId: id
+        selectedId: id,
+        displayLines: false,
       })
     }
   }
@@ -49,7 +57,7 @@ class PageHome extends Component {
                   <div className={s.container__legend}>
                     {selectedId !== "" && (
                       <>
-                        <h2>{selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}</h2>
+                        <h2 className="tweenMax-video-title">{selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}</h2>
                         <h4>{`"${selectedLang(i18n, videos[selectedId].quote.en, videos[selectedId].quote.fr)}"`}</h4>
                         <p>{`${selectedLang(i18n, videos[selectedId].legend.en, videos[selectedId].legend.fr)} / ${videos[selectedId].duration}`}</p>
                       </>

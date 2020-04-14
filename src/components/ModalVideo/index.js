@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 import YouTube from 'react-youtube';
 import { FiX } from 'react-icons/fi';
 import { selectedLang } from 'utils/lang';
+import { TweenMax, Power2 } from 'gsap';
 
 import Button from "components/Button";
 
@@ -20,17 +22,47 @@ const ModalVideo = ({video, close, playIntro}) => {
       mute: playIntro ? 1 : 0,
     },
   };
+
+  useEffect(() => {
+    const modalVideo = document.querySelector('.tweenMax-modalVideo');
+    TweenMax.to(modalVideo, 0.1, {
+      css: { 
+        scaleX: 0.1,
+        scaleY: 0.1, 
+      }
+    });
+    TweenMax.to(modalVideo, 0.5, {
+      css: { 
+        scaleX: 1,
+        scaleY: 1,
+        transformOrigin: "center bottom",
+        autoAlpha: 1 }, 
+      ease: Power2.easeOut });
+  }, [video]);
+
+  const closeModal = () => {
+    const modalVideo = document.querySelector('.tweenMax-modalVideo');
+    TweenMax.to(modalVideo, 0.4, {
+      css: {        
+        scaleX: 0.1,
+        scaleY: 0.1, 
+        transformOrigin: "center center",
+        autoAlpha: 0 }, 
+      ease: Power2.easeOut });
+    TweenMax.delayedCall(0.5, close);
+  }
+
   return(
-    <div className={s.container}>
+    <div className={classNames(s.container, 'tweenMax-modalVideo')}>
       {playIntro ? (
         <Button 
           value= {t('skip')}
-          handleClick={() => close()}
+          handleClick={() => closeModal()}
         />
       ) : (
         <FiX
-          onClick={() => close()}
-          onKeyPress={() => close()}
+          onClick={() => closeModal()}
+          onKeyPress={() => closeModal()}
           role="presentation"
           className="hoverable"
         />
@@ -42,7 +74,7 @@ const ModalVideo = ({video, close, playIntro}) => {
             : selectedLang(i18n, video.url.en, video.url.fr)
           } 
           opts={opts}
-          onEnd={() => close()}
+          onEnd={() => closeModal()}
         />
       </div>
     </div>

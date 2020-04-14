@@ -1,21 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */ // eslint-disable-line
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './style.scss';
 
 const MandalaSvg = ({ coords }) => {
-  const [displayLines, setDisplayLines] = useState(false);
   return(
-    <div 
-      id="mandala-container"
-      onMouseOver={() => setDisplayLines(true)}
-      onFocus={() => setDisplayLines(true)}
-      onMouseOut={() => setDisplayLines(false)}
-      onBlur={() => setDisplayLines(false)}
-    >
+    <div id="mandala-container">
       <div className="mandala">
-        <svg id="rotate" viewBox="0 0 248.527 248.527">
+        <svg 
+          id="rotate" 
+          viewBox="0 0 248.527 248.527"
+        >
           <g id="cirkels">
             <g>
               <g>
@@ -7916,7 +7912,7 @@ const MandalaSvg = ({ coords }) => {
               </g>
             </g>
           </g>
-          {displayLines && <g id="lines" dangerouslySetInnerHTML={{__html: coords}}></g>}
+          <g id="lines" className="tweenMax-lines" dangerouslySetInnerHTML={{__html: coords}}></g>
         </svg>
       </div>
     </div>
