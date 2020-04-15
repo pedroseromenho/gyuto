@@ -4,11 +4,11 @@
     @include flex-row;
     justify-content: space-between;
     padding: 15px;
-    &__background {
-        @media screen and (min-width: $max-720) {
-            background-color: $color-dark;
-        }
-    }
+    // &__background {
+    //     @media screen and (min-width: $max-720) {
+    //         background-color: $color-dark;
+    //     }
+    // }
     &__wrapper{
         display: flex;
         align-items: baseline;

@@ -4,15 +4,24 @@ import PropTypes from 'prop-types';
 import { TimelineMax } from 'gsap';
 
 import './svg.scss';
+import { imgEnter } from 'animations/info';
 
 const NavSvg = ({sections, changeSection, currentSection}) => {
   useEffect(() => {
     const loaderAnimation = new TimelineMax();
     loaderAnimation
-      .to(".load-svg", 1, { 
+      .to(".load-svg", 1.2, { 
         width: 0 
       })
   }, [])
+
+  const handleChangeSection = (section) =>{
+    const img = document.querySelector(".tweenMax-info-img"); 
+    changeSection(section);
+    imgEnter(img);
+  }
+
+
   return(
     <>
       <div className="load-svg" />
@@ -35,8 +44,8 @@ const NavSvg = ({sections, changeSection, currentSection}) => {
                     ? 'svg-sectionName-selected' 
                     : undefined
                 )}
-                onClick={() => changeSection(s.section)}
-                onKeyPress={() => changeSection(s.section)}
+                onClick={() => handleChangeSection(s.section)}
+                onKeyPress={() => handleChangeSection(s.section)}
                 role="presentation"
               >
                 {s.name}
@@ -50,8 +59,8 @@ const NavSvg = ({sections, changeSection, currentSection}) => {
               stroke="transparent" 
               strokeWidth="10" 
               className="hoverable" 
-              onClick={() => changeSection(s.section)}
-              onKeyPress={() => changeSection(s.section)}
+              onClick={() => handleChangeSection(s.section)}
+              onKeyPress={() => handleChangeSection(s.section)}
               role="presentation"
             />
           </Fragment>

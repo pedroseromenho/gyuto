@@ -3,6 +3,7 @@ export const info = [
     id: 0,
     section: 'intro',
     img: "./assets/images/info/1_intro.JPG",
+    imgLow: "./assets/images/info/1_intro-low.png",
     quote: {
       fr: "Le son de la grande montagne qui craque. Le son des vagues dans l'océan",
       en: "The sound of the big mountain cracking, the sound of the waves in the ocean"
@@ -20,6 +21,7 @@ export const info = [
     id: 1,
     section: 'monastery',
     img: "./assets/images/info/2_monastery.JPG",
+    imgLow: "./assets/images/info/2_monastery-low.png",
     quote: {
       fr: "Au 14ème siècle, en méditant longuement sur le bien et le mal, notre grand maître Lama Tsongkhapa a atteint un haut degré de connaissance. Différents protecteurs du dharma, comme Mahakala, divinité protectrice de Gyütö, l’ont accompagné durant sa longue méditation. Le son des protecteurs du dharma ressemble parfois à une montagne qui craque, parfois au son des vagues dans l’océan. Tsongkhapa a entendu ces sons et ils sont devenus la base sacrée de son enseignement. Ici à Gyütö, notre tradition sonore sonne comme les vagues de l’océan.",
       en: "In the 14th century, by meditating a long time on good and evil, our grand Lama Tsongkhapa reached a high level of knowledge. During his long meditation he was accompanied by various Dharma protectors, such as Mahakala, the protector deity of Gyütö. The sound of the Dharma protectors sometimes resembles that of a mountain cracking, sometimes that of ocean waves. Tsongkhapa heard those sounds and they became the sacred foundation of his teaching. Here in Gyütö, our sound tradition is that of waves crashing in the ocean."
@@ -37,6 +39,7 @@ export const info = [
     id: 2,
     section: 'genesis',
     img: "./assets/images/info/3_genesis.JPG",
+    imgLow: "./assets/images/info/3_genesis-low.png",
     quote: {
       fr: "En partageant notre état d’extrême conscience avec un public non averti des pratiques tantriques, nous exorcisons les forces négatives en présence, et le simple fait d’être en interaction avec nous génère un effet bienfaisant",
       en: "By sharing our state of extreme awareness with a public that is unfamiliar with tantric practice, we exorcise the negative forces which are present, and the mere fact of being in interaction with us generates a beneficial effect"
@@ -54,6 +57,7 @@ export const info = [
     id: 3,
     section: 'immersion',
     img: "./assets/images/info/4_immersion.JPG",
+    imgLow: "./assets/images/info/4_immersion-low.png",
     quote: {
       fr: "Dans le monde d’aujourd’hui, les idées d’apprentissage, de lente maturation et de transformation sont devenues incompréhensibles. Persuadés que nous manquons de temps, nous vivons désormais par procuration en nous identifiant à des existences rêvées, pressés de réaliser sur-le-champ nos désirs.",
       en: "In today's world, learning techniques that imply slow maturation and transformation, are unheard of. Convinced that we have no time, we live henceforth by proxy, identifying ourselves to dreamed-up lives and in a rush to fulfill our desires at once."
@@ -71,6 +75,7 @@ export const info = [
     id: 4,
     section: 'transmission',
     img: "./assets/images/info/5_transmission.JPG",
+    imgLow: "./assets/images/info/5_transmission-low.png",
     quote: {
       fr: "Si vous voulez sauver les connaissances et les faire voyager à travers le temps, confiez-les aux enfants",
       en: "If you want to preserve knowledge and allow it to travel through time, entrust it to children"
@@ -87,6 +92,7 @@ export const info = [
   {
     id: 5,
     img: "./assets/images/info/6_dharma.JPG",
+    imgLow: "./assets/images/info/6_dharma-low.png",
     section: 'dharma',
     quote: {
       fr: "...marche comme ton coeur te mène, et selon le regard de tes yeux",
@@ -105,6 +111,7 @@ export const info = [
     id: 6,
     img: "./assets/images/info/7_son.JPG",
     section: 'sound',
+    imgLow: "./assets/images/info/7_son-low.png",
     quote: {
       fr: "Au début quand les moines essaient de chanter avec cette voix profonde, le son sort juste de la gorge mais avec la pratique, la source du son descend pour finalement provenir du chakra racine, tout en bas, très profond …Si certains canaux sont fermés, on ne peut pas les utiliser mais avec la méditation et la pratique du son, ils s'ouvrent. Quand les canaux s'ouvrent, on retrouve un esprit sain dans un corps sain. Ainsi nous croyons que ce chant est un son de guérison.",
       en: "When the monks first try to chant with a deep voice, the sound just comes out of the throat, but with practice, the source of the sound goes down until it finally becomes the chakra root, way deep down... If certain channels are closed, they cannot be used, but through meditation and practice, they open up. When the channels open up, we get a healthy spirit within a healthy body. Thus we believe that this chanting is also a healing sound"
@@ -122,6 +129,7 @@ export const info = [
     id: 7,
     img: "./assets/images/info/8_characters.JPG",
     section: 'characters',
+    imgLow: "./assets/images/info/8_characters-low.png",
     quote: {
       fr: "",
       en: ""

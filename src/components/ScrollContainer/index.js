@@ -15,6 +15,7 @@ const ScrollContainer = ({
   <div className={
     classNames(
       classNameContainer,
+      "tweenMax-scrollContainer",
       showScrollBar 
         ? "container-scroll-bar"
         : "container-scroll"
