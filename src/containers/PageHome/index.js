@@ -1,26 +1,20 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import Media from 'react-media';
 import { videos } from 'data/videos';
 import { selectedLang } from 'utils/lang';
 import { TweenMax } from 'gsap';
-import { linesEnter, infoEnter, infoLeave } from 'animations/home';
+import { infoEnter, infoLeave } from 'animations/home';
 
 import Mandala from 'components/Mandala';
 
 import s from './style.module.scss';
 
-const PageHome = ({openModalVideo, location }) => {
+const PageHome = ({openModalVideo }) => {
   const [selectedId, setSelectedId] = useState(null);
   const { i18n } = useTranslation();
-
-  useEffect(() => {
-    const lines = document.querySelector('.tweenMax-lines');
-    linesEnter(lines);
-  }, [location.pathname])
 
   useEffect(() => {
     const title = document.querySelector('.tweenMax-video-title');
@@ -103,7 +97,6 @@ const PageHome = ({openModalVideo, location }) => {
 }
 PageHome.propTypes = {
   openModalVideo: PropTypes.func.isRequired,
-  location: PropTypes.any.isRequired,
   i18n: PropTypes.any,
 };
 
@@ -111,4 +104,4 @@ PageHome.defaultProps = {
   i18n: null,
 };
 
-export default withRouter(PageHome);
+export default PageHome;

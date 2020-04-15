@@ -2,7 +2,7 @@ export const info = [
   {
     id: 0,
     section: 'intro',
-    img: "./assets/images/info/1_intro.png",
+    img: "./assets/images/info/1_intro.JPG",
     quote: {
       fr: "Le son de la grande montagne qui craque. Le son des vagues dans l'océan",
       en: "The sound of the big mountain cracking, the sound of the waves in the ocean"

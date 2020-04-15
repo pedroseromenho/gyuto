@@ -1,12 +1,5 @@
 import { TweenMax } from 'gsap';
 
-export const linesEnter = (lines) =>{
-  if(lines){
-    TweenMax.from(lines, {autoAlpha:0})
-    TweenMax.to(lines, 1, {autoAlpha: 0.8})
-  }
-} 
-
 export const infoEnter = (
   title, quote, legend, img
 ) => {
@@ -23,10 +16,8 @@ export const infoEnter = (
     new TweenMax.to(legend, 1.2, {y: 0}, 0.4) 
   }
   if(img) {
-    new TweenMax
-      .from(img, 1, {opacity: 0}, 1);
-    new TweenMax
-      .to(img, 1, {opacity: 1}, 1)
+    new TweenMax.from(img, 1, {opacity: 0}, 1);
+    new TweenMax.to(img, 1, {opacity: 1}, 1)
   }
 }
 

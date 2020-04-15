@@ -1,0 +1,28 @@
+@import "~styles/config";
+
+.container-scroll,
+.container-scroll-bar{
+    position: relative;
+    .scrollBar{
+        @include scroll-bar;
+    }
+    .wrapper-scroll{
+        overflow-y: scroll;
+        height: 100%;
+        @include scroll-bar-default;
+        padding-right: 5px;
+    }
+}
+
+.container-scroll{
+    &:hover 
+    .scrollBar{
+        @include scroll-bar-display;
+    }
+}
+
+.container-scroll-bar{
+    .scrollBar{
+        @include scroll-bar-display;
+    }
+}

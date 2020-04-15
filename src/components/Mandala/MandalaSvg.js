@@ -1,17 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */ // eslint-disable-line
-import React from 'react';
+import React, { useEffect } from 'react';
+import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { linesEnter, } from 'animations/mandala';
 
 import './style.scss';
 
-const MandalaSvg = ({ coords }) => {
+const MandalaSvg = ({ coords, location }) => {
+
+  useEffect(() => {
+    const lines = document.querySelector('.tweenMax-lines');
+    linesEnter(lines);
+  }, [location.pathname]);
+
   return(
-    <div id="mandala-container">
+    <div id="mandala-container" className='tweenMax-mandala'>
       <div className="mandala">
-        <svg 
-          id="rotate" 
-          viewBox="0 0 248.527 248.527"
-        >
+        <svg id="rotate" viewBox="0 0 248.527 248.527">
           <g id="cirkels">
             <g>
               <g>
@@ -7920,6 +7925,7 @@ const MandalaSvg = ({ coords }) => {
 
 MandalaSvg.propTypes = {
   coords: PropTypes.any.isRequired,
+  location: PropTypes.any.isRequired,
 };
 
-export default MandalaSvg;
+export default withRouter(MandalaSvg);

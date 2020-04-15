@@ -7,23 +7,13 @@
     padding-bottom: 30px;
     &__wrapper{
         flex: 1;
-        position: relative;
         margin: 0 auto;
         height: 100%;
         padding-right: 15px;
-        &:hover 
-        &__scrollBar{
-            @include scroll-bar-display;
-        }
-        &__scrollBar{
-            @include scroll-bar;
-        }
         &__list{
             @include fit;
             height: 100%;
-            overflow-y: scroll;
             padding-right: 5px;
-            @include scroll-bar-default;
             &__item{
                 &__info{
                     @include flex-row;
