@@ -2,7 +2,7 @@
 {
   "title": "Portraits",
   "backgroundImg": "/assets/portraits/0_background.JPG",
-  "galery": [{
+  "gallery": [{
         "url": "assets/portraits/Chakdor.JPG",
         "name":"Chakdor"
       },

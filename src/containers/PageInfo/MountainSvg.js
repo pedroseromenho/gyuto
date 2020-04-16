@@ -2,11 +2,11 @@ import React, {useEffect, Fragment} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { TimelineMax } from 'gsap';
-
-import './svg.scss';
 import { imgEnter } from 'animations/info';
 
-const NavSvg = ({sections, changeSection, currentSection}) => {
+import './svg.scss';
+
+const MountainSvg = ({sections, changeSection, currentSection}) => {
   useEffect(() => {
     const loaderAnimation = new TimelineMax();
     loaderAnimation
@@ -20,7 +20,6 @@ const NavSvg = ({sections, changeSection, currentSection}) => {
     changeSection(section);
     imgEnter(img);
   }
-
 
   return(
     <>
@@ -69,10 +68,10 @@ const NavSvg = ({sections, changeSection, currentSection}) => {
     </>
   )}
 
-NavSvg.propTypes = {
+MountainSvg.propTypes = {
   sections: PropTypes.any.isRequired,
   changeSection: PropTypes.func.isRequired,
   currentSection: PropTypes.string.isRequired,
 };
 
-export default NavSvg;
+export default MountainSvg;

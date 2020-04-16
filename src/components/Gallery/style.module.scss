@@ -1,0 +1,14 @@
+@import "~styles/config";
+
+.container{
+    max-width: 500px;
+    max-height: 350px;
+    &__backgroundImg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: 500px;
+        max-height: 350px;
+        height: 100%;
+    }
+}

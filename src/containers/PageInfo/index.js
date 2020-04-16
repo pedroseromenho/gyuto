@@ -4,7 +4,7 @@ import {sections} from './sections';
 import {selectedLang} from 'utils/lang';
 import classNames from 'classnames';
 
-import NavSvg from './NavSvg';
+import MountainSvg from './MountainSvg';
 import ScrollContainer from 'components/ScrollContainer';
 
 import s from './style.module.scss';
@@ -18,7 +18,7 @@ const PageInfo = () => {
 
   const preloadImg = () => {
     setLoadedImg(false)
-    let img=new Image();
+    let img = new Image();
     img.onload = () => {
       setLoadedImg(true);
     }
@@ -74,7 +74,7 @@ const PageInfo = () => {
             ? sectionContent.img : sectionContent.imgLow}')`}}
         />
       </div>
-      <NavSvg 
+      <MountainSvg 
         sections={sections(t)} 
         changeSection={changeSection} 
         currentSection={currentSection} 
