@@ -36,7 +36,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             transform: translateZ(0);
-            animation: sharpen 1.5s both;
+            animation: sharpen 1s both;
             height: calc(100vh - 300px);
         }
     }
@@ -50,7 +50,7 @@
 
 @keyframes sharpen {
     from {
-        filter: blur(100px);
+        filter: blur(10px);
     }
     to {
         filter: blur(0);

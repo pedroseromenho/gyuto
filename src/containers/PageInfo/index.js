@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import {sections} from './sections';
 import {selectedLang} from 'utils/lang';
 import classNames from 'classnames';
-import { imgEnter, textEnter } from 'animations/info';
 
 import NavSvg from './NavSvg';
 import ScrollContainer from 'components/ScrollContainer';
@@ -31,11 +30,6 @@ const PageInfo = () => {
   } 
 
   useEffect(() => {
-    // const img = document.querySelector(".tweenMax-info-img");
-    // const text = document.querySelector(".tweenMax-scrollContainer");
-    // imgEnter(img);
-    // textEnter(text);
-
     preloadImg();
   }, [currentSection])
 

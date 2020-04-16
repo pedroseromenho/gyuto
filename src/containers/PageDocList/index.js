@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Media from 'react-media';
 import { useTranslation } from 'react-i18next';
 import { selectedLang } from 'utils/lang';
-import { videos } from 'data/videos';
-import { intro } from 'data/intro';
+import  videos from '__MOCKS__/videos';
+import intro from '__MOCKS__/intro';
 
 import ListItem from 'components/ListItem';
 import Preview from './Preview';

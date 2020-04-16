@@ -1,0 +1,219 @@
+
+{
+  "title": "Portraits",
+  "backgroundImg": "/assets/portraits/0_background.JPG",
+  "galery": [{
+        "url": "assets/portraits/Chakdor.JPG",
+        "name":"Chakdor"
+      },
+      {
+        "url": "assets/portraits/Chomsnor.JPG",
+        "name":"Chomsnor"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Gyaltsen.JPG",
+        "name":"Dakpa Gyaltsen"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Gylasten.JPG",
+        "name":"Dakpa Gylasten"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Kelsang.JPG",
+        "name":"Dakpa Kelsang"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Tenzin-1.JPG",
+        "name":"Dakpa Tenzin"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Tenzin-2.JPG",
+        "name":"Dakpa Tenzin"
+      },
+      {
+        "url": "assets/portraits/Dawa_Gaia.JPG",
+        "name":"Dawa & Gaia"
+      },
+      {
+        "url": "assets/portraits/Dawa_Tsering.JPG",
+        "name":"Dawa Tsering"
+      },
+      {
+        "url": "assets/portraits/Dorjee_Khandu.JPG",
+        "name":"Dorjee Khandu"
+      },
+      {
+        "url": "assets/portraits/Dorjee_Tsehap.JPG",
+        "name":"Dorjee Tsehap"
+      },
+      {
+        "url": "assets/portraits/family.JPG",
+        "name":"family"
+      },
+      {
+        "url": "assets/portraits/Jampa_Sonam.JPG",
+        "name":"Jampa_Sonam"
+      },
+      {
+        "url": "assets/portraits/Jampa_Thardoe.JPG",
+        "name":"Jampa Thardoe"
+      },
+      {
+        "url": "assets/portraits/Jampa_Thaye.JPG",
+        "name":"Jampa Thaye"
+      },
+      {
+        "url": "assets/portraits/Jampa.JPG",
+        "name":"Jampa"
+      },
+      {
+        "url": "assets/portraits/Jamphel_Tsering.JPG",
+        "name":"Jamphel Tsering"
+      },
+      {
+        "url": "assets/portraits/Kelsang_Norbu.JPG",
+        "name":"Kelsang Norbu"
+      },
+      {
+        "url": "assets/portraits/Kelsang.JPG",
+        "name":"Kelsang"
+      },
+      {
+        "url": "assets/portraits/Kunchok.JPG",
+        "name":"Kunchok"
+      },
+      {
+        "url": "assets/portraits/Lablen.JPG",
+        "name":"Lablen"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Ngawang.JPG",
+        "name":"Lobsang Ngawang"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Palden-1.JPG",
+        "name":"Lobsang Palden"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Palden-2.JPG",
+        "name":"Lobsang Palden"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Tanzing.JPG",
+        "name":"Lobsang Tanzing"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Tsering.JPG",
+        "name":"Lobsang Tsering"
+      },
+      {
+        "url": "assets/portraits/Nyima_Tsering.JPG",
+        "name":"Nyima Tsering"
+      },
+      {
+        "url": "assets/portraits/Phuntsok_Ngawang.JPG",
+        "name":"Phuntsok Ngawang"
+      },
+      {
+        "url": "assets/portraits/Rangdol.JPG",
+        "name":"Rangdol"
+      },
+      {
+        "url": "assets/portraits/Sangyal_Dhondup.JPG",
+        "name":"Sangyal Dhondup"
+      },
+      {
+        "url": "assets/portraits/Sonam_Chonpal.JPG",
+        "name":"Sonam Chonpal"
+      },
+      {
+        "url": "assets/portraits/Sonam_Dakpa.JPG",
+        "name":"Sonam Dakpa"
+      },
+      {
+        "url": "assets/portraits/Sonam_Dorjee.JPG",
+        "name":"Sonam Dorjee"
+      },
+      {
+        "url": "assets/portraits/Sonam_Jampa.JPG",
+        "name":"Sonam Jampa"
+      },
+      {
+        "url": "assets/portraits/Sonam_Kherap.JPG",
+        "name":"Sonam Kherap"
+      },
+      {
+        "url": "assets/portraits/Sonam_Tashi.JPG",
+        "name":"Sonam Tashi"
+      },
+      {
+        "url": "assets/portraits/Sonam_Tsokney.JPG",
+        "name":"Sonam Tsokney"
+      },
+      {
+        "url": "assets/portraits/Sonam.JPG",
+        "name":"Sonam"
+      },
+      {
+        "url": "assets/portraits/Tanam_Gyal.JPG",
+        "name":"Tanam Gyal"
+      },
+      {
+        "url": "assets/portraits/Tashi_Gyatso.JPG",
+        "name":"Tashi Gyatso"
+      },
+      {
+        "url": "assets/portraits/Tashi_Topgyal.JPG",
+        "name":"Tashi Topgyal"
+      },
+      {
+        "url": "assets/portraits/Tashi-1.JPG",
+        "name":"Tashi "
+      },
+      {
+        "url": "assets/portraits/Tashi-2.JPG",
+        "name":"Tashi"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Dawa.JPG",
+        "name":"Tenzin Dawa"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Jigme.JPG",
+        "name":"Tenzin Jigme"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Kunchok.JPG",
+        "name":"Tenzin Kunchok"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Namdak.JPG",
+        "name":"Tenzin Namdak"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Tsultrim.JPG",
+        "name":"Tenzin Tsultrim"
+      },
+      {
+        "url": "assets/portraits/Thupten_Norbu_Jangchup.JPG",
+        "name":"Thupten Norbu Jangchup"
+      },      
+      {
+        "url": "assets/portraits/Tsering_Topgyal.JPG",
+        "name":"Tsering Topgyal"
+      },      
+      {
+        "url": "assets/portraits/Tsewa_Palgon.JPG",
+        "name":"Tsewa Palgon"
+      },      
+      {
+
+        "url": "assets/portraits/Yeshi.JPG",
+        "name":"Yeshi"
+      },      
+      {
+        "url": "assets/portraits/Yuna_Dawa_Nemo.JPG",
+        "name":"Yuna & Dawa & Nemo"
+      }
+    ]
+}

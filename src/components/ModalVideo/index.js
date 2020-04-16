@@ -21,6 +21,7 @@ const ModalVideo = ({video, close, playIntro}) => {
       rel: 0,
       showinfo: 0,
       mute: playIntro ? 1 : 0,
+      vq: 'large',
     },
   };
 

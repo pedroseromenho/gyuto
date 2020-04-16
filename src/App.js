@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { intro } from './data/intro';
+import intro from './__MOCKS__/intro';
 
 import Layout from './components/Layout';
 import Header from './containers/Header';

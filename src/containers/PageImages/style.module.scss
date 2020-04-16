@@ -1,0 +1,21 @@
+@import "~styles/config";
+
+.container{
+    &__backgroundImg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateZ(0);
+        animation: sharpen 1s both;
+        @include fit;
+    }
+}
+
+
+@keyframes sharpen {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+  }

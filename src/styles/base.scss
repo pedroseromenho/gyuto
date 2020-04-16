@@ -14,12 +14,15 @@
   body {
     background: $color-dark;
     color: $color-light;
-    cursor: none;
     min-height: 100vh;
     height: 100%;
     @media screen and (min-width: $max-720) {
       max-height: 100vh;
       overflow: hidden;
+      cursor: none;
+    }
+    @media screen and (max-width: $min-720) {
+      cursor: auto;
     }
   }
   

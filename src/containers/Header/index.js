@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
-import { FiMenu, FiX } from "react-icons/fi";
 import { routes } from "utils/routes";
 
 import Nav from 'containers/Nav';
+import Burger from 'components/Burger';
 
 import s from './style.module.scss';
 
@@ -15,31 +14,8 @@ const Header = ({ history, location }) => {
   const { t } = useTranslation('common');
   const [openMenu, setOpenMenu] = useState(false);
 
-  const MenuBurger = () => {
-    if(!openMenu){
-      return (
-        <FiMenu
-          onClick={() => setOpenMenu(!openMenu)}
-          onKeyPress={() => setOpenMenu(!openMenu)}
-          role='presentation'
-        />
-      )
-    } return (
-      <FiX
-        onClick={() => setOpenMenu(!openMenu)}
-        onKeyPress={() => setOpenMenu(!openMenu)}
-        role='presentation'
-      />
-    )
-  }
-
   return(
-    <div 
-      className={classNames(
-        s.container,
-        location.pathname !== '/' ? s.container__background : undefined
-      )}
-    >
+    <div className={s.container}>
       <div className={s.container__wrapper}>
         <h1
           onClick={() => history.push('/')}
@@ -64,7 +40,10 @@ const Header = ({ history, location }) => {
           <>
             {matches.small 
               ? (
-                <MenuBurger/>
+                <Burger 
+                  isOpen={openMenu}
+                  toggle={() => setOpenMenu(!openMenu)}
+                />
               )
               : <Nav />}
             {(openMenu && matches.small && (

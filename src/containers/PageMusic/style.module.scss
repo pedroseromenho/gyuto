@@ -1,0 +1,60 @@
+@import "~styles/config";
+
+.container{
+    height: 100%;
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
+    &__wrapper{
+        display: flex;
+        &__video{
+            flex: 2;
+            &__img{
+                margin-top: 15px;
+            }
+        }
+        &__text{
+            flex: 2;
+            margin-left: 20px;
+            margin-right: 20px;
+            &__box{
+                height: calc(100vh - 280px);
+                padding-top: 15px;
+                &__content{
+                    padding-right: 20px !important;
+                    p{
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__albums{
+            flex: 1;
+            &__img{
+                margin-top: 15px;
+            }
+        }
+        &__video,
+        &__text,
+        &__albums{
+            h2{
+                border-bottom: 2px solid $color-light;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__player{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        &__title{
+            position: absolute;
+            bottom: 18px;
+            right: 130px;
+        }
+    }
+}

@@ -8,11 +8,6 @@
         padding-left: 2%;
         padding-right: 2%;
     }
-    // &__background {
-    //     @media screen and (min-width: $max-720) {
-    //         background-color: $color-dark;
-    //     }
-    // }
     &__list{
         @include flex-row;
         li{

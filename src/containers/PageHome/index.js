@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import Media from 'react-media';
-import { videos } from 'data/videos';
+import  videos from '__MOCKS__/videos';
 import { selectedLang } from 'utils/lang';
 import { TweenMax } from 'gsap';
 import { infoEnter, infoLeave } from 'animations/home';

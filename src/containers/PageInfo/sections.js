@@ -1,4 +1,4 @@
-import {info} from 'data/info';
+import info from '__MOCKS__/info';
 
 const coords = (t) => (
   [{
