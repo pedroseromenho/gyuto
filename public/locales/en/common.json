@@ -2,8 +2,9 @@
     "title": "Gyütö",
     "info": "Info",
     "music": "Music",
-    "images": "Images",
+    "portraits": "Portraits",
     "docList": "Doc List",
     "credits": "Credits",
-    "skip": "skip"
+    "skip": "skip",
+    "albums": "Albums"
 }

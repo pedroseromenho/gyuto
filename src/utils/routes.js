@@ -10,8 +10,8 @@ export const routes = (t) => (
     isFooter: false,
   },
   {
-    name: t('images'),
-    pathname: "/images",
+    name: t('portraits'),
+    pathname: "/portraits",
     isFooter: false,
   },
   {

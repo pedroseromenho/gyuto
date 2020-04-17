@@ -10,7 +10,8 @@ const ScrollContainer = ({
   classNameContainer, 
   classNameWrapper, 
   list,
-  showScrollBar
+  showScrollBar,
+  isWhite
 }) => (
   <div className={
     classNames(
@@ -18,7 +19,8 @@ const ScrollContainer = ({
       "tweenMax-scrollContainer",
       showScrollBar 
         ? "container-scroll-bar"
-        : "container-scroll"
+        : "container-scroll",
+      isWhite && "container-scroll-bar-white"
     )}>
     {list ? (
       <ul className={
@@ -47,6 +49,7 @@ ScrollContainer.defaultProps = {
   showScrollBar: false,
   classNameContainer: undefined,
   classNameWrapper: undefined,
+  isWhite: false,
 }
 
 ScrollContainer.propTypes = {
@@ -55,6 +58,7 @@ ScrollContainer.propTypes = {
   children: PropTypes.any.isRequired,
   classNameContainer: PropTypes.any,
   classNameWrapper: PropTypes.any,
+  isWhite: PropTypes.bool,
 }
 
 export default ScrollContainer;

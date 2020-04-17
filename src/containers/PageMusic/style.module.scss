@@ -9,8 +9,9 @@
         display: flex;
         &__video{
             flex: 2;
-            &__img{
+            &__iframe{
                 margin-top: 15px;
+                @include video-responsive;
             }
         }
         &__text{

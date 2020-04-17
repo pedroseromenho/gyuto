@@ -31,7 +31,7 @@ const PageInfo = () => {
 
   useEffect(() => {
     preloadImg();
-  }, [currentSection])
+  }, [currentSection]) //eslint-disable-line
 
   return(
     <div className={s.container}>

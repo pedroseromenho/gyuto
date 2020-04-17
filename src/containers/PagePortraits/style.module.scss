@@ -1,0 +1,48 @@
+@import "~styles/config";
+
+.container{
+    height: 100%;
+    &__backgroundImg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateZ(0);
+        animation: sharpen 1s both;
+        @include fit;
+    }
+    &__wrapper{
+        @include flex-row;
+        height: 100%;
+        max-width: 1150px;
+        margin: auto;
+        &__slide{
+            &__legend{
+                background-color: $color-dark;
+                padding: 10px;
+            }
+        }
+        &__text{
+            flex: 1;
+            z-index: 1;
+            margin-left: 10px;
+            height: calc(100vh - 200px);
+            &__content{
+                p{
+                    font-size: 1.3rem;
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes sharpen {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+  }
