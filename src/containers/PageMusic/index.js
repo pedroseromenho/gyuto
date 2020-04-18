@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import music from '__MOCKS__/music';
 import { useTranslation } from 'react-i18next';
 import { selectedLang } from 'utils/lang';
@@ -32,6 +32,16 @@ const PageMusic = () => {
           </h2>
           <div className={s.container__wrapper__video__iframe}>
             <CoverMedia item={music} />
+            <div className={s.container__wrapper__video__iframe__link}>
+              <a 
+                href={music.info.siteWeb}
+                className="hoverable"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {music.info.siteWeb.replace(/(^\w+:|^)\/\//, '')}
+              </a> 
+            </div>
           </div>
         </div>
         <div className={s.container__wrapper__text}>
@@ -47,19 +57,31 @@ const PageMusic = () => {
                 selectedLang(i18n, music.info.text.en, music.info.text.fr)
               }} 
             />
+            <span>{selectedLang(i18n, music.info.legend.en, music.info.legend.fr)}</span>
           </ScrollContainer>
         </div>
         <div className={s.container__wrapper__albums}>
           <h2>{t('albums')}</h2>
           {music.albums.map(e => (
-            <CoverMedia 
-              key={e.title}
-              className={s.container__wrapper__albums__img} 
-              item={e}
-              isPlaying={isPlaying && e.title === list[musicIndex].album}
-              onPlay={() => playAlbum(e.title)}
-              isAlbumCover
-            />
+            <Fragment key={e.title}>
+              <CoverMedia
+                className={s.container__wrapper__albums__img} 
+                item={e}
+                isPlaying={isPlaying && e.title === list[musicIndex].album}
+                onPlay={() => playAlbum(e.title)}
+                isAlbumCover
+              />
+              <div className={s.container__wrapper__albums__order}>
+                <a 
+                  href={e.url_order}
+                  className="hoverable"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {`${t('order')} ${e.title}`}
+                </a> 
+              </div>
+            </Fragment>
           ))}
         </div>
       </div>

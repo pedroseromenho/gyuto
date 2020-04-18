@@ -1,7 +1,7 @@
 {
   "video": {
     "url": "WiW_xVVr6b8",
-    "img": "./assets/music/img.JPG"
+    "img": "./assets/music/img.png"
   },
   "info": {
     "title": {
@@ -20,7 +20,7 @@
       "fr": "bo van der werf, octobre 2018",
       "en": "bo van der werf, october 2018"
     },
-    "siteWeb": "www.octurn.com"
+    "siteWeb": "http://www.octurn.com"
   },
   "albums": [{
     "title": "Kailash",

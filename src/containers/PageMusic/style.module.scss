@@ -10,8 +10,15 @@
         &__video{
             flex: 2;
             &__iframe{
-                background-color: $color-gray;
                 margin-top: 15px;
+                &__link{
+                    margin-top: 15px;
+                    a{
+                        color: $color-light;
+                        text-decoration: underline;
+                        cursor: none;
+                    }
+                }
             }
         }
         &__text{
@@ -28,6 +35,9 @@
                             margin-top: 0;
                         }
                     }
+                    span{
+                        font-size: $font-size-nano;
+                    }
                 }
             }
         }
@@ -35,6 +45,15 @@
             flex: 1;
             &__img{
                 margin-top: 15px;
+            }
+            &__order{
+                margin-top: 5px;
+                a{
+                    color: $color-light;
+                    text-decoration: underline;
+                    cursor: none; 
+                    font-size: $font-size-nano;
+                }
             }
         }
         &__video,

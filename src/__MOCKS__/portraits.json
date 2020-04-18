@@ -7,6 +7,10 @@
     "en": "<p>Very quickly, the monks became like our 'big brothers', and we wanted to taketheir portraits. Taking advantage of this close intimacy, they told us about their perilous journey from their native land, Tibet, and their crossing of the Himalayas, to the north of India.</p><p>“I wanted to become a monk when I was a child, I wanted to read and learn the sacred texts. I loved the life of the monks I saw in my village in Tibet. My parents worked hard all day to feed us, my brothers, my sisters, and me. Since my older brother was already helping them in the fields with theanimals, my mum decided that I wouldbe a monk. During this period the Chinese were burningthe monasteries and the sacred texts, and so my parents decided that I should flee to India. I was only 8 years old when I crossed the Himalayas on foot. The trip lasted a month. When I was too tired to walk, the older children carried us on their backs, but in the morning some children had died of cold. We had to walk during the night, because during the day the Chinese guards shot at us. We only had a little tsampa to eat for the whole trip. My uncle who accompanied me,died on arrival in India. The new climate for us was very harsh, many monks fell ill, they died soon after. I saw my parents only once, when I was 20 years old, and since then I have stayed at the monastery. I am very happy to be a monk. My parents are dead now, and I wish I had known them better. ”</p><p>Everyone has their own experience, but their stories are incredibly similar: to flee the persecution of the Chinese regime and to be able to live their devotion freely, there was only one solution: crossing the Himalayas On foot and risking their lives.</p>"
   },
   "gallery": [{
+        "url": "assets/portraits/0_Intro.png",
+        "name":"Gaia"
+      },
+      {
         "url": "assets/portraits/Chakdor.JPG",
         "name":"Chakdor"
       },
@@ -211,7 +215,6 @@
         "name":"Tsewa Palgon"
       },      
       {
-
         "url": "assets/portraits/Yeshi.JPG",
         "name":"Yeshi"
       },      

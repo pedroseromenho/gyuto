@@ -7,12 +7,15 @@ $zero: scaleY(0);
 .container{
     position: relative;
     background-color: $color-gray;
+    &:hover
+    &__hoverImg{
+        animation: easeOpacity 0.2s ease-in-out;
+    }
     &__hoverImg{
         @include fit;
         @include flex-row;
         justify-content: center;
         background-color: rgba($color: $color-gray, $alpha: 0.5);
-        animation: ease-opacity 0.2 ease-in-out;
         @for $i from 1 through 10{
             span:nth-child(#{$i}){
               width: $width;
@@ -55,7 +58,7 @@ $zero: scaleY(0);
     }
 }
 
-@keyframes ease-opacity{
+@keyframes easeOpacity{
     from{
         opacity: 0;
     }
