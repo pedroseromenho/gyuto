@@ -15,10 +15,6 @@ $rhap_font-family: inherit !default;
   padding: 10px 15px;
   background-color: $color-dark;
   outline: none;
-
-  &:focus:not(:focus-visible) {
-    outline: 0;
-  }
 }
 
 .rhap_header {
@@ -78,12 +74,9 @@ $rhap_font-family: inherit !default;
   flex: 1 0 auto;
   align-self: center;
   margin: 0 calc(10px + 1%);
-  cursor: pointer;
+  cursor: none;
   -webkit-user-select: none; 
-
-  &:focus:not(:focus-visible) {
-    outline: 0;
-  }
+  outline: 0;
 }
 
 .rhap_time {
@@ -207,11 +200,8 @@ $rhap_font-family: inherit !default;
   align-items: center;
   width: 100%;
   height: 14px;
-  cursor: pointer;
-
-  &:focus:not(:focus-visible) {
-    outline: 0;
-  }
+  cursor: none;
+  outline: 0;
 }
 
 .rhap_volume-bar {
@@ -235,31 +225,25 @@ $rhap_font-family: inherit !default;
   opacity: 0.9;
   border-radius: 50px;
   box-shadow: rgba($color-middle-light, .5) 0 0 3px;
-  cursor: pointer;
+  cursor: none;
 
   &:hover {
     opacity: .9;
   }
 }
 
-/* Utils */
 .rhap_button-clear {
   background-color: transparent;
   border: none;
   padding: 0;
   overflow: hidden;
-  cursor: pointer;
-
+  cursor: none;
+  outline: 0;
   &:hover {
     opacity: .9;
     transition-duration: .2s;
   }
-
   &:active {
     opacity: .95;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: 0;
   }
 }

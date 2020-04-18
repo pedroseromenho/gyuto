@@ -1,0 +1,65 @@
+@import "~styles/config";
+
+$width: 4px;
+$height: 50px;
+$zero: scaleY(0);
+
+.container{
+    position: relative;
+    background-color: $color-gray;
+    &__hoverImg{
+        @include fit;
+        @include flex-row;
+        justify-content: center;
+        background-color: rgba($color: $color-gray, $alpha: 0.5);
+        animation: ease-opacity 0.2 ease-in-out;
+        @for $i from 1 through 10{
+            span:nth-child(#{$i}){
+              width: $width;
+              height: $height;
+              transform: $zero;
+              background: rgba(240, 50, 50, random(12)/11);
+              float: left;
+              margin-right:4px;
+              border-radius: 3px 3px 0 0;
+              transform-origin: bottom;
+              animation: music-#{$i} 2s ease-in-out infinite ($i * 0.2s);
+              @keyframes music-#{$i}{
+                    0%{
+                        transform: $zero;
+                    } 
+                    50%{
+                        transform: scaleY(random(2)*0.8);
+                    }
+                    100%{
+                        transform: $zero;
+                    } 
+                }
+            }
+        }
+        svg{
+            font-size: 4.5rem;
+        }
+    }
+    &__video{
+        background-color: $color-gray;
+        margin-top: 15px;
+        @include video-responsive;
+    }
+    &__hoverVideo{
+        @include fit;
+        @include flex-row;
+        justify-content: center;
+        font-size: 4.5rem;
+        background-image:linear-gradient(to top, rgba($color: $color-gray, $alpha: 0.7), transparent);
+    }
+}
+
+@keyframes ease-opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

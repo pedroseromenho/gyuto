@@ -10,8 +10,8 @@
         &__video{
             flex: 2;
             &__iframe{
+                background-color: $color-gray;
                 margin-top: 15px;
-                @include video-responsive;
             }
         }
         &__text{

@@ -1,0 +1,50 @@
+@import "~styles/config";
+
+$width: 4px;
+$height: 15px;
+$zero: scaleY(0);
+
+.container{
+    &__title{
+        position: absolute;
+        bottom: 18px;
+        left: 15px;
+        display: flex;
+        align-items: baseline;
+        &__bars{
+            margin-right: 5px;
+            @for $i from 1 through 5{
+                span:nth-child(#{$i}){
+                  width: $width;
+                  height: $height;
+                  transform: $zero;
+                  background: rgba(240, 50, 50, random(12)/11);
+                  transform: scaleY(random(2)*0.8);
+                  float: left;
+                  margin-right:4px;
+                  border-radius: 3px 3px 0 0;
+                  transform-origin: bottom;
+                }
+            }
+        }
+        &__barsIsPlaying{
+            @for $i from 1 through 5{
+                span:nth-child(#{$i}){
+                  transform: inherit;
+                  animation: music-#{$i} 2s ease-in-out infinite ($i * 0.2s);
+                }
+                @keyframes music-#{$i}{
+                  0%{
+                    transform: $zero;
+                  } 
+                  50%{
+                    transform: scaleY(random(2)*0.8);
+                  }
+                  100%{
+                    transform: $zero;
+                  } 
+                }
+            }
+        }
+    }
+}
