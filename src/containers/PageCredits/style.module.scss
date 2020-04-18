@@ -1,9 +1,17 @@
 @import "~styles/config";
 
 .container{
-   max-width: 600px;
+   max-width: 650px;
    margin: auto;
    height: calc(100vh - 150px);
+   img{
+       background-color: $color-gray;
+       width: 100%;
+       filter: blur(10px);
+   }
+   &__img{
+    animation: sharpen 1s both;
+   }
    a{
        color: $color-light;
        text-decoration: underline;
@@ -34,3 +42,12 @@
        }
    }
 }
+
+@keyframes sharpen {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter: blur(0);
+    }
+  }

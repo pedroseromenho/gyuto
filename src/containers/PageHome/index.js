@@ -82,7 +82,7 @@ const PageHome = ({openModalVideo }) => {
                 <div className={s.container__img}>
                   {selectedId !== null && (
                     <img 
-                      src={videos[selectedId].img} 
+                      src={videos[selectedId].img.medium} 
                       alt={selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)} 
                       className="tweenMax-video-img"
                     />

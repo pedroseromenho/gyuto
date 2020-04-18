@@ -58,6 +58,12 @@
             }
             &__img{
                 background-color: $color-gray;
+                img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    filter: blur(5px);
+                }
             }
             &__text{
                 h5{
@@ -71,3 +77,18 @@
         }
     }
 }
+
+.loaded{
+    img{
+        animation: sharpen 1s both;
+    }
+}
+
+@keyframes sharpen {
+    from {
+        filter: blur(5px);
+    }
+    to {
+        filter: blur(0);
+    }
+  }

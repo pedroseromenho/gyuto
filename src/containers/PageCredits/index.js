@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import credits from '__MOCKS__/credits'
 import { useTranslation } from 'react-i18next';
 import { selectedLang } from 'utils/lang';
@@ -8,14 +8,34 @@ import ScrollContainer from 'components/ScrollContainer';
 import s from './style.module.scss';
 
 const PageCredits = () => {
+  const [ loadedImg, setLoadedImg ] = useState(false);
   const { i18n, t } = useTranslation('common');
+  
+  const preloadImg = () => {
+    setLoadedImg(false)
+    let img = new Image();
+    img.onload = () => {
+      setLoadedImg(true);
+    }
+    img.src = credits.contact.portrait.high;
+  }
 
-  console.log(credits);
+  useEffect(() => {
+    preloadImg();
+  }, []) 
+
   return(
     <ScrollContainer
       classNameContainer={s.container}
     >
-      <img src={credits.contact.portrait} alt={credits.contact.name}/>
+      <img 
+        src={loadedImg 
+          ? credits.contact.portrait.high
+          : credits.contact.portrait.low
+        } 
+        alt={credits.contact.name}
+        className={loadedImg && s.container__img}
+      />
       <h3>{credits.contact.name}</h3>
       <div className={s.container__email}>
         <a href={`mailto: ${credits.contact.email.movie}`} className="hoverable">

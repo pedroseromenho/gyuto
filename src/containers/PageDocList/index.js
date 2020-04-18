@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
 import { useTranslation } from 'react-i18next';
@@ -14,9 +14,24 @@ import ScrollContainer from 'components/ScrollContainer';
 
 const PageDocList = ({ openModalVideo }) => {
   const [selectedId, setSelectedId] = useState(null);
+  const [ loadedImg, setLoadedImg ] = useState(false);
   const displayInfo = videos.filter(i => i.id === selectedId)[0];
-
   const { i18n } = useTranslation();
+
+  const preloadImg = () => {
+    setLoadedImg(false)
+    let img = new Image();
+    img.onload = () => {
+      setLoadedImg(true);
+    }
+    img.src = displayInfo.img.high;
+  }
+
+  useEffect(() => {
+    if(selectedId){
+      preloadImg();
+    }
+  }, [selectedId]) //eslint-disable-line
 
   return(
     <div className={s.container}>
@@ -68,7 +83,7 @@ const PageDocList = ({ openModalVideo }) => {
                     />
                   ) : (
                     <Preview 
-                      img={displayInfo.img} 
+                      img={loadedImg ? displayInfo.img.high : displayInfo.img.low} 
                       quote={selectedLang(i18n, 
                         displayInfo.quote.en, displayInfo.quote.fr
                       )} 
@@ -78,6 +93,7 @@ const PageDocList = ({ openModalVideo }) => {
                       alt={selectedLang(i18n, 
                         displayInfo.title.en, displayInfo.title.fr
                       )}
+                      className={s.loaded}
                     />
                   )}
               </div>

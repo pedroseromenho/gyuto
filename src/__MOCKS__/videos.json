@@ -16,7 +16,11 @@
       "fr": "4mRhdJh2Hcg",
       "en": "TxoYtay1lHE"
     },
-    "img": "./assets/videos/1-becoming_budhha_1.png",
+    "img": {
+      "low":"./assets/videos/1-becoming_budhha_1-low.png",
+      "medium": "./assets/videos/1-becoming_budhha_1-medium.png",
+      "high": "./assets/videos/1-becoming_budhha_1.png"
+    },
     "duration": "3'14"
   },
   {
@@ -37,7 +41,11 @@
       "fr": "l49OE8tWb5g",
       "en": "YCihbUdKoGU"
     },
-    "img": "./assets/videos/2-becoming_buddha_2.png",
+    "img": {
+      "low":"./assets/videos/2-becoming_buddha_2-low.png",
+      "medium": "./assets/videos/2-becoming_buddha_2-medium.png",
+      "high": "./assets/videos/2-becoming_buddha_2.png"
+    },
     "duration": "3'02"
   },
   {
@@ -58,7 +66,11 @@
       "fr": "YmzzAqp7_ec",
       "en": "jWrcRtPI3DA"
     },
-    "img": "./assets/videos/3-becoming_buddha_3.png",
+    "img": {
+      "low": "./assets/videos/3-becoming_buddha_3-low.png",
+      "medium": "./assets/videos/3-becoming_buddha_3-medium.png",
+      "high": "./assets/videos/3-becoming_buddha_3.png"
+    },
     "duration": "4'09"
   },
   {
@@ -79,7 +91,11 @@
       "fr": "oEUQOfjr_dY",
       "en": "Kw6BYCNNirY"
     },
-    "img": "./assets/videos/4-becoming_buddha_4.png",
+    "img": {
+      "low": "./assets/videos/4-becoming_buddha_4-low.png",
+      "medium": "./assets/videos/4-becoming_buddha_4-medium.png",
+      "high": "./assets/videos/4-becoming_buddha_4.png"
+    },
     "duration": "3'09"
   },
   {
@@ -100,7 +116,11 @@
       "fr": "K15VZ4IOc-M",
       "en": "cPun4cNM-3w"
     },
-    "img": "./assets/videos/5-transmission.png",
+    "img": {
+      "low": "./assets/videos/5-transmission-low.png",
+      "medium": "./assets/videos/5-transmission-medium.png",
+      "high": "./assets/videos/5-transmission.png"
+    },
     "duration": "4'32"
   },
   {
@@ -121,7 +141,11 @@
       "fr": "kgsZpl_A9_s",
       "en": "7iNtuaFUpkg"
     },
-    "img": "./assets/videos/6-ant_without_shadow.png",
+    "img": {
+      "low": "./assets/videos/6-ant_without_shadow-low.png",
+      "medium": "./assets/videos/6-ant_without_shadow-medium.png",
+      "high": "./assets/videos/6-ant_without_shadow.png"
+    },
     "duration": "2'52"
   },
   {
@@ -142,7 +166,11 @@
       "fr": "2I8XXQrnmjA",
       "en": "kov6n4j8YWw"
     },
-    "img": "./assets/videos/7-ultimate_happiness_1.png",
+    "img": {
+      "low": "./assets/videos/7-ultimate_happiness_1-low.png",
+      "medium": "./assets/videos/7-ultimate_happiness_1-medium.png",
+      "high": "./assets/videos/7-ultimate_happiness_1.png"
+    },
     "duration": "2'58"
   },
   {
@@ -163,7 +191,11 @@
       "fr": "Mdf_gEelqgA",
       "en": "iZTtr93gbVw"
     },
-    "img": "./assets/videos/8-ultimate_hapiness_2.JPG",
+    "img": {
+      "low": "./assets/videos/8-ultimate_hapiness_2-low.JPG",
+      "medium": "./assets/videos/8-ultimate_hapiness_2-medium.JPG",
+      "high": "./assets/videos/8-ultimate_hapiness_2.JPG"
+    },
     "duration": "4'55"
   },
   {
@@ -184,7 +216,11 @@
       "fr": "-Cy3_vQUexY",
       "en": "9gsaRn6Fk48"
     },
-    "img": "./assets/videos/9-ultimate_happiness_3.png",
+    "img": {
+      "low": "./assets/videos/9-ultimate_happiness_3-low.png",
+      "medium": "./assets/videos/9-ultimate_happiness_3-medium.png",
+      "high": "./assets/videos/9-ultimate_happiness_3.png"
+    },
     "duration": "2'19"
   },
   {
@@ -205,7 +241,11 @@
       "fr": "Saolag6gx-M",
       "en": "fSDB3btGLN4"
     },
-    "img": "./assets/videos/10-ultimate_happiness_4.png",
+    "img": {
+      "low": "./assets/videos/10-ultimate_happiness_4-low.png",
+      "medium": "./assets/videos/10-ultimate_happiness_4-medium.png",
+      "high": "./assets/videos/10-ultimate_happiness_4.png"
+    },
     "duration": "4'50"
   },
   {
@@ -226,7 +266,11 @@
       "fr": "At-LTgtoY3Q",
       "en": "xw7XdJ8A3bk"
     },
-    "img": "./assets/videos/11-Kundun.png",
+    "img": {
+      "low": "./assets/videos/11-Kundun-low.png",
+      "medium": "./assets/videos/11-Kundun-medium.png",
+      "high": "./assets/videos/11-Kundun.png"
+    },
     "duration": "10'43"
   },
   {
@@ -247,7 +291,11 @@
       "fr": "xdALdaJRpGg",
       "en": "94yceioOHFg"
     },
-    "img": "./assets/videos/12-New_reality.png",
+    "img": {
+      "low": "./assets/videos/12-New_reality-low.png",
+      "medium": "./assets/videos/12-New_reality-medium.png",
+      "high": "./assets/videos/12-New_reality.png"
+    },
     "duration": "2'57"
   },
   {
@@ -268,7 +316,11 @@
       "fr": "_ZFstJ56sdw",
       "en": "qYZA0BVVBlk"
     },
-    "img": "./assets/videos/13-the_samsara_beings_1.png",
+    "img": {
+      "low": "./assets/videos/13-the_samsara_beings_1-low.png",
+      "medium": "./assets/videos/13-the_samsara_beings_1-medium.png",
+      "high": "./assets/videos/13-the_samsara_beings_1.png"
+    },
     "duration": "4'14"
   },
   {
@@ -289,7 +341,11 @@
       "fr": "BLU0GInSiVw",
       "en": "Klui7ZLNzX4"
     },
-    "img": "./assets/videos/14-the_samsara_beings_2.png",
+    "img": {
+      "low": "./assets/videos/14-the_samsara_beings_2-low.png",
+      "medium": "./assets/videos/14-the_samsara_beings_2-medium.png",
+      "high": "./assets/videos/14-the_samsara_beings_2.png"
+    },
     "duration": "4'19"
   },
   {
@@ -310,7 +366,11 @@
       "fr": "Hyl6ZMJPMbw",
       "en": "fWQhtkqnihQ"
     },
-    "img": "./assets/videos/15-the_samsara_beings_3.png",
+    "img": {
+      "low": "./assets/videos/15-the_samsara_beings_3-low.png",
+      "medium": "./assets/videos/15-the_samsara_beings_3-medium.png",
+      "high": "./assets/videos/15-the_samsara_beings_3.png"
+    },
     "duration": "5'30"
   },
   {
@@ -332,7 +392,11 @@
       "fr": "5CYTSYfdOAU",
       "en": "Vv1RrMZjgco"
     },
-    "img": "./assets/videos/16-the_samsara_beings_4.png",
+    "img": {
+      "low": "./assets/videos/15-the_samsara_beings_4-low.png",
+      "medium": "./assets/videos/15-the_samsara_beings_4-medium.png",
+      "high": "./assets/videos/16-the_samsara_beings_4.png"
+    },
     "duration": "2'55"
   },
   {
@@ -353,7 +417,11 @@
       "fr": "KHbX1CvHCMs",
       "en": "adFmW6lrA-o"
     },
-    "img": "./assets/videos/17-Interdependence.png",
+    "img": {
+      "low": "./assets/videos/17-Interdependence-low.png",
+      "medium": "./assets/videos/17-Interdependence-medium.png",
+      "high": "./assets/videos/17-Interdependence.png"
+    },
     "duration": "8'09"
   },
   {
@@ -374,7 +442,11 @@
       "fr": "adoUX17ZNRI",
       "en": "zkOeu_MaQDo"
     },
-    "img": "./assets/videos/18-Dkhyl_khor.JPG",
+    "img": {
+      "low": "./assets/videos/18-Dkhyl_khor-low.JPG",
+      "medium": "./assets/videos/18-Dkhyl_khor-medium.JPG",
+      "high": "./assets/videos/18-Dkhyl_khor.JPG"
+    },
     "duration": "5'45"
   },
   {
@@ -395,7 +467,11 @@
       "fr": "lDIvfbxnDtQ",
       "en": "kAkjj-GgNS0"
     },
-    "img": "./assets/videos/19-Renki.png",
+    "img": {
+      "low": "./assets/videos/19-Renki-low.png",
+      "medium": "./assets/videos/19-Renki-medium.png",
+      "high": "./assets/videos/19-Renki.png"
+    },
     "duration": "7'02"
   },
   {
@@ -416,7 +492,11 @@
       "fr": "e50A0W14IuY",
       "en": "PQH1Xd2pXRI"
     },
-    "img": "./assets/videos/20-Heart_Sutra.png",
+    "img": {
+      "low": "./assets/videos/20-Heart_Sutra-low.png",
+      "medium": "./assets/videos/20-Heart_Sutra-medium.png",
+      "high": "./assets/videos/20-Heart_Sutra.png"
+    },
     "duration": "8'16"
   }
 ]

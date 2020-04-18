@@ -1,7 +1,10 @@
 {
   "video": {
     "url": "WiW_xVVr6b8",
-    "img": "./assets/music/img.png"
+    "img": {
+      "medium": "./assets/music/img.png",
+      "high": "./assets/music/img-medium.png"
+    }
   },
   "info": {
     "title": {

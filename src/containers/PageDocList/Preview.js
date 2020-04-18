@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import YouTube from 'react-youtube';
+import classNames from 'classnames';
 
 import s from './style.module.scss';
 
-const Preview = ({video, img, quote, legend, alt}) => (
+const Preview = ({video, img, quote, legend, alt, className}) => (
   <div className={s.container__preview__info}>
     {video && (
       <div className={s.container__preview__info__video}>
@@ -15,8 +16,8 @@ const Preview = ({video, img, quote, legend, alt}) => (
       </div>
     )}
     {img && (
-      <div className={s.container__preview__info__img}>
-        <img src={img} alt ={alt} />
+      <div className={classNames(s.container__preview__info__img, className)}>
+        <img src={img} alt={alt} />
       </div>
     )}
     <div className={s.container__preview__info__text}>
@@ -29,6 +30,7 @@ const Preview = ({video, img, quote, legend, alt}) => (
 Preview.propTypes = {
   video: PropTypes.any,
   img: PropTypes.any,
+  className: PropTypes.any,
   alt: PropTypes.string,
   quote: PropTypes.string.isRequired,
   legend: PropTypes.string.isRequired,
@@ -38,6 +40,7 @@ Preview.defaultProps = {
   video: null,
   img: null,
   alt: "",
+  className: undefined,
 };
 
 export default Preview;

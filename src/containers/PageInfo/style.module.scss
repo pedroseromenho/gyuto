@@ -36,8 +36,11 @@
             background-size: cover;
             background-repeat: no-repeat;
             transform: translateZ(0);
-            animation: sharpen 1s both;
             height: calc(100vh - 300px);
+            filter: blur(10px);
+        }
+        &__imgLoaded{
+            animation: sharpen 1s both;
         }
     }
     svg{

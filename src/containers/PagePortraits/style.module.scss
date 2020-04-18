@@ -6,8 +6,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         transform: translateZ(0);
-        animation: sharpen 1s both;
         @include fit;
+        filter: blur(100px);
+    }
+    &__backgroundImgLoaded{
+        animation: sharpen 1s both;
     }
     &__wrapper{
         @include flex-row;

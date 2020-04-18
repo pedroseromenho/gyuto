@@ -61,7 +61,7 @@ const CoverMedia = ({
         ) 
         : (
           <>
-            <img src={item.video.img} alt={item.info.title.en} />
+            <img src={item.video.img.medium} alt={item.info.title.en} />
             <div className={s.container__hoverVideo}>
               <IoMdPlayCircle 
                 className="hoverable"

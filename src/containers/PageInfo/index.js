@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import {sections} from './sections';
 import {selectedLang} from 'utils/lang';
 import classNames from 'classnames';
+import { textEnter } from 'animations/info';
 
 import MountainSvg from './MountainSvg';
 import ScrollContainer from 'components/ScrollContainer';
@@ -22,7 +23,7 @@ const PageInfo = () => {
     img.onload = () => {
       setLoadedImg(true);
     }
-    img.src = sectionContent.img;
+    img.src = sectionContent.img.high;
   }
 
   const changeSection = (current) => {
@@ -30,14 +31,19 @@ const PageInfo = () => {
   } 
 
   useEffect(() => {
+    const text = document.querySelector(".tweenMax-info-text")
     preloadImg();
+    textEnter(text)
   }, [currentSection]) //eslint-disable-line
 
   return(
     <div className={s.container}>
       <div className={s.container__wrapper} key={sectionContent.section}>
         <ScrollContainer
-          classNameContainer={s.container__wrapper__info}
+          classNameContainer={classNames(
+            s.container__wrapper__info, 
+            "tweenMax-info-text"
+          )}
           classNameWrapper={s.container__wrapper__info__content}
           showScrollBar
         >
@@ -69,9 +75,10 @@ const PageInfo = () => {
         <div 
           className={classNames(
             s.container__wrapper__img, 
-            "tweenMax-info-img")}
+            "tweenMax-info-img",
+            loadedImg && s.container__wrapper__imgLoaded)}
           style={{backgroundImage: `url('${loadedImg 
-            ? sectionContent.img : sectionContent.imgLow}')`}}
+            ? sectionContent.img.high : sectionContent.img.low}')`}}
         />
       </div>
       <MountainSvg 
