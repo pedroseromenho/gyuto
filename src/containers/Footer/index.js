@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { FaFacebook } from "react-icons/fa";
 import { routes } from "utils/routes";
 import Media from 'react-media';
+import credits from '__MOCKS__/credits';
 
 import Lang from 'components/Lang';
 import ListItem from 'components/ListItem';
@@ -31,7 +32,7 @@ const Footer = ({ history}) => {
               )))}
             <ListItem 
               value={<FaFacebook />}
-              handleClick={undefined}
+              handleClick={() => window.open(credits.contact.facebook)}
             /> 
           </ul>
         </div>
