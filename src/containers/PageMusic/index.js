@@ -1,8 +1,12 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useEffect } from 'react';
 import music from '__MOCKS__/music';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { selectedLang } from 'utils/lang';
-import {playlist} from 'utils/playlist'
+import {playlist} from 'utils/playlist';
+import classNames from 'classnames';
+import { infoEnter } from 'animations/music';
 
 import ScrollContainer from 'components/ScrollContainer';
 import PlayerAudio from 'components/PlayerAudio';
@@ -10,7 +14,7 @@ import CoverMedia from 'components/CoverMedia';
 
 import s from "./style.module.scss";
 
-const PageMusic = () => {
+const PageMusic = ({ location }) => {
   const [musicIndex, setMusicIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [list, setList] = useState(playlist);
@@ -23,10 +27,18 @@ const PageMusic = () => {
     setIsPlaying(true);
   }
 
+  useEffect(() => {
+    const video = document.querySelector(".tweenMax-music-video");
+    const text = document.querySelector(".tweenMax-music-text");
+    const albums = document.querySelector(".tweenMax-music-albums");
+    infoEnter(video, text, albums)
+  }, [location.pathname])
   return(
     <div className={s.container}>
       <div className={s.container__wrapper}>
-        <div className={s.container__wrapper__video}>
+        <div className={classNames(
+          s.container__wrapper__video, "tweenMax-music-video"
+        )}>
           <h2>
             {selectedLang(i18n, music.info.title.en, music.info.title.fr)}
           </h2>
@@ -44,7 +56,9 @@ const PageMusic = () => {
             </div>
           </div>
         </div>
-        <div className={s.container__wrapper__text}>
+        <div className={classNames(
+          s.container__wrapper__text, "tweenMax-music-text"
+        )}>
           <h2>
             {selectedLang(i18n, music.info.subTitle.en, music.info.subTitle.fr)}
           </h2>
@@ -60,7 +74,9 @@ const PageMusic = () => {
             <span>{selectedLang(i18n, music.info.legend.en, music.info.legend.fr)}</span>
           </ScrollContainer>
         </div>
-        <div className={s.container__wrapper__albums}>
+        <div className={classNames(
+          s.container__wrapper__albums, "tweenMax-music-albums"
+        )}>
           <h2>{t('albums')}</h2>
           {music.albums.map(e => (
             <Fragment key={e.title}>
@@ -104,6 +120,11 @@ const PageMusic = () => {
         isPlaying={isPlaying}
       />
     </div>
-  )}
+  )
+}
 
-export default PageMusic;
+PageMusic.propTypes = {
+  location: PropTypes.any.isRequired
+}
+
+export default withRouter(PageMusic);

@@ -34,7 +34,7 @@ const PageCredits = () => {
           : credits.contact.portrait.low
         } 
         alt={credits.contact.name}
-        className={loadedImg && s.container__img}
+        className={loadedImg ? s.container__img : undefined}
       />
       <h3>{credits.contact.name}</h3>
       <div className={s.container__email}>

@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom';
 import Media from 'react-media';
 
 import ModalVideo from 'components/ModalVideo';
@@ -13,16 +14,40 @@ const Layout = ({
   footer, 
   closeModalVideo, 
   video,
-  playIntro
+  playIntro,
+  location,
 }) => {
+  
+  const [modalFullSize, setModalFullSize] = useState(false);
+
+  const setFullSize = () => {
+    setModalFullSize(true);
+  }
+
+  const removeFullSize = () => {
+    setModalFullSize(false);
+  }
 
   useEffect(() => {
-    if(video){
+    if(modalFullSize){
       return document.body.classList.add('videoOpen');
     }else{
       return document.body.classList.remove('videoOpen');
     }
-  }, [video]);
+  }, [modalFullSize]);
+
+  useEffect(() => {
+    const audio = new Audio('/assets/click.wav');
+    const links = document.querySelectorAll('.hoverable');
+    links.forEach((e, index) => {
+      links[index].addEventListener('click', () => {
+        audio.play();
+      })
+    })
+    // document.body.addEventListener('click', () => {
+    //   audio.play();
+    // })
+  }, [location.pathname])
 
   return(
     <div className={s.container}>
@@ -35,10 +60,16 @@ const Layout = ({
             <main>{main}</main>
             <footer>{footer}</footer>
             {video !== null && !matches.small && (
-              <ModalVideo video={video} close={closeModalVideo} playIntro={playIntro} />
+              <ModalVideo 
+                video={video} 
+                close={closeModalVideo} 
+                playIntro={playIntro} 
+                setFullSize={setFullSize}
+                removeFullSize={removeFullSize}
+              />
             )}
-            {video === null && !matches.small && (
-              <Cursor />
+            {!modalFullSize && !matches.small && (
+              <Cursor video={video}/>
             )}
           </>
         )}
@@ -53,10 +84,11 @@ Layout.propTypes = {
   closeModalVideo: PropTypes.func.isRequired,
   video: PropTypes.any,
   playIntro: PropTypes.bool.isRequired,
+  location: PropTypes.any.isRequired,
 };
 
 Layout.defaultProps = {
   video: null,
 }
 
-export default Layout;
+export default withRouter(Layout);

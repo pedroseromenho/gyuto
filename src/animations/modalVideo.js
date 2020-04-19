@@ -30,3 +30,31 @@ export const modalEnter = (modal) => {
       autoAlpha: 1 }, 
     ease: Power2.easeOut });
 }
+
+export const modalMinimize = (modal) => {
+  if(modal){
+    TweenMax.to(modal, 0.4, {
+      css: {        
+        scaleX: 0.9,
+        scaleY: 0.9, 
+        transformOrigin: "bottom right"}, 
+      ease: Power2.easeOut });
+  }
+}
+
+export const modalMaximize = (modal) => {
+  if(modal){
+    TweenMax.from(modal, 0.4, {
+      css: {        
+        scaleX: 0.9,
+        scaleY: 0.9, 
+        transformOrigin: "bottom right"}, 
+      ease: Power2.easeOut });
+    TweenMax.to(modal, 0.4, {
+      css: {        
+        scaleX: 1,
+        scaleY: 1, 
+        transformOrigin: "top left"}, 
+      ease: Power2.easeOut });
+  }
+}

@@ -5,14 +5,14 @@ import { cursor } from 'animations/cursor';
 
 import './style.scss';
 
-const Cursor = ({location}) => {
+const Cursor = ({location, video}) => {
   useEffect(() => {
     const bigBall = document.querySelector('.cursor__ball--big');
     const smallBall = document.querySelector('.cursor__ball--small');
     const hoverables = document.querySelectorAll('.hoverable');
 
     cursor(bigBall, smallBall, hoverables);
-  }, [location.pathname]);
+  }, [location.pathname, video]);
 
   return(
     <div className="cursor">
@@ -31,6 +31,11 @@ const Cursor = ({location}) => {
 
 Cursor.propTypes = {
   location: PropTypes.any.isRequired,
+  video: PropTypes.any
+};
+
+Cursor.defaultProps = {
+  video: null
 };
 
 export default withRouter(Cursor);

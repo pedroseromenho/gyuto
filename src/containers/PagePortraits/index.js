@@ -36,7 +36,6 @@ const PagePortraits = ({location}) => {
     let img = new Image();
     img.onload = () => {
       setLoadedImg(true);
-      console.log('loaded');
     }
     img.src = portraits.backgroundImg.high;
   }
