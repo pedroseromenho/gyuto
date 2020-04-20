@@ -46,6 +46,7 @@
     font-family: $regular;
     counter-reset: heading-counter;
     text-size-adjust: 100%;
+    overflow-x: hidden;
   }
   
   img {
