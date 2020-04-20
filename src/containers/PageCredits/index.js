@@ -17,7 +17,7 @@ const PageCredits = () => {
     img.onload = () => {
       setLoadedImg(true);
     }
-    img.src = credits.contact.portrait.high;
+    img.src = credits.contact.images[0].high;
   }
 
   useEffect(() => {
@@ -30,8 +30,8 @@ const PageCredits = () => {
     >
       <img 
         src={loadedImg 
-          ? credits.contact.portrait.high
-          : credits.contact.portrait.low
+          ? credits.contact.images[0].high
+          : credits.contact.images[0].low
         } 
         alt={credits.contact.name}
         className={loadedImg ? s.container__img : undefined}

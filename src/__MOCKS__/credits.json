@@ -1,10 +1,14 @@
 {
    "contact":{
        "name": "Filipa Cardoso",
-       "portrait":{
-           "low": "./assets/credits/credits-low.png",
-           "high": "./assets/credits/credits.png" 
+       "images":[{
+           "low": "./assets/credits/1-credits-low.png",
+           "high": "./assets/credits/1-credits.png" 
        },
+        {
+            "low": "./assets/credits/2-credits-low.png",
+            "high": "./assets/credits/2-credits.png" 
+        }],
        "email":{
            "movie" : "gyuto.movie.com@gmail.com",
            "personal": "filipa7@hotmail.com"

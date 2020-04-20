@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import {withRouter} from 'react-router-dom';
 import Media from 'react-media';
 
 import ModalVideo from 'components/ModalVideo';
@@ -15,7 +14,6 @@ const Layout = ({
   closeModalVideo, 
   video,
   playIntro,
-  location,
 }) => {
   
   const [modalFullSize, setModalFullSize] = useState(false);
@@ -35,19 +33,6 @@ const Layout = ({
       return document.body.classList.remove('videoOpen');
     }
   }, [modalFullSize]);
-
-  useEffect(() => {
-    const audio = new Audio('/assets/click.wav');
-    const links = document.querySelectorAll('.hoverable');
-    links.forEach((e, index) => {
-      links[index].addEventListener('click', () => {
-        audio.play();
-      })
-    })
-    // document.body.addEventListener('click', () => {
-    //   audio.play();
-    // })
-  }, [location.pathname])
 
   return(
     <div className={s.container}>
@@ -84,11 +69,10 @@ Layout.propTypes = {
   closeModalVideo: PropTypes.func.isRequired,
   video: PropTypes.any,
   playIntro: PropTypes.bool.isRequired,
-  location: PropTypes.any.isRequired,
 };
 
 Layout.defaultProps = {
   video: null,
 }
 
-export default withRouter(Layout);
+export default Layout;
