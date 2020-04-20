@@ -52,19 +52,6 @@
         padding-left: 15px;
         &__info{
             width: 100%;
-            &__video{
-                @include video-responsive;
-                background-color: $color-gray;
-            }
-            &__img{
-                background-color: $color-gray;
-                img{
-                    object-fit: cover;
-                    object-position: center;
-                    width: 100%;
-                    filter: blur(5px);
-                }
-            }
             &__text{
                 h5{
                     font-size: $font-size;
@@ -77,18 +64,3 @@
         }
     }
 }
-
-.loaded{
-    img{
-        animation: sharpen 1s both;
-    }
-}
-
-@keyframes sharpen {
-    from {
-        filter: blur(5px);
-    }
-    to {
-        filter: blur(0);
-    }
-  }

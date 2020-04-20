@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import portraits from '__MOCKS__/portraits';
 import Swiper from 'react-id-swiper';
 import PropTypes from 'prop-types';
@@ -13,9 +13,9 @@ import ScrollContainer from 'components/ScrollContainer';
 import 'swiper/css/swiper.css';
 import './swiper.scss';
 import s from "./style.module.scss";
+import LazyImg from 'components/LazyImg';
 
 const PagePortraits = ({location}) => {
-  const [ loadedImg, setLoadedImg ] = useState(false);
   const { i18n } = useTranslation('pageInfo');
 
   const params = {
@@ -29,15 +29,7 @@ const PagePortraits = ({location}) => {
     spaceBetween: 0,
     loop: true,
     watchOveflow: true,
-  }
-
-  const preloadImg = () => {
-    setLoadedImg(false)
-    let img = new Image();
-    img.onload = () => {
-      setLoadedImg(true);
-    }
-    img.src = portraits.backgroundImg.high;
+    lazy: true
   }
 
   useEffect(() =>{
@@ -45,7 +37,6 @@ const PagePortraits = ({location}) => {
     const next = document.querySelector(".swiper-button-next");
     prev.classList.add('hoverable');
     next.classList.add('hoverable');
-    preloadImg();
   }, []);
 
   useEffect(() => {
@@ -56,13 +47,11 @@ const PagePortraits = ({location}) => {
 
   return(
     <div className={s.container}>
-      <div 
-        className={classNames(s.container__backgroundImg,
-          loadedImg && s.container__backgroundImgLoaded)} 
-        style={{backgroundImage: `url('${
-          loadedImg 
-            ? portraits.backgroundImg.high
-            : portraits.backgroundImg.low}')`}}
+      <LazyImg 
+        isBackground
+        className={s.container__backgroundImg}
+        imgHigh={portraits.backgroundImg.high}
+        imgLow={portraits.backgroundImg.low}
       />
       <div className={s.container__wrapper}>
         <Swiper {...params}>

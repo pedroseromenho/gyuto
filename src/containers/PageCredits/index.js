@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react';
+import React from 'react';
 import credits from '__MOCKS__/credits'
 import { useTranslation } from 'react-i18next';
 import { selectedLang } from 'utils/lang';
@@ -6,35 +6,17 @@ import { selectedLang } from 'utils/lang';
 import ScrollContainer from 'components/ScrollContainer';
 
 import s from './style.module.scss';
+import LazyImg from 'components/LazyImg';
 
 const PageCredits = () => {
-  const [ loadedImg, setLoadedImg ] = useState(false);
   const { i18n, t } = useTranslation('common');
-  
-  const preloadImg = () => {
-    setLoadedImg(false)
-    let img = new Image();
-    img.onload = () => {
-      setLoadedImg(true);
-    }
-    img.src = credits.contact.images[0].high;
-  }
-
-  useEffect(() => {
-    preloadImg();
-  }, []) 
 
   return(
-    <ScrollContainer
-      classNameContainer={s.container}
-    >
-      <img 
-        src={loadedImg 
-          ? credits.contact.images[0].high
-          : credits.contact.images[0].low
-        } 
+    <ScrollContainer classNameContainer={s.container}>
+      <LazyImg
+        imgHigh={credits.contact.images[0].high}
+        imgLow={credits.contact.images[0].low}
         alt={credits.contact.name}
-        className={loadedImg ? s.container__img : undefined}
       />
       <h3>{credits.contact.name}</h3>
       <div className={s.container__email}>
@@ -47,6 +29,11 @@ const PageCredits = () => {
       </div>
       <p>{selectedLang(i18n, credits.contact.bio.en, credits.contact.bio.fr)}</p>
       <h4>{t('credits')}</h4>
+      <LazyImg
+        imgHigh={credits.contact.images[1].high}
+        imgLow={credits.contact.images[1].low}
+        alt={credits.contact.name}
+      />
       {credits.credits.map(c => (
         <ul 
           key={c.what.en}

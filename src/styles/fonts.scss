@@ -4,10 +4,12 @@
     font-family: "Begum Regular";
     font-display: auto;
     src:local('Begum Regular'), url("/assets/fonts/Begum-Regular.otf") format("opentype");
+    font-weight: normal;
 }
 
 @font-face{
     font-family: "Begum Medium";
     font-display: auto;
     src:local('Begum Medium'), url("/assets/fonts/Begum-Medium.otf") format("opentype");
+    font-weight: bold;
 }

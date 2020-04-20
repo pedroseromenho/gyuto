@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import YouTube from 'react-youtube';
-import classNames from 'classnames';
+import LazyImg from 'components/LazyImg';
 
 import s from './style.module.scss';
+import CoverMedia from 'components/CoverMedia';
 
-const Preview = ({video, img, quote, legend, alt, className}) => (
+const Preview = ({video, quote, legend, alt, imgHigh, imgLow}) => (
   <div className={s.container__preview__info}>
     {video && (
-      <div className={s.container__preview__info__video}>
-        <YouTube 
-          videoId={video} 
-          opts={{playerVars: {rel: 0}}}
-        />
-      </div>
+      <CoverMedia 
+        imgHigh={imgHigh}
+        imgLow={imgLow}
+        video={video}
+        alt={alt}
+      />
     )}
-    {img && (
-      <div className={classNames(s.container__preview__info__img, className)}>
-        <img src={img} alt={alt} />
+    {imgHigh && video === null && (
+      <div className={s.container__preview__info__img}>
+        <LazyImg 
+          imgHigh={imgHigh}
+          imgLow={imgLow}
+          alt={alt}
+        />
       </div>
     )}
     <div className={s.container__preview__info__text}>
@@ -34,6 +38,8 @@ Preview.propTypes = {
   alt: PropTypes.string,
   quote: PropTypes.string.isRequired,
   legend: PropTypes.string.isRequired,
+  imgHigh: PropTypes.string,
+  imgLow: PropTypes.string,
 };
 
 Preview.defaultProps = {
@@ -41,6 +47,8 @@ Preview.defaultProps = {
   img: null,
   alt: "",
   className: undefined,
+  imgHigh: "",
+  imgLow: ""
 };
 
 export default Preview;

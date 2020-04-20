@@ -9,22 +9,13 @@ import MountainSvg from './MountainSvg';
 import ScrollContainer from 'components/ScrollContainer';
 
 import s from './style.module.scss';
+import LazyImg from 'components/LazyImg';
 
 const PageInfo = () => {
   const [ currentSection, setCurrentSection ] = useState('intro');
-  const [ loadedImg, setLoadedImg ] = useState(false);
   const { t, i18n } = useTranslation('pageInfo');
 
   const sectionContent = sections(t).filter(i => i.section === currentSection)[0];
-
-  const preloadImg = () => {
-    setLoadedImg(false)
-    let img = new Image();
-    img.onload = () => {
-      setLoadedImg(true);
-    }
-    img.src = sectionContent.img.high;
-  }
 
   const changeSection = (current) => {
     setCurrentSection(current);
@@ -32,7 +23,6 @@ const PageInfo = () => {
 
   useEffect(() => {
     const text = document.querySelector(".tweenMax-info-text")
-    preloadImg();
     textEnter(text)
   }, [currentSection]) //eslint-disable-line
 
@@ -72,13 +62,11 @@ const PageInfo = () => {
             )}} 
           />
         </ScrollContainer>
-        <div 
-          className={classNames(
-            s.container__wrapper__img, 
-            "tweenMax-info-img",
-            loadedImg && s.container__wrapper__imgLoaded)}
-          style={{backgroundImage: `url('${loadedImg 
-            ? sectionContent.img.high : sectionContent.img.low}')`}}
+        <LazyImg 
+          isBackground
+          className={s.container__wrapper__img}
+          imgHigh={sectionContent.img.high}
+          imgLow={sectionContent.img.low}
         />
       </div>
       <MountainSvg 

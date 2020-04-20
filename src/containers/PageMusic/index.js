@@ -43,7 +43,12 @@ const PageMusic = ({ location }) => {
             {selectedLang(i18n, music.info.title.en, music.info.title.fr)}
           </h2>
           <div className={s.container__wrapper__video__iframe}>
-            <CoverMedia item={music} />
+            <CoverMedia 
+              imgHigh={music.video.img.medium}
+              imgLow={music.video.img.low}
+              alt={music.info.title.en}
+              video={music.video.url}
+            />
             <div className={s.container__wrapper__video__iframe__link}>
               <a 
                 href={music.info.siteWeb}
@@ -78,27 +83,35 @@ const PageMusic = ({ location }) => {
           s.container__wrapper__albums, "tweenMax-music-albums"
         )}>
           <h2>{t('albums')}</h2>
-          {music.albums.map(e => (
-            <Fragment key={e.title}>
-              <CoverMedia
-                className={s.container__wrapper__albums__img} 
-                item={e}
-                isPlaying={isPlaying && e.title === list[musicIndex].album}
-                onPlay={() => playAlbum(e.title)}
-                isAlbumCover
-              />
-              <div className={s.container__wrapper__albums__order}>
-                <a 
-                  href={e.url_order}
-                  className="hoverable"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {`${t('order')} ${e.title}`}
-                </a> 
-              </div>
-            </Fragment>
-          ))}
+          <ScrollContainer 
+            classNameContainer={s.container__wrapper__albums__box}
+            classNameWrapper={s.container__wrapper__albums__box__content}
+          >
+            {music.albums.map(e => (
+              <Fragment key={e.title}>
+                <CoverMedia
+                  className={s.container__wrapper__albums__box__img} 
+                  item={e}
+                  isPlaying={isPlaying && e.title === list[musicIndex].album}
+                  onPlay={() => playAlbum(e.title)}
+                  isAlbumCover
+                  imgHigh={e.cover.high}
+                  imgLow={e.cover.low}
+                  alt={e.title}
+                />
+                <div className={s.container__wrapper__albums__box__order}>
+                  <a 
+                    href={e.url_order}
+                    className="hoverable"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {`${t('order')} ${e.title}`}
+                  </a> 
+                </div>
+              </Fragment>
+            ))}
+          </ScrollContainer>
         </div>
       </div>
       <PlayerAudio 

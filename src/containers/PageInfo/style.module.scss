@@ -30,17 +30,7 @@
         }
         &__img{
             flex: 3;
-            background-color: $color-light;
-            height: calc(100vh - 200px);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            transform: translateZ(0);
             height: calc(100vh - 300px);
-            filter: blur(10px);
-        }
-        &__imgLoaded{
-            animation: sharpen 1s both;
         }
     }
     svg{
@@ -49,13 +39,3 @@
         bottom: 50px;
     }
 }
-
-
-@keyframes sharpen {
-    from {
-        filter: blur(10px);
-    }
-    to {
-        filter: blur(0);
-    }
-  }

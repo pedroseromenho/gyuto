@@ -43,16 +43,22 @@
         }
         &__albums{
             flex: 1;
-            &__img{
-                margin-top: 15px;
-            }
-            &__order{
-                margin-top: 5px;
-                a{
-                    color: $color-light;
-                    text-decoration: underline;
-                    cursor: none; 
-                    font-size: $font-size-nano;
+            &__box{
+                height: calc(100vh - 280px);
+                &__content{
+                    padding-right: 0 !important;
+                }
+                &__img{
+                    margin-top: 15px;
+                }
+                &__order{
+                    margin-top: 5px;
+                    a{
+                        color: $color-light;
+                        text-decoration: underline;
+                        cursor: none; 
+                        font-size: $font-size-nano;
+                    }
                 }
             }
         }

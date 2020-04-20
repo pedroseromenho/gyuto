@@ -16,6 +16,7 @@ $zero: scaleY(0);
         @include flex-row;
         justify-content: center;
         background-color: rgba($color: $color-gray, $alpha: 0.5);
+        z-index: 1;
         @for $i from 1 through 10{
             span:nth-child(#{$i}){
               width: $width;
@@ -55,6 +56,9 @@ $zero: scaleY(0);
         justify-content: center;
         font-size: 4.5rem;
         background-image:linear-gradient(to top, rgba($color: $color-gray, $alpha: 0.7), transparent);
+    }
+    &__img{
+        width: 100%;
     }
 }
 

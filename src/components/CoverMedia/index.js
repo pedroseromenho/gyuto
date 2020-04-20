@@ -3,11 +3,12 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { IoMdPlayCircle } from "react-icons/io";
 import YouTube from 'react-youtube';
+import LazyImg from 'components/LazyImg';
 
 import s from './style.module.scss';
 
 const CoverMedia = ({
-  isAlbumCover, item, className, isPlaying, onPlay
+  isAlbumCover, className, isPlaying, onPlay, imgHigh, alt, imgLow, video
 }) => {
   const [isHover, setIsHover] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
@@ -45,7 +46,11 @@ const CoverMedia = ({
               )}
           </div>
         )}
-        <img src={item.cover} alt={item.title} />
+        <LazyImg 
+          imgHigh={imgHigh} 
+          imgLow={imgLow} 
+          alt={alt} 
+        />
       </div>
     )
   } return (
@@ -54,14 +59,18 @@ const CoverMedia = ({
         ? (
           <div className={s.container__video}>
             <YouTube 
-              videoId={item.video.url} 
+              videoId={video} 
               opts={opts}
             />
           </div>
         ) 
         : (
           <>
-            <img src={item.video.img.medium} alt={item.info.title.en} />
+            <LazyImg 
+              imgHigh={imgHigh} 
+              imgLow={imgLow} 
+              alt={alt} 
+            />
             <div className={s.container__hoverVideo}>
               <IoMdPlayCircle 
                 className="hoverable"
@@ -78,18 +87,24 @@ const CoverMedia = ({
 
 CoverMedia.defaultProps = {
   isAlbumCover: false,
-  item: undefined,
   className: undefined,
   isPlaying: false,
   onPlay: undefined,
+  imgHigh: "",
+  imgLow: "",
+  alt: "",
+  video: "",
 }
 
 CoverMedia.propTypes = {
   isAlbumCover: PropTypes.bool,
-  item: PropTypes.any,
   className: PropTypes.any,
   isPlaying: PropTypes.bool,
   onPlay: PropTypes.func,
+  imgHigh: PropTypes.string,
+  imgLow: PropTypes.string,
+  alt: PropTypes.string,
+  video: PropTypes.string,
 }
 
 export default CoverMedia

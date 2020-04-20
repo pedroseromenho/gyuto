@@ -1,6 +1,10 @@
 {
     "url": "gKaFVqp_dVY",
-    "img": "./assets/videos/intro.png",
+    "img": {
+      "high": "./assets/videos/0-intro.png",
+      "medium": "./assets/videos/0-intro-medium.png",
+      "low": "./assets/videos/0-intro-low.png"
+    },
     "quote": {
       "fr": "Le son de la grande montagne qui craque. Le son des vagues dans l'océan",
       "en": "The sound of the big mountain cracking, the sound of the waves in the ocean"
