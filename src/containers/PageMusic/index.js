@@ -19,7 +19,7 @@ const PageMusic = ({ location }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [list, setList] = useState(playlist);
 
-  const { i18n, t } = useTranslation('common');
+  const { i18n, t } = useTranslation('translation');
 
   const playAlbum = (album) => {
     const filtered = playlist().filter(i => i.album === album);

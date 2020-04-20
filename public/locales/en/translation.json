@@ -10,5 +10,6 @@
     "order": "Order",
     "close": "Close",
     "minimize": "Minimize",
-    "maximize": "Maximize"
+    "maximize": "Maximize",
+    "404": "Page not found..."
 }

@@ -9,7 +9,7 @@ import s from './style.module.scss';
 import LazyImg from 'components/LazyImg';
 
 const PageCredits = () => {
-  const { i18n, t } = useTranslation('common');
+  const { i18n, t } = useTranslation('translation');
 
   return(
     <ScrollContainer classNameContainer={s.container}>

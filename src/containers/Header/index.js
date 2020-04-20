@@ -11,8 +11,11 @@ import Burger from 'components/Burger';
 import s from './style.module.scss';
 
 const Header = ({ history, location }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('translation');
   const [openMenu, setOpenMenu] = useState(false);
+
+  const filteredRoutes = routes(t).filter(r => r.pathname !== '/');
+  const matchRoute = filteredRoutes.filter(f => f.pathname === location.pathname)
 
   return(
     <div className={s.container}>
@@ -25,7 +28,7 @@ const Header = ({ history, location }) => {
         >
           {t('title')}
         </h1>
-        {location.pathname !== '/' && (
+        {matchRoute.length > 0 && (
           <h2>
             {routes(t)
               .filter(i => i.pathname === location.pathname)

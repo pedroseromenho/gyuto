@@ -13,7 +13,7 @@ import ListItem from 'components/ListItem';
 import s from './style.module.scss';
 
 const Footer = ({ history}) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('translation');
   return(
     <Media queries={{
       small: "(max-width: 719px)"

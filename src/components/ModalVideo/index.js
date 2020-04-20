@@ -14,7 +14,7 @@ import Button from "components/Button";
 import s from './style.module.scss';
 
 const ModalVideo = ({video, close, playIntro, setFullSize, removeFullSize}) => {
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('translation');
   const [minimize, setMinimize] = useState(false)
 
   const opts = {

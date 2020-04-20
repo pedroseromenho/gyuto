@@ -13,7 +13,7 @@ const Nav = ({
   history, 
   closeMenu,
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('translation');
 
   const displayPage = (page) => {
     history.push(page);

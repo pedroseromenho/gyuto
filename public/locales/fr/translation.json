@@ -10,5 +10,6 @@
     "order": "Commander",
     "close": "Fermer",
     "minimize": "Réduire",
-    "maximize": "Augmenter"
+    "maximize": "Augmenter",
+    "404": "Page non trouvée..."
 }

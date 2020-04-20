@@ -11,6 +11,7 @@ import PageMusic from './containers/PageMusic';
 import PageCredits from './containers/PageCredits';
 import PageDocList from './containers/PageDocList';
 import Footer from './containers/Footer';
+import NoMatch from 'containers/NoMatch';
 
 import './App.module.scss';
 
@@ -58,6 +59,7 @@ const App = () => {
               <PageDocList openModalVideo={openModalVideo}/>
             )}/>
             <Route path="/credits" component={PageCredits}/>
+            <Route component={NoMatch} />
           </Switch>
         )}
         footer={<Footer/>}

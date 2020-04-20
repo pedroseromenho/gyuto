@@ -76,6 +76,7 @@ const PagePortraits = ({location}) => {
             className={s.container__wrapper__text__content} 
             dangerouslySetInnerHTML={{__html: selectedLang(i18n, portraits.text.en, portraits.text.fr)}}
           />
+          <span>{selectedLang(i18n, portraits.credits.en, portraits.credits.fr)}</span>
         </ScrollContainer>
       </div>
     </div>

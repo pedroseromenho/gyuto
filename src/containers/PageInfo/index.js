@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import {sections} from './sections';
+import {sections} from 'utils/sections';
 import {selectedLang} from 'utils/lang';
 import classNames from 'classnames';
 import { textEnter } from 'animations/info';

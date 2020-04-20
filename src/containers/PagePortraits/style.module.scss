@@ -22,6 +22,7 @@
             margin-left: 10px;
             height: calc(100vh - 200px);
             &__content{
+                font-family: $medium;
                 p{
                     font-size: 1.3rem;
                     &:first-child{

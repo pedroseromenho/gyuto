@@ -50,6 +50,8 @@
         top: 15px;
         left: 15px;
         z-index: 1;
+        font-size: 1.2rem;
+        padding: 3px 8px;
     }
     &__video{
         @include video-responsive;
