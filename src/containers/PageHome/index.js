@@ -4,11 +4,14 @@ import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import Media from 'react-media';
 import  videos from '__MOCKS__/videos';
+import intro from '__MOCKS__/intro';
 import { selectedLang } from 'utils/lang';
 import { TweenMax } from 'gsap';
 import { infoEnter, infoLeave } from 'animations/home';
 
+import CoverMedia from 'components/CoverMedia';
 import Mandala from 'components/Mandala';
+import Button from 'components/Button';
 
 import s from './style.module.scss';
 
@@ -49,7 +52,19 @@ const PageHome = ({openModalVideo }) => {
         {matches => (
           matches.small 
             ? (
-              <div>Mobile</div>
+              <div className={s.container__mobile}>
+                <CoverMedia 
+                  video={intro.url}
+                  imgHigh={intro.img.high}
+                  imgLow={intro.img.low}
+                  alt='intro'
+                />
+                <h3>{selectedLang(i18n, intro.quote.en, intro.quote.fr)}</h3>
+                <p>{selectedLang(i18n, intro.legend.en, intro.legend.fr)}</p>
+                <Button 
+                  value="Voir les videos"
+                />
+              </div>
             ) : (
               <Fragment>
                 <div className={s.container__legend}>

@@ -19,7 +19,7 @@ const LazyImg = ({
     
   useEffect(() => {
     preloadImg();
-  }, []) 
+  }, []) // eslint-disable-line 
 
   if(isBackground){
     return(

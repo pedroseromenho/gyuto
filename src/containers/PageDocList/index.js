@@ -66,6 +66,7 @@ const PageDocList = ({ openModalVideo }) => {
                       )} 
                       imgHigh={intro.img.high}
                       imgLow={intro.img.low}
+                      alt='intro'
                     />
                   ) : (
                     <Preview 
