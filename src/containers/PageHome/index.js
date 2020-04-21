@@ -15,7 +15,7 @@ import Button from 'components/Button';
 
 import s from './style.module.scss';
 
-const PageHome = ({openModalVideo }) => {
+const PageHome = () => {
   const [selectedId, setSelectedId] = useState(null);
   const { i18n } = useTranslation();
 
@@ -88,9 +88,8 @@ const PageHome = ({openModalVideo }) => {
                 />
                 <div className={classNames(s.container__mandala, "tweenMax-mandala")}>
                   <Mandala
-                    getSelectedVideo={openModalVideo}
                     getSelectedId={getSelectedId}
-                    videos={videos}
+                    videosList={videos}
                     selectedId={selectedId}
                   />
                 </div>
@@ -111,7 +110,6 @@ const PageHome = ({openModalVideo }) => {
   );
 }
 PageHome.propTypes = {
-  openModalVideo: PropTypes.func.isRequired,
   i18n: PropTypes.any,
 };
 
