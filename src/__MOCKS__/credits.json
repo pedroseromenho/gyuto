@@ -55,10 +55,16 @@
     "who":[{
         "fr": "Topgyal Tsering, Tenzin Passang, Lobsang Ngawang, Dorge Tsering, Gedung Nyandak, Phuntsok Ngawang, Lhundup Tenzing, Lobsang Phenden",
         "en": "Topgyal Tsering, Tenzin Passang, Lobsang Ngawang, Dorge Tsering, Gedung Nyandak, Phuntsok Ngawang, Lhundup Tenzing, Lobsang Phenden"
+    }]
+},
+{
+    "what": {
+        "fr": "Enregistrement",
+        "en": "Recording"
     },
-    {
-        "fr": "Enregistrement: Dré Pallemaerts",
-        "en": "Recording: Dré Pallemaerts"
+    "who":[{
+        "fr": "Dré Pallemaerts",
+        "en": "Dré Pallemaerts"
     }]
 },
 {
@@ -90,7 +96,7 @@
     },
     {
         "fr": "Guéshé Lobsang Yonten",
-        "en": "Guéshé Lobsang Yonten"
+        "en": "Geshe Lobsang Yonten"
     },
     {
         "fr": "Phuntsok Ngawang (moine chanteur)",
@@ -98,7 +104,7 @@
     },
     {
         "fr": "Thupten Jigmé (maître de chant)",
-        "en": "Thupten Jigmé (singing master)"
+        "en": "Thupten Jigmé (chant master)"
     }]
 },
 {
@@ -107,19 +113,18 @@
         "en": "Voix off"
     },
     "who":[{
-        "fr": "Gaia, Nemo et Yuna Van der Werf",
-        "en": "Gaia, Nemo et Yuna Van der Werf"
+        "fr": "Gaia, Nemo et Yuna van der Werf",
+        "en": "Gaia, Nemo et Yuna van der Werf"
     }]
 },
 {
     "what": {
-        "fr": "Design et développement du site-web",
-        "en": "Design and development of the website"
+        "fr": "Traductions",
+        "en": "Translations"
     },
     "who":[{
-        "fr": "Pedro Seromenho",
-        "en": "Pedro Seromenho",
-        "link": "https://pedroseromenho.com"
+        "fr": "Nadia Nino, Nadine Ganase, Xavier Huguet",
+        "en": "Nadia Nino, Nadine Ganase, Xavier Huguet"
     }]
 },
 {
@@ -146,29 +151,40 @@
         "en": "“Where's the newborn?“ - Nicolas de Cues"
     },
     {
-        "fr": "“Le bouddhisme une philosophie du bonheur“ - Philippe Cornu",
-        "en": "“Buddhism a philosophy of happiness” - Philippe Cornu"
+        "fr": "“Le bouddhisme, une philosophie du bonheur“ - Philippe Cornu",
+        "en": "“Buddhism, a philosophy of happiness” - Philippe Cornu"
     },
     {
         "fr": "“Le Bouddha” - Alexandra David-Néel",
         "en": "“The Buddha” - Alexandra David-Néel"
     },
     {
-        "fr": "“La Reine des prières d'aspiration” - Samantabhadra",
-        "en": "“The Queen of aspirational Prayers” - Samantabhadra"
+        "fr": "“La reine des prières d'aspiration” - Samantabhadra",
+        "en": "“The queen of aspirational Prayers” - Samantabhadra"
     },
     {
         "fr": "“Nouvelle réalité / HH Dalaï-Lama” - Sofia Stril-Rever",
         "en": "“New reality / HH Dalaï-Lama” - Sofia Stril-Rever"
     },
     {
-        "fr": "Contes bouddhistes",
+        "fr": "Contes bouddhistes zen",
         "en": "Zen buddhism tales"
     }]
 },
 {
     "what": {
-        "fr": "Remerciement spéciaux à",
+        "fr": "Design et développement du site-web",
+        "en": "Design and development of the website"
+    },
+    "who":[{
+        "fr": "Pedro Seromenho",
+        "en": "Pedro Seromenho",
+        "link": "https://pedroseromenho.com"
+    }]
+},
+{
+    "what": {
+        "fr": "Remerciements spéciaux à",
         "en": "Special thanks to"
     },
     "who":[{
@@ -180,8 +196,8 @@
         "en": "Tashi and all the monks of Gyütö"
     },
     {
-        "fr": "Patrick Ghislain, Nicolas van Achter et Bo",
-        "en": "Patrick Ghislain and Bo"
+        "fr": "Patrick Ghislain, Nicolas van Achter, Pedro Seromenho et Bo",
+        "en": "Patrick Ghislain, Nicolas van Achter, Pedro Seromenho and Bo"
     }]
 },
 {
@@ -190,18 +206,18 @@
         "en": "Thanks to"
     },
     "who":[{
-        "fr": "Xavier Lucy, Marc-henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia e Manuel, Balou e Malou, Anne Recour, Isabelle Dumon, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson",
-        "en": "Nicolas van Achter, Xavier Lucy, Marc-henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumon, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon"
+        "fr": "Nicolas van Achter, Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin",
+        "en": "Nicolas van Achter, Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin"
     }]
 },
 {
     "what": {
-        "fr": "Merci aux kiss kiss bankers (pre-production)",
+        "fr": "Merci aux kiss kiss bankers (pré-production)",
         "en": "Thanks to the kiss kiss bankers (pre-production)"
     },
     "who":[{
-        "fr": "Antonella Simonelli, Stéphane Savelli, Jean Van Kerchove, Rafael Rodrigues, Isabelle Berlanger, Félicette Chazerand, Patrice Bonnafoux, François Brice, Isabelle Maes, Yael O’Hayon, Alessandro Filippini, Filipe Jesus, Pedro Roiz, Arnauld de Battice, Marie-Rose Meysman, J-P Pecto, Nicolas Thys, David Grynberg, Nadine Ganase, Marc Gilmant, Laurent Blondiau, Ogyen Wangmo Van Eecke, Eminé Meyrem, Samuel Ber, Wout Gooris, Serge Lazarevitch, Ofélia Cardoso, Christelle Cornil, Michel thuns, Xavier Huguet, Koen van Meel, Marie-Rose de Poorter, Denis Mpunga, Gwen Vamos-Ancellin, Marie France Brice, Caroline Verbruggen, Philippe Duplat, Nel Blok, Julius Proost, David Dony, Alexandre von Sivers, Ariane Riveros",
-        "en": "Antonella Simonelli, Stéphane Savelli, Jean Van Kerchove, Rafael Rodrigues, Isabelle Berlanger, Félicette Chazerand, Patrice Bonnafoux, François Brice, Isabelle Maes, Yael O’Hayon, Alessandro Filippini, Filipe Jesus, Pedro Roiz, Arnauld de Battice, Marie-Rose Meysman, J-P Pecto, Nicolas Thys, David Grynberg, Nadine Ganase, Marc Gilmant, Laurent Blondiau, Ogyen Wangmo Van Eecke, Eminé Meyrem, Samuel Ber, Wout Gooris, Serge Lazarevitch, Ofélia Cardoso, Christelle Cornil, Michel thuns, Xavier Huguet, Koen van Meel, Marie-Rose de Poorter, Denis Mpunga, Gwen Vamos-Ancellin, Marie France Brice, Caroline Verbruggen, Philippe Duplat, Nel Blok, Julius Proost, David Dony, Alexandre von Sivers, Ariane Riveros "
+        "fr": "Antonella Simonelli, Stéphane Savelli, Jean Van Kerchove, Rafael Rodrigues, Isabelle Berlanger, Félicette Chazerand, Patrice Bonnafoux, François Brice, Isabelle Maes, Yael O’Hayon, Alessandro Filippini, Filipe Jesus, Pedro Roiz, Arnauld de Battice, Marie-Rose Meysman, J-P Pecto, Nicolas Thys, David Grynberg, Nadine Ganase, Marc Gilmant, Laurent Blondiau, Ogyen Wangmo Van Eecke, Eminé Meyrem, Samuel Ber, Wout Gooris, Serge Lazarevitch, Ofélia Cardoso, Christelle Cornil, Michel Thuns, Xavier Huguet, Koen van Meel, Marie-Rose de Poorter, Denis Mpunga, Gwen Vamos-Ancellin, Marie France Brice, Caroline Verbruggen, Philippe Duplat, Nel Blok, Julius Proost, David Dony, Alexandre von Sivers, Ariane Riveros",
+        "en": "Antonella Simonelli, Stéphane Savelli, Jean Van Kerchove, Rafael Rodrigues, Isabelle Berlanger, Félicette Chazerand, Patrice Bonnafoux, François Brice, Isabelle Maes, Yael O’Hayon, Alessandro Filippini, Filipe Jesus, Pedro Roiz, Arnauld de Battice, Marie-Rose Meysman, J-P Pecto, Nicolas Thys, David Grynberg, Nadine Ganase, Marc Gilmant, Laurent Blondiau, Ogyen Wangmo Van Eecke, Eminé Meyrem, Samuel Ber, Wout Gooris, Serge Lazarevitch, Ofélia Cardoso, Christelle Cornil, Michel Thuns, Xavier Huguet, Koen van Meel, Marie-Rose de Poorter, Denis Mpunga, Gwen Vamos-Ancellin, Marie France Brice, Caroline Verbruggen, Philippe Duplat, Nel Blok, Julius Proost, David Dony, Alexandre von Sivers, Ariane Riveros "
     }]
 },
 {
