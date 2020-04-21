@@ -1,110 +1,22 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import { IoMdPlayCircle } from "react-icons/io";
-import YouTube from 'react-youtube';
-import LazyImg from 'components/LazyImg';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setHoverVideo } from 'actions/appActions';
+import CoverMedia from './CoverMedia';
 
-import s from './style.module.scss';
-
-const CoverMedia = ({
-  isAlbumCover, className, isPlaying, onPlay, imgHigh, alt, imgLow, video
-}) => {
-  const [isHover, setIsHover] = useState(false);
-  const [playVideo, setPlayVideo] = useState(false);
-  const bars = new Array(10).fill('');
-
-  const opts = {
-    playerVars: {
-      rel: 0,
-      showinfo: 0,
-      vq: 'large',
-      autoplay: 1
-    },
+const mapStateToProps = (state) => {
+  const { app } = state;
+  return {
+    hoverVideo: app.hoverVideo
   };
+};
 
-  if(isAlbumCover){
-    return(
-      <div className={classNames(
-        s.container, className)}
-      onMouseOver={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      >
-        {(isPlaying || isHover) && (
-          <div className={s.container__hoverImg}>
-            {isPlaying
-              ? (
-                bars.map((b, index) => (
-                  <span key={index} className={s.container__hoverImg__bar}/>
-                ))
-              )
-              : (
-                <IoMdPlayCircle 
-                  className="hoverable"
-                  onClick={onPlay}
-                />
-              )}
-          </div>
-        )}
-        <LazyImg 
-          imgHigh={imgHigh} 
-          imgLow={imgLow} 
-          alt={alt} 
-        />
-      </div>
-    )
-  } return (
-    <div className={classNames(s.container, "hoverable")}>
-      {playVideo 
-        ? (
-          <div className={s.container__video}>
-            <YouTube 
-              videoId={video} 
-              opts={opts}
-            />
-          </div>
-        ) 
-        : (
-          <>
-            <LazyImg 
-              imgHigh={imgHigh} 
-              imgLow={imgLow} 
-              alt={alt} 
-            />
-            <div className={s.container__hoverVideo}>
-              <IoMdPlayCircle 
-                className="hoverable"
-                onClick={() => setPlayVideo(true)}
-                onKeyPress={() => setPlayVideo(true)}
-                role="presentation"
-              />
-            </div>
-          </>
-        )}
-    </div>
-  )
-}
+const mapDispatchToProps = (dispatch) => ({
+  actions:{
+    setHoverVideo: bindActionCreators(setHoverVideo, dispatch),
+  }
+});
 
-CoverMedia.defaultProps = {
-  isAlbumCover: false,
-  className: undefined,
-  isPlaying: false,
-  onPlay: undefined,
-  imgHigh: "",
-  imgLow: "",
-  alt: "",
-  video: "",
-}
-
-CoverMedia.propTypes = {
-  isAlbumCover: PropTypes.bool,
-  className: PropTypes.any,
-  isPlaying: PropTypes.bool,
-  onPlay: PropTypes.func,
-  imgHigh: PropTypes.string,
-  imgLow: PropTypes.string,
-  alt: PropTypes.string,
-  video: PropTypes.string,
-}
-
-export default CoverMedia
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(CoverMedia);

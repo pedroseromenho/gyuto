@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import intro from './__MOCKS__/intro';
 
 import Layout from './components/Layout';
 import Header from './containers/Header';
@@ -15,60 +14,24 @@ import NoMatch from 'containers/NoMatch';
 
 import './App.module.scss';
 
-const App = () => {
-  const [video, setVideo] = useState(null);
-  const [playIntro, setPlayIntro] = useState(false);
-  
-  useEffect(() => {
-    const lsIntro = localStorage.getItem('intro');
-    if(lsIntro === null){
-      setVideo(intro);
-      setPlayIntro(true);
-    }
-  }, [])
-
-  const openModalVideo = (selectedVideo) => {
-    if(video === null){
-      setVideo(selectedVideo);
-    }
-  }
-
-  const closeModalVideo = () =>{
-    const lsIntro = localStorage.getItem('intro');
-    setVideo(null);
-    if(lsIntro === null){
-      localStorage.setItem("intro", true);
-      setVideo(null);
-      setPlayIntro(false);
-    }
-  }
-
-  return(
-    <Router>
-      <Layout 
-        header={<Header />}
-        main={(
-          <Switch>
-            <Route exact path="/" component={() => (
-              <PageHome openModalVideo={openModalVideo}/> 
-            )} />
-            <Route path="/info" component={PageInfo}/>
-            <Route path="/portraits" component={PagePortraits}/>
-            <Route path="/music" component={PageMusic}/>
-            <Route path="/doclist" component={() => (
-              <PageDocList openModalVideo={openModalVideo}/>
-            )}/>
-            <Route path="/credits" component={PageCredits}/>
-            <Route component={NoMatch} />
-          </Switch>
-        )}
-        footer={<Footer/>}
-        closeModalVideo={closeModalVideo}
-        video={video}
-        playIntro={playIntro}
-      />
-    </Router>
-  )
-}
+const App = () => (
+  <Router>
+    <Layout 
+      header={<Header />}
+      main={(
+        <Switch>
+          <Route exact path="/" component={PageHome} />
+          <Route path="/info" component={PageInfo}/>
+          <Route path="/portraits" component={PagePortraits}/>
+          <Route path="/music" component={PageMusic}/>
+          <Route path="/doclist" component={PageDocList}/>
+          <Route path="/credits" component={PageCredits}/>
+          <Route component={NoMatch} />
+        </Switch>
+      )}
+      footer={<Footer/>}
+    />
+  </Router>
+)
 
 export default App;
