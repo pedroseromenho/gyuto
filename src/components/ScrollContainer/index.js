@@ -1,4 +1,5 @@
 import React from 'react';
+import Media from 'react-media';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -13,35 +14,40 @@ const ScrollContainer = ({
   showScrollBar,
   isWhite
 }) => (
-  <div className={
-    classNames(
-      classNameContainer,
-      "tweenMax-scrollContainer",
-      showScrollBar 
-        ? "container-scroll-bar"
-        : "container-scroll",
-      isWhite && "container-scroll-bar-white"
-    )}>
-    {list ? (
-      <ul className={
-        classNames(
-          "wrapper-scroll", 
-          classNameWrapper
-        )}>
-        {children}
-      </ul>
-    ) : (
+  <Media queries={{
+    small: "(max-width: 719px)"
+  }}>
+    {matches => (
       <div className={
         classNames(
-          "wrapper-scroll", 
-          classNameWrapper
+          classNameContainer,
+          "tweenMax-scrollContainer",
+          showScrollBar 
+            ? "container-scroll-bar"
+            : "container-scroll",
+          isWhite && "container-scroll-bar-white"
         )}>
-        {children}
+        {list ? (
+          <ul className={
+            classNames(
+              "wrapper-scroll", 
+              classNameWrapper
+            )}>
+            {children}
+          </ul>
+        ) : (
+          <div className={
+            classNames(
+              "wrapper-scroll", 
+              classNameWrapper
+            )}>
+            {children}
+          </div>
+        )}
+        {!matches.small && <div className="scrollBar" />}
       </div>
     )}
-
-    <div className="scrollBar" />
-  </div>
+  </Media>
 );
 
 ScrollContainer.defaultProps = {

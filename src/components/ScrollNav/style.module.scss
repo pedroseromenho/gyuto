@@ -1,0 +1,32 @@
+@import "~styles/config";
+
+.container{
+    &__nav{
+        display: flex;
+        overflow-x: scroll;
+        list-style: none;
+        padding: 10px 10px;
+        margin: -10px -15px 10px -15px; 
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &::after{
+            content: '';
+            flex: 0 0 10px;
+        }
+        &__item{
+            text-transform: inherit;
+            border: 0;
+            margin-right: 10px;
+            &:first-of-type{
+                margin-left: 5px;
+            }
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+        &__activeItem{
+            color: $color-cursor;
+        }
+    }
+}

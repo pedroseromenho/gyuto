@@ -32,7 +32,7 @@ const LazyImg = ({
     )
   }
   return(
-    <div className={s.img}>
+    <div className={classNames(s.img, className)}>
       <img 
         src={loadedImg 
           ? imgHigh

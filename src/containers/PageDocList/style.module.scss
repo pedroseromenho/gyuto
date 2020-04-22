@@ -2,34 +2,44 @@
 
 .container{
     @include flex-row;
-    height: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    @media screen and (min-width: $max-720){
+        padding-top: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 100%;
+    }
     &__wrapper{
         flex: 1;
-        margin: 0 auto;
-        height: 100%;
-        padding-right: 15px;
-        &__list{
-            @include fit;
+        @media screen and (min-width: $max-720){
+            margin: 0 auto;
+            padding-right: 15px;
             height: 100%;
-            padding-right: 5px;
+        }
+        &__list{
+            @media screen and (min-width: $max-720){
+                @include fit;
+                padding-right: 5px;
+                height: 100%;
+            }
             &__item{
                 &__info{
-                    @include flex-row;
-                    justify-content: space-between;
-                    &:first-child,
-                    &:last-child{
-                        align-items: baseline; 
+                    &__title{
+                        @include flex-row;
+                        justify-content: space-between;
+                        &:first-child,
+                        &:last-child{
+                            align-items: baseline; 
+                        }
+                        h3{
+                            font-size: 1.4rem;
+                        }
+                        span{
+                            svg{
+                                margin-bottom: -2px;
+                            }
+                        }
                     }
-                    h3{
-                        font-size: 1.4rem;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                    }
-                }
-                &:not(:last-child){
-                    border-bottom: 1px solid $color-light;
                 }
                 &:first-child{
                     h3{
@@ -41,7 +51,9 @@
                         margin-bottom: 0;
                     }
                 }
-
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-light;
+                }
             }
         }
     }
@@ -51,7 +63,9 @@
         align-self: baseline;
         padding-left: 15px;
         &__info{
-            width: 100%;
+            @media screen and (min-width: $max-720){
+                height: 100%;
+            }
             &__text{
                 h5{
                     font-size: $font-size;
@@ -59,6 +73,11 @@
                 }
                 p{
                     font-size: $font-size-min;
+                }
+            }
+            &__img{
+                @media screen and (max-width: $min-720){
+                    margin-top: -10px;
                 }
             }
         }

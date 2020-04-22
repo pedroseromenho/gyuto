@@ -41,7 +41,9 @@ const Layout = ({
           <>
             <header>{header}</header>
             <main>{main}</main>
-            <footer>{footer}</footer>
+            {!matches.small && (
+              <footer>{footer}</footer>
+            )}
             {video !== null && !matches.small && (
               <ModalVideo video={video} />
             )}

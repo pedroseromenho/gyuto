@@ -3,7 +3,9 @@
 .container{
     padding: 15px;
     padding-bottom: 0px;
-    height: 100%;
+    @media screen and (min-width: $max-720){
+        height: 100%;
+    }
     header{
         position: fixed;
         top: 0;
@@ -14,6 +16,9 @@
             padding-left: 2%;
             padding-right: 2%;
         }
+        @media screen and (max-width: $min-720){
+            background-color: $color-dark;
+        }
     }
     main{
         height: 100%;
@@ -22,6 +27,9 @@
         @media screen and (min-width: 1500px) {
             padding-left: 2%;
             padding-right: 2%;
+        }
+        @media screen and (max-width: $min-720){
+            padding-top: 55px;
         }
     }
     footer{

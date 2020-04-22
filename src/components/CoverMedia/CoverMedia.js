@@ -6,6 +6,7 @@ import YouTube from 'react-youtube';
 import LazyImg from 'components/LazyImg';
 
 import s from './style.module.scss';
+import { detectMobile } from 'utils/detectMobile';
 
 const CoverMedia = ({
   isAlbumCover, 
@@ -33,8 +34,11 @@ const CoverMedia = ({
   };
 
   const isPlayingVideo = () => {
+    const isMobile = detectMobile();
     setPlayVideo(true);
-    actions.setHoverVideo(true)
+    if(!isMobile){
+      actions.setHoverVideo(true)
+    }
   }
 
   if(isAlbumCover){
@@ -116,6 +120,7 @@ CoverMedia.defaultProps = {
   imgLow: "",
   alt: "",
   video: "",
+  hoverVideo: false
 }
 
 CoverMedia.propTypes = {
@@ -127,7 +132,7 @@ CoverMedia.propTypes = {
   imgLow: PropTypes.string,
   alt: PropTypes.string,
   video: PropTypes.string,
-  hoverVideo: PropTypes.bool.isRequired,
+  hoverVideo: PropTypes.bool,
   actions : PropTypes.shape({
     setHoverVideo: PropTypes.func.isRequired,
   }),

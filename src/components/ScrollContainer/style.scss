@@ -8,10 +8,12 @@
         @include scroll-bar;
     }
     .wrapper-scroll{
-        overflow-y: scroll;
-        height: 100%;
-        @include scroll-bar-default;
-        padding-right: 5px;
+        @media screen and (min-width: $max-720){
+            overflow-y: scroll;
+            height: 100%;
+            @include scroll-bar-default;
+            padding-right: 5px;
+        }
     }
 }
 

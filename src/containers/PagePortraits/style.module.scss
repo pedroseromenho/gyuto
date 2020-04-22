@@ -6,28 +6,46 @@
         @include fit;
     }
     &__wrapper{
-        @include flex-row;
-        height: 100%;
-        max-width: 1150px;
-        margin: auto;
+        @media screen and (min-width: $max-720){
+            @include flex-row;
+            height: 100%;
+            max-width: 1150px;
+            margin: auto;
+        }
         &__slide{
             &__legend{
                 background-color: $color-dark;
                 padding: 10px;
+                @media screen and (max-width: $min-720){
+                    padding-left: 0;
+                    font-size: $font-size-nano;
+                }
             }
         }
         &__text{
             flex: 1;
-            z-index: 1;
-            margin-left: 10px;
-            height: calc(100vh - 200px);
+            @media screen and (min-width: $max-720){
+                z-index: 1;
+                margin-left: 10px;
+                height: calc(100vh - 200px);
+            }
             &__content{
                 font-family: $medium;
                 p{
                     font-size: 1.3rem;
-                    &:first-child{
-                        margin-top: 0;
+                    @media screen and (max-width: $min-720){
+                        font-size: 1.1rem;
                     }
+                    &:first-child{
+                        @media screen and (min-width: $max-720){
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: $min-720){
+                span{
+                    font-size: $font-size-nano;
                 }
             }
         }

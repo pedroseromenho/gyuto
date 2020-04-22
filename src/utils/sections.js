@@ -3,7 +3,7 @@ import info from '__MOCKS__/info';
 const coords = (t) => (
   [{
     section: 'intro',
-    name: '',
+    name: t('intro'),
     x: '',
     y: '',
     cx: '',

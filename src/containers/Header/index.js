@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {withRouter} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
 import { routes } from "utils/routes";
+import { navLeave } from 'animations/menuMobile';
+import { TweenMax } from 'gsap';
 
 import Nav from 'containers/Nav';
 import Burger from 'components/Burger';
@@ -15,47 +17,64 @@ const Header = ({ history, location }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const filteredRoutes = routes(t).filter(r => r.pathname !== '/');
-  const matchRoute = filteredRoutes.filter(f => f.pathname === location.pathname)
+  const matchRoute = filteredRoutes.filter(f => f.pathname === location.pathname);
+
+  const handleOpenMenu = () => {
+    const nav = document.querySelector('.tweenMax-navMobile');
+    if(openMenu){
+      navLeave(nav);
+      TweenMax.delayedCall(0.2, () => setOpenMenu(false));
+    }else{
+      setOpenMenu(true)
+    }
+  }
+
+  const homePageButton = (mobile) => {
+    const nav = document.querySelector('.tweenMax-navMobile');
+    history.push('/');
+    if(mobile && openMenu){
+      navLeave(nav);
+      TweenMax.delayedCall(0.2, () => setOpenMenu(false));
+    }
+  }
 
   return(
-    <div className={s.container}>
-      <div className={s.container__wrapper}>
-        <h1
-          onClick={() => history.push('/')}
-          onKeyPress={() => history.push('/')}
-          role="presentation"
-          className="hoverable"
-        >
-          {t('title')}
-        </h1>
-        {matchRoute.length > 0 && (
-          <h2>
-            {routes(t)
-              .filter(i => i.pathname === location.pathname)
-              .map(i => i.name)}
-          </h2>
-        )}
-      </div>
-      <Media queries={{
-        small: "(max-width: 719px)"
-      }}>
-        {matches => (
-          <>
-            {matches.small 
-              ? (
-                <Burger 
-                  isOpen={openMenu}
-                  toggle={() => setOpenMenu(!openMenu)}
-                />
-              )
-              : <Nav />}
-            {(openMenu && matches.small && (
-              <Nav closeMenu={() => setOpenMenu(false)}/>
-            ))}
-          </>
-        )}
-      </Media>
-    </div>
+    <Media queries={{
+      small: "(max-width: 719px)"
+    }}>
+      {matches => (
+        <div className={s.container}>
+          <div className={s.container__wrapper}>
+            <h1
+              onClick={() => homePageButton(matches.small)}
+              onKeyPress={() => homePageButton(matches.small)}
+              role="presentation"
+              className="hoverable"
+            >
+              {t('title')}
+            </h1>
+            {matchRoute.length > 0 && (
+              <h2>
+                {routes(t)
+                  .filter(i => i.pathname === location.pathname)
+                  .map(i => i.name)}
+              </h2>
+            )}
+          </div>
+          {matches.small 
+            ? (
+              <Burger 
+                isOpen={openMenu}
+                toggle={() => handleOpenMenu()}
+              />
+            )
+            : <Nav />}
+          {(openMenu && matches.small && (
+            <Nav closeMenu={() => setOpenMenu(false)} openMenu={openMenu}/>
+          ))}
+        </div>
+      )}
+    </Media>
   )}
 
 Header.propTypes = {

@@ -3,7 +3,12 @@
 .container{
    max-width: 650px;
    margin: auto;
-   height: calc(100vh - 150px);
+   @media screen and (min-width: $max-720){
+    height: calc(100vh - 150px);
+    }
+    @media screen and (max-width: $min-720){
+       margin-bottom: 20px;
+    }
    a{
        color: $color-light;
        text-decoration: underline;

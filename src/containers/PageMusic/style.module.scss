@@ -1,18 +1,39 @@
 @import "~styles/config";
 
 .container{
-    height: 100%;
     max-width: 1500px;
     margin: auto;
     position: relative;
+    @media screen and (min-width: $max-720){
+        height: 100%;
+    }
+    @media screen and (max-width: $min-720){
+        margin-bottom: 50px;
+    }
     &__wrapper{
         display: flex;
+        @media screen and (max-width: $min-720){
+            flex-direction: column;
+        }
         &__video{
             flex: 2;
+            h2{
+                border-bottom: 2px solid $color-light;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: $min-720){
+                h2{
+                    margin-top: 0;
+                }
+            }
             &__iframe{
                 margin-top: 15px;
                 &__link{
                     margin-top: 15px;
+                    @media screen and (max-width: $min-720){
+                        font-size: $font-size-nano;
+                    }
                     a{
                         color: $color-light;
                         text-decoration: underline;
@@ -23,13 +44,19 @@
         }
         &__text{
             flex: 2;
-            margin-left: 20px;
-            margin-right: 20px;
+            @media screen and (min-width: $max-720){
+                margin-left: 20px;
+                margin-right: 20px;
+            }
             &__box{
-                height: calc(100vh - 280px);
                 padding-top: 15px;
+                @media screen and (min-width: $max-720){
+                    height: calc(100vh - 280px);
+                }
                 &__content{
-                    padding-right: 20px !important;
+                    @media screen and (min-width: $max-720){
+                        padding-right: 20px !important;
+                    }
                     p{
                         &:first-child{
                             margin-top: 0;
@@ -44,7 +71,9 @@
         &__albums{
             flex: 1;
             &__box{
-                height: calc(100vh - 280px);
+                @media screen and (min-width: $max-720){
+                    height: calc(100vh - 280px);
+                }
                 &__content{
                     padding-right: 0 !important;
                 }
@@ -62,13 +91,16 @@
                 }
             }
         }
-        &__video,
-        &__text,
-        &__albums{
+        &__toogle{
+            @include flex-row;
+            justify-content: space-between;
+            border-bottom: 2px solid $color-light;
             h2{
-                border-bottom: 2px solid $color-light;
                 font-size: 1.3rem;
                 margin-bottom: 0;
+            }
+            svg{
+                margin-bottom: -10px;
             }
         }
     }
@@ -77,6 +109,9 @@
         bottom: 0;
         right: 0;
         left: 0;
+        @media screen and (max-width: $min-720){
+            position: fixed;
+        }
         &__title{
             position: absolute;
             bottom: 18px;

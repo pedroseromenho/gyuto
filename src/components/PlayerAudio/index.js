@@ -52,7 +52,7 @@ const PlayerAudio = ({
             <span key={index} className={s.container__title__bar}/>
           ))}
         </div>
-        <span>{`${playlist[index].album} - ${playlist[index].music}`}</span>
+        <span className={s.container__title__name}>{`${playlist[index].album} - ${playlist[index].music}`}</span>
       </div>
       <AudioPlayer
         src={playlist[index].src}

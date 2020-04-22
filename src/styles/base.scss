@@ -15,8 +15,8 @@
     background: $color-dark;
     color: $color-light;
     min-height: 100vh;
-    height: 100%;
     @media screen and (min-width: $max-720) {
+      height: 100%;
       max-height: 100vh;
       overflow: hidden;
       cursor: none;

@@ -47,7 +47,6 @@ $zero: scaleY(0);
     }
     &__video{
         background-color: $color-gray;
-        margin-top: 15px;
         @include video-responsive;
     }
     &__hoverVideo{
