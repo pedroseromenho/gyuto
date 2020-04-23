@@ -42,12 +42,15 @@ const Nav = ({
           <ul>
             {routes(t).map((r) => 
               matches.small ? (
-                <ListItem
-                  value={r.name}
-                  handleClick={() => displayPage(r.pathname)}
-                  key={r.name}
-                />
-              ) : !r.isFooter && (
+                r.displayMobile 
+                  ? (
+                    <ListItem
+                      value={r.name}
+                      handleClick={() => displayPage(r.pathname)}
+                      key={r.name}
+                    />
+                  ) : null
+              ) : !r.isFooter && r.displayDesktop && (
                 <ListItem
                   value={r.name}
                   handleClick={() => history.push(r.pathname)}

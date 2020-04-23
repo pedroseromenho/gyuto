@@ -6,9 +6,9 @@ import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
 
 import CoverMedia from 'components/CoverMedia/CoverMedia';
 
-const Item = ({ s, item, isMobile, index }) => {
+const Item = ({ s, item, isMobile, index, isIntro }) => {
   const [isOpen, setIsOpen] = useState(index === 0 || false);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('pageInfo');
 
   return(
     <div className={s.container__wrapper__list__item__info}>
@@ -18,7 +18,7 @@ const Item = ({ s, item, isMobile, index }) => {
         onKeyPress={isMobile ? () => setIsOpen(!isOpen) : undefined}
         role="presentation"
       >
-        <h3>{selectedLang(i18n, item.title.en, item.title.fr)}</h3>
+        <h3>{isIntro ? t('intro') : selectedLang(i18n, item.title.en, item.title.fr)}</h3>
         <span>{item.duration}{" "}{isMobile && (isOpen ? <FiChevronUp /> : <FiChevronDown />)}</span>
       </div>
       {isMobile && isOpen && (
@@ -26,8 +26,8 @@ const Item = ({ s, item, isMobile, index }) => {
           <CoverMedia 
             imgHigh={item.img.high}
             imgLow={item.img.low}
-            video={selectedLang(i18n, item.url.en, item.url.fr)}
-            alt={selectedLang(i18n, item.title.en, item.title.fr)}
+            video={isIntro ? item.url : selectedLang(i18n, item.url.en, item.url.fr)}
+            alt={isIntro ? t('intro') : selectedLang(i18n, item.title.en, item.title.fr)}
           />
           <div className={s.container__preview__info__text}>
             <h5>{`"${selectedLang(i18n, item.quote.en, item.quote.fr)}"`}</h5>
@@ -39,11 +39,17 @@ const Item = ({ s, item, isMobile, index }) => {
   )
 }
 
+Item.defaultProps = {
+  isIntro: false,
+  index: undefined
+}
+
 Item.propTypes = {
   s: PropTypes.any.isRequired,
   item: PropTypes.any.isRequired,
   isMobile: PropTypes.bool.isRequired,
-  index: PropTypes.number.isRequired
+  isIntro: PropTypes.bool,
+  index: PropTypes.any
 };
   
 

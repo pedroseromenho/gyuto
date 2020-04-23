@@ -16,7 +16,7 @@ import s from './style.module.scss';
 const PageDocList = ({ actions }) => {
   const [selectedId, setSelectedId] = useState(null);
   const displayInfo = videos.filter(i => i.id === selectedId)[0];
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('pageInfo');
 
   return(
     <Media queries={{
@@ -29,7 +29,16 @@ const PageDocList = ({ actions }) => {
             classNameWrapper={s.container__wrapper__list}
             list
           >
-            {videos.map((i, index) => (
+            {matches.small && (
+              <ListItem 
+                key={t('intro')}
+                className={s.container__wrapper__list__item}
+                value={
+                  <Item s={s} item={intro} isMobile={matches.small} index={0} isIntro/>
+                }
+              />
+            )}
+            {videos.map((i) => (
               <ListItem 
                 key={i.title.fr}
                 className={s.container__wrapper__list__item}
@@ -45,7 +54,8 @@ const PageDocList = ({ actions }) => {
                     : undefined
                 }
                 value={
-                  <Item s={s} item={i} isMobile={matches.small} index={index} />}/>
+                  <Item s={s} item={i} isMobile={matches.small} />}
+              />
             ))}
           </ScrollContainer>
           {!matches.small && (

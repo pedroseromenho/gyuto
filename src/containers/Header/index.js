@@ -57,6 +57,7 @@ const Header = ({ history, location }) => {
               <h2>
                 {routes(t)
                   .filter(i => i.pathname === location.pathname)
+                  .filter(i => matches.small ? i.displayMobile : i.displayDesktop)
                   .map(i => i.name)}
               </h2>
             )}

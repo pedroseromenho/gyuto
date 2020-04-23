@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Media from 'react-media';
 
 import Layout from './components/Layout';
 import Header from './containers/Header';
@@ -16,21 +17,29 @@ import './App.module.scss';
 
 const App = () => (
   <Router>
-    <Layout 
-      header={<Header />}
-      main={(
-        <Switch>
-          <Route exact path="/" component={PageHome} />
-          <Route path="/info" component={PageInfo}/>
-          <Route path="/portraits" component={PagePortraits}/>
-          <Route path="/music" component={PageMusic}/>
-          <Route path="/doclist" component={PageDocList}/>
-          <Route path="/credits" component={PageCredits}/>
-          <Route component={NoMatch} />
-        </Switch>
+    <Media queries={{
+      small: "(max-width: 719px)"
+    }}>
+      {matches => (
+        <Layout 
+          header={<Header />}
+          main={(
+            <Switch>
+              <Route exact path="/" component={matches.small ? PageInfo : PageHome} />
+              {!matches.small && (
+                <Route path="/info" component={PageInfo}/>
+              )}
+              <Route path="/portraits" component={PagePortraits}/>
+              <Route path="/music" component={PageMusic}/>
+              <Route path="/doclist" component={PageDocList}/>
+              <Route path="/credits" component={PageCredits}/>
+              <Route component={NoMatch} />
+            </Switch>
+          )}
+          footer={<Footer/>}
+        />
       )}
-      footer={<Footer/>}
-    />
+    </Media>
   </Router>
 )
 
