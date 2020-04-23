@@ -54,7 +54,7 @@ const Mandala = ({
   useEffect(() => {
     const videoLink =  document.getElementsByClassName('hoverable');
     for (let index = 0, order = 76; index < videosList.length; index++ , order--) {
-      videoLink[order].setAttribute("r", 0.9);
+      videoLink[order].setAttribute("r", 1.1);
       videoLink[order].setAttribute("stroke", "transparent");
       videoLink[order].setAttribute("stroke-width", "10");
       videoLink[order].addEventListener('mouseenter', () => {

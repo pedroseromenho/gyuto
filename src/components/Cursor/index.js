@@ -17,13 +17,13 @@ const Cursor = ({location, video}) => {
   return(
     <div className="cursor">
       <div className="cursor__ball cursor__ball--big ">
-        <svg height="30" width="30">
-          <circle cx="15" cy="15" r="12" strokeWidth="0"></circle>
+        <svg height="100" width="100">
+          <circle cx="50" cy="50" r="12" strokeWidth="50" stroke="white"/>
         </svg>
       </div>
       <div className="cursor__ball cursor__ball--small">
         <svg height="10" width="10">
-          <circle cx="5" cy="5" r="4" strokeWidth="0"></circle>
+          <circle cx="5" cy="5" r="4" strokeWidth="0" shapeRendering="geometricPrecision"/>
         </svg>
       </div>
     </div>
