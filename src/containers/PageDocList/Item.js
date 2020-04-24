@@ -6,7 +6,7 @@ import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
 
 import CoverMedia from 'components/CoverMedia/CoverMedia';
 
-const Item = ({ s, item, isMobile, index, isIntro }) => {
+const Item = ({ s, item, isMobile, index, isIntro, onReady, currentVideo }) => {
   const [isOpen, setIsOpen] = useState(index === 0 || false);
   const { i18n, t } = useTranslation('pageInfo');
 
@@ -28,6 +28,8 @@ const Item = ({ s, item, isMobile, index, isIntro }) => {
             imgLow={item.img.low}
             video={isIntro ? item.url : selectedLang(i18n, item.url.en, item.url.fr)}
             alt={isIntro ? t('intro') : selectedLang(i18n, item.title.en, item.title.fr)}
+            onReady={onReady}
+            currentVideo={currentVideo}
           />
           <div className={s.container__preview__info__text}>
             <h5>{`"${selectedLang(i18n, item.quote.en, item.quote.fr)}"`}</h5>
@@ -41,7 +43,8 @@ const Item = ({ s, item, isMobile, index, isIntro }) => {
 
 Item.defaultProps = {
   isIntro: false,
-  index: undefined
+  index: undefined, 
+  currentVideo: null,
 }
 
 Item.propTypes = {
@@ -49,7 +52,9 @@ Item.propTypes = {
   item: PropTypes.any.isRequired,
   isMobile: PropTypes.bool.isRequired,
   isIntro: PropTypes.bool,
-  index: PropTypes.any
+  index: PropTypes.any,
+  onReady: PropTypes.func.isRequired,
+  currentVideo: PropTypes.any
 };
   
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { IoMdPlayCircle } from "react-icons/io";
@@ -19,10 +19,15 @@ const CoverMedia = ({
   imgLow, 
   video, 
   actions, 
-  hoverVideo
+  hoverVideo,
+  onReady,
+  currentVideo
 }) => {
   const [isHover, setIsHover] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
+
+  const player = useRef(null);
+
   const bars = new Array(10).fill('');
 
   const opts = {
@@ -38,6 +43,12 @@ const CoverMedia = ({
     setPlayVideo(true);
     actions.setHoverVideo(true);
   }
+
+  useEffect(() => {
+    if(player !== null && playVideo){
+      player.current.internalPlayer.pauseVideo()
+    }
+  }, [currentVideo]) //eslint-disable-line
 
   if(isAlbumCover){
     return(
@@ -89,6 +100,8 @@ const CoverMedia = ({
                 <YouTube 
                   videoId={video} 
                   opts={opts}
+                  onReady={onReady}
+                  ref={player}
                 />
               </div>
             ) 
@@ -124,7 +137,9 @@ CoverMedia.defaultProps = {
   imgLow: "",
   alt: "",
   video: "",
-  hoverVideo: false
+  hoverVideo: false,
+  onReady: undefined,
+  currentVideo: null
 }
 
 CoverMedia.propTypes = {
@@ -140,6 +155,8 @@ CoverMedia.propTypes = {
   actions : PropTypes.shape({
     setHoverVideo: PropTypes.func.isRequired,
   }),
+  onReady: PropTypes.func,
+  currentVideo: PropTypes.any
 }
 
 export default CoverMedia

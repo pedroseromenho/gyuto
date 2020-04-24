@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
 import { useTranslation } from 'react-i18next';
@@ -15,6 +15,8 @@ import s from './style.module.scss';
 
 const PageDocList = ({ actions }) => {
   const [selectedId, setSelectedId] = useState(null);
+  const [currentVideo, setCurrentVideo] = useState(null);
+
   const displayInfo = videos.filter(i => i.id === selectedId)[0];
   const { i18n, t } = useTranslation('pageInfo');
 
@@ -34,7 +36,15 @@ const PageDocList = ({ actions }) => {
                 key={t('intro')}
                 className={s.container__wrapper__list__item}
                 value={
-                  <Item s={s} item={intro} isMobile={matches.small} index={0} isIntro/>
+                  <Item 
+                    s={s} 
+                    item={intro} 
+                    isMobile={matches.small} 
+                    index={0} 
+                    isIntro
+                    onReady={() => setCurrentVideo(intro.url)}
+                    currentVideo={currentVideo}
+                  />
                 }
               />
             )}
@@ -54,7 +64,13 @@ const PageDocList = ({ actions }) => {
                     : undefined
                 }
                 value={
-                  <Item s={s} item={i} isMobile={matches.small} />}
+                  <Item 
+                    s={s} 
+                    item={i} 
+                    isMobile={matches.small} 
+                    onReady={() => setCurrentVideo(selectedLang(i18n, i.url.en, i.url.fr))}
+                    currentVideo={currentVideo}
+                  />}
               />
             ))}
           </ScrollContainer>
