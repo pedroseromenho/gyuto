@@ -6,13 +6,10 @@
            "high": "./assets/credits/1-credits.png" 
        },
         {
-            "low": "./assets/credits/2-credits-low.png",
-            "high": "./assets/credits/2-credits.png" 
+            "low": "./assets/credits/2-credits-low.jpg",
+            "high": "./assets/credits/2-credits.jpg" 
         }],
-       "email":{
-           "movie" : "gyuto.movie.com@gmail.com",
-           "personal": "filipa7@hotmail.com"
-        },
+       "email": "gyuto.movie.com@gmail.com",
        "facebook": "https://www.facebook.com/Gyuto-movie-761195010728271/",
        "bio": {
            "fr":"Je suis née à Lisbonne en 1971. A 18 ans je quitte mes racines pour aller en France faire des études de danse. Je parcours le monde comme danseuse et découvre une passion pour la photographie. Quand je m'installe à Bruxelles, je fonde une famille et développe ma passion pour l’image en réalisant mes premiers films, consacrés au monde du théâtre et de la danse, puis en co-réalisant des documentaires, notamment sur le cinéaste Satyajit Ray en Inde. Depuis, j’enrichis en continu mon expérience, en travaillant sur toutes les étapes de la réalisation, de la photographie au montage final.",
@@ -129,20 +126,6 @@
 },
 {
     "what": {
-        "fr": "Illustrations",
-        "en": "Illustrations"
-    },
-    "who":[{
-        "fr": "Mandala dessiné par Firma 103",
-        "en": "Mandala designed by Firma 103"
-    },
-    {
-        "fr": "Shrivatsa dessiné par Alexandre Plennevaux",
-        "en": "Shrivatsa designed by Alexandre Plennevaux"
-    }]
-},
-{
-    "what": {
         "fr": "Références",
         "en": "Quotes"
     },
@@ -184,6 +167,20 @@
 },
 {
     "what": {
+        "fr": "Illustrations",
+        "en": "Illustrations"
+    },
+    "who":[{
+        "fr": "Mandala dessiné par Firma 103",
+        "en": "Mandala designed by Firma 103"
+    },
+    {
+        "fr": "Shrivatsa dessiné par Alexandre Plennevaux",
+        "en": "Shrivatsa designed by Alexandre Plennevaux"
+    }]
+},
+{
+    "what": {
         "fr": "Remerciements spéciaux à",
         "en": "Special thanks to"
     },
@@ -206,8 +203,8 @@
         "en": "Thanks to"
     },
     "who":[{
-        "fr": "Nicolas van Achter, Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin",
-        "en": "Nicolas van Achter, Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin"
+        "fr": "Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin",
+        "en": "Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin"
     }]
 },
 {

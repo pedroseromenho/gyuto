@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { IoMdPlayCircle } from "react-icons/io";
 import YouTube from 'react-youtube';
+import Media from 'react-media';
+
 import LazyImg from 'components/LazyImg';
 
 import s from './style.module.scss';
-import { detectMobile } from 'utils/detectMobile';
 
 const CoverMedia = ({
   isAlbumCover, 
@@ -29,16 +30,13 @@ const CoverMedia = ({
       rel: 0,
       showinfo: 0,
       vq: 'large',
-      autoplay: 1
+      autoplay: 1,
     },
   };
 
   const isPlayingVideo = () => {
-    const isMobile = detectMobile();
     setPlayVideo(true);
-    if(!isMobile){
-      actions.setHoverVideo(true)
-    }
+    actions.setHoverVideo(true);
   }
 
   if(isAlbumCover){
@@ -72,42 +70,48 @@ const CoverMedia = ({
       </div>
     )
   } return (
-    <div className={classNames(s.container, "hoverable")}>
-      {playVideo 
-        ? (
-          <div 
-            className={s.container__video}
-            onMouseEnter={!hoverVideo 
-              ? () => actions.setHoverVideo(true) 
-              : undefined}
-            onMouseLeave={hoverVideo 
-              ? () => actions.setHoverVideo(false) 
-              : undefined}
-          >
-            <YouTube 
-              videoId={video} 
-              opts={opts}
-            />
-          </div>
-        ) 
-        : (
-          <>
-            <LazyImg 
-              imgHigh={imgHigh} 
-              imgLow={imgLow} 
-              alt={alt} 
-            />
-            <div className={s.container__hoverVideo}>
-              <IoMdPlayCircle 
-                className="hoverable"
-                onClick={() => isPlayingVideo()}
-                onKeyPress={() => isPlayingVideo()}
-                role="presentation"
-              />
-            </div>
-          </>
-        )}
-    </div>
+    <Media queries={{
+      small: "(max-width: 719px)"
+    }}>
+      {matches => (
+        <div className={classNames(s.container, "hoverable")}>
+          {playVideo 
+            ? (
+              <div 
+                className={s.container__video}
+                onMouseEnter={!hoverVideo 
+                  ? () => actions.setHoverVideo(true) 
+                  : undefined}
+                onMouseLeave={hoverVideo 
+                  ? () => actions.setHoverVideo(false) 
+                  : undefined}
+              >
+                <YouTube 
+                  videoId={video} 
+                  opts={opts}
+                />
+              </div>
+            ) 
+            : (
+              <>
+                <LazyImg 
+                  imgHigh={imgHigh} 
+                  imgLow={imgLow} 
+                  alt={alt} 
+                />
+                <div className={s.container__hoverVideo}>
+                  <IoMdPlayCircle 
+                    className="hoverable"
+                    onClick={matches.small ? () => setPlayVideo(true) : () => isPlayingVideo()}
+                    onKeyPress={matches.small ? () => setPlayVideo(true) : () => isPlayingVideo()}
+                    role="presentation"
+                  />
+                </div>
+              </>
+            )}
+        </div>
+      )}
+    </Media>
   )
 }
 

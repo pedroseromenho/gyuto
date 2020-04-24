@@ -18,7 +18,7 @@ const Cursor = ({location, video}) => {
     <div className="cursor">
       <div className="cursor__ball cursor__ball--big ">
         <svg height="100" width="100">
-          <circle cx="50" cy="50" r="12" strokeWidth="50" stroke="white"/>
+          <circle cx="50" cy="50" r="45" />
         </svg>
       </div>
       <div className="cursor__ball cursor__ball--small">

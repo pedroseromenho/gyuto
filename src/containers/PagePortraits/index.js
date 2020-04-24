@@ -27,6 +27,7 @@ const PagePortraits = ({location}) => {
     },
     autoplay: {
       delay: 2500,
+      disableOnInteraction: false
     },
     spaceBetween: 0,
     loop: true,

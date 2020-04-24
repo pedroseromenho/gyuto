@@ -20,11 +20,8 @@ const PageCredits = () => {
       />
       <h3>{credits.contact.name}</h3>
       <div className={s.container__email}>
-        <a href={`mailto: ${credits.contact.email.movie}`} className="hoverable">
-          {credits.contact.email.movie}
-        </a>
-        <a href={`mailto: ${credits.contact.email.personal}`} className="hoverable">
-          {credits.contact.email.personal}
+        <a href={`mailto: ${credits.contact.email}`} className="hoverable">
+          {credits.contact.email}
         </a>
       </div>
       <p>{selectedLang(i18n, credits.contact.bio.en, credits.contact.bio.fr)}</p>
