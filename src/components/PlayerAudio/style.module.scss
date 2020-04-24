@@ -11,7 +11,7 @@ $zero: scaleY(0);
         left: 15px;
         display: flex;
         align-items: baseline;
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
           &__name{
             display: none;
           }

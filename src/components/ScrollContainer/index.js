@@ -15,7 +15,7 @@ const ScrollContainer = ({
   isWhite
 }) => (
   <Media queries={{
-    small: "(max-width: 719px)"
+    small: "(max-width: 839px)"
   }}>
     {matches => (
       <div className={

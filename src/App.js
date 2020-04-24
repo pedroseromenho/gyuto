@@ -18,7 +18,7 @@ import './App.module.scss';
 const App = () => (
   <Router>
     <Media queries={{
-      small: "(max-width: 719px)"
+      small: "(max-width: 839px)"
     }}>
       {matches => (
         <Layout 

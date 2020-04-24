@@ -3,7 +3,7 @@
 .container{
     @include flex-row;
     padding-top: 10px;
-    @media screen and (min-width: $max-720){
+    @media screen and (min-width: $min-840){
         padding-top: 10px;
         padding-top: 30px;
         padding-bottom: 30px;
@@ -11,13 +11,13 @@
     }
     &__wrapper{
         flex: 1;
-        @media screen and (min-width: $max-720){
+        @media screen and (min-width: $min-840){
             margin: 0 auto;
             padding-right: 15px;
             height: 100%;
         }
         &__list{
-            @media screen and (min-width: $max-720){
+            @media screen and (min-width: $min-840){
                 @include fit;
                 padding-right: 5px;
                 height: 100%;
@@ -63,7 +63,7 @@
         align-self: baseline;
         padding-left: 15px;
         &__info{
-            @media screen and (min-width: $max-720){
+            @media screen and (min-width: $min-840){
                 height: 100%;
             }
             &__text{
@@ -76,7 +76,7 @@
                 }
             }
             &__img{
-                @media screen and (max-width: $min-720){
+                @media screen and (max-width: $max-840){
                     margin-top: -10px;
                 }
             }

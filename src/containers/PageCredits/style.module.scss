@@ -3,10 +3,10 @@
 .container{
    max-width: 650px;
    margin: auto;
-   @media screen and (min-width: $max-720){
+   @media screen and (min-width: $min-840){
     height: calc(100vh - 150px);
     }
-    @media screen and (max-width: $min-720){
+    @media screen and (max-width: $max-840){
        margin-bottom: 20px;
     }
    a{

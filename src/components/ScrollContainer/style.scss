@@ -8,7 +8,7 @@
         @include scroll-bar;
     }
     .wrapper-scroll{
-        @media screen and (min-width: $max-720){
+        @media screen and (min-width: $min-840){
             overflow-y: scroll;
             height: 100%;
             @include scroll-bar-default;

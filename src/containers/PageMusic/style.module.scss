@@ -4,15 +4,15 @@
     max-width: 1500px;
     margin: auto;
     position: relative;
-    @media screen and (min-width: $max-720){
+    @media screen and (min-width: $min-840){
         height: 100%;
     }
-    @media screen and (max-width: $min-720){
+    @media screen and (max-width: $max-840){
         margin-bottom: 50px;
     }
     &__wrapper{
         display: flex;
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             flex-direction: column;
         }
         &__video{
@@ -22,7 +22,7 @@
                 font-size: 1.3rem;
                 margin-bottom: 0;
             }
-            @media screen and (max-width: $min-720){
+            @media screen and (max-width: $max-840){
                 h2{
                     margin-top: 0;
                 }
@@ -31,7 +31,7 @@
                 margin-top: 15px;
                 &__link{
                     margin-top: 15px;
-                    @media screen and (max-width: $min-720){
+                    @media screen and (max-width: $max-840){
                         font-size: $font-size-nano;
                     }
                     a{
@@ -44,17 +44,17 @@
         }
         &__text{
             flex: 2;
-            @media screen and (min-width: $max-720){
+            @media screen and (min-width: $min-840){
                 margin-left: 20px;
                 margin-right: 20px;
             }
             &__box{
                 padding-top: 15px;
-                @media screen and (min-width: $max-720){
+                @media screen and (min-width: $min-840){
                     height: calc(100vh - 280px);
                 }
                 &__content{
-                    @media screen and (min-width: $max-720){
+                    @media screen and (min-width: $min-840){
                         padding-right: 20px !important;
                     }
                     p{
@@ -71,7 +71,7 @@
         &__albums{
             flex: 1;
             &__box{
-                @media screen and (min-width: $max-720){
+                @media screen and (min-width: $min-840){
                     height: calc(100vh - 280px);
                 }
                 &__content{
@@ -109,7 +109,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             position: fixed;
         }
         &__title{

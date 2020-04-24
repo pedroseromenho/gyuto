@@ -48,7 +48,7 @@ const PageInfo = () => {
 
   return(
     <Media queries={{
-      small: "(max-width: 719px)"
+      small: "(max-width: 839px)"
     }}>
       {matches => (
         <div className={s.container}>

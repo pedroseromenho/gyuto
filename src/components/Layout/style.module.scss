@@ -3,7 +3,7 @@
 .container{
     padding: 15px;
     padding-bottom: 0px;
-    @media screen and (min-width: $max-720){
+    @media screen and (min-width: $min-840){
         height: 100%;
     }
     header{
@@ -16,7 +16,7 @@
             padding-left: 2%;
             padding-right: 2%;
         }
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             background-color: $color-dark;
         }
     }
@@ -28,7 +28,7 @@
             padding-left: 2%;
             padding-right: 2%;
         }
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             padding-top: 55px;
         }
     }

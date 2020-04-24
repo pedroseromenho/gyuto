@@ -1,7 +1,7 @@
 @import "~styles/config";
 
 .container{
-    @media screen and (max-width: $min-720){
+    @media screen and (max-width: $max-840){
         @include flex-row;
         position: fixed;
         top: 0;
@@ -15,13 +15,13 @@
     }
     ul{
         @include flex-row;
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             flex-direction: column;
         }
         li{
             font-size: 1.3rem;
             margin-left: 10px;
-            @media screen and (max-width: $min-720){
+            @media screen and (max-width: $max-840){
                 padding: 5px 0;
                 font-size: 2rem;
             }
