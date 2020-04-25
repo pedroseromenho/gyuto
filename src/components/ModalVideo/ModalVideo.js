@@ -68,7 +68,8 @@ const ModalVideo = ({
     <div className={classNames(
       s.container, 
       'tweenMax-modalVideo',
-      minimize && s.container__minimized
+      minimize && s.container__minimized,
+      !minimize && s.container__maximized
     )}
     onMouseEnter={!hoverVideo 
       ? () => actions.setHoverVideo(true) 

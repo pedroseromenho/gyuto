@@ -76,6 +76,19 @@
                 }
                 &__content{
                     padding-right: 0 !important;
+
+                    @media screen and (max-width: $max-840){
+                        @include flex-row;
+                        &__album{
+                            flex: 1;
+                            &:first-child{
+                                margin-right: 5px;
+                            }
+                            &:last-child{
+                                margin-left: 5px;
+                            }
+                        }
+                    }
                 }
                 &__img{
                     margin-top: 15px;

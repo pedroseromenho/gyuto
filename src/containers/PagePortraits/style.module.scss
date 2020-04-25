@@ -13,6 +13,9 @@
             margin: auto;
         }
         &__slide{
+            img{
+                width: 100%;
+            }
             &__legend{
                 background-color: $color-dark;
                 padding: 10px;

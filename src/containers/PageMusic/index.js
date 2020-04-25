@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import music from '__MOCKS__/music';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -122,7 +122,7 @@ const PageMusic = ({ location }) => {
                     classNameWrapper={s.container__wrapper__albums__box__content}
                   >
                     {music.albums.map(e => (
-                      <Fragment key={e.title}>
+                      <div key={e.title} className={s.container__wrapper__albums__box__content__album}>
                         <CoverMedia
                           className={s.container__wrapper__albums__box__img} 
                           item={e}
@@ -143,7 +143,7 @@ const PageMusic = ({ location }) => {
                             {`${t('order')} ${e.title}`}
                           </a> 
                         </div>
-                      </Fragment>
+                      </div>
                     ))}
                   </ScrollContainer>
                 )}

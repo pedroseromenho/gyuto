@@ -45,6 +45,9 @@
         top: inherit;
         left: inherit;
     }
+    &__maximized{
+        overflow-y: auto;
+    }
     &__skip{
         position: fixed;
         top: 15px;

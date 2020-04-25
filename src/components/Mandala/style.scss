@@ -9,7 +9,7 @@
     justify-content: center;
     border-radius: 50%;
     z-index: 1;
-    @media screen and (max-height: 600px) {
+    @media screen and (max-width: 1150px) {
         width: 400px;
         height: 400px;
     }
@@ -25,7 +25,7 @@
         background-color: transparent;
         width: 550px;
         height: 550px;
-        @media screen and (max-height: 600px) {
+        @media screen and (max-width: 1150px) {
             width: 400px;
             height: 400px;
         }
