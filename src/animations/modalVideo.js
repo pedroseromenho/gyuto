@@ -1,4 +1,4 @@
-import { TweenMax, Power2 } from 'gsap';
+import { TweenMax, Power2, gsap } from 'gsap';
 
 export const modalLeave = (modal) => {
   if(modal){
@@ -32,6 +32,10 @@ export const modalEnter = (modal) => {
 }
 
 export const modalMinimize = (modal) => {
+  gsap.config({
+    nullTargetWarn: false,
+  });
+
   if(modal){
     TweenMax.to(modal, 0.4, {
       css: {        
@@ -43,6 +47,9 @@ export const modalMinimize = (modal) => {
 }
 
 export const modalMaximize = (modal) => {
+  gsap.config({
+    nullTargetWarn: false,
+  });
   if(modal){
     TweenMax.from(modal, 0.4, {
       css: {        

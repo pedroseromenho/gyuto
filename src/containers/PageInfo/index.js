@@ -31,16 +31,21 @@ const PageInfo = () => {
 
   const currentIndex = sections(t).findIndex((e) => e.section === currentSection);
 
+  const swiped = (callback) => {
+    window.scrollTo(0, 0);
+    return callback;
+  }
+
   const handlers = useSwipeable({
     onSwipedRight: () => setCurrentSection(
       currentIndex === 0 
-        ? sections(t)[sections(t).length - 1].section
-        : sections(t)[currentIndex - 1].section
+        ? swiped(sections(t)[sections(t).length - 1].section)
+        : swiped(sections(t)[currentIndex - 1].section)
     ),
     onSwipedLeft: () =>  setCurrentSection(
       currentIndex === sections(t).length - 1
-        ? sections(t)[0].section
-        : sections(t)[currentIndex + 1].section
+        ? swiped(sections(t)[0].section)
+        : swiped(sections(t)[currentIndex + 1].section)
     ),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,

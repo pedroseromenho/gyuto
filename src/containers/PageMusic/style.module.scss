@@ -78,7 +78,7 @@
                     padding-right: 0 !important;
 
                     @media screen and (max-width: $max-840){
-                        @include flex-row;
+                        display: flex;
                         &__album{
                             flex: 1;
                             &:first-child{
@@ -95,6 +95,7 @@
                 }
                 &__order{
                     margin-top: 5px;
+                    line-height: 15px;
                     a{
                         color: $color-light;
                         text-decoration: underline;

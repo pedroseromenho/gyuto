@@ -46,9 +46,11 @@
                         margin-top: 0;
                     }
                 }
-                &:last-child{
-                    h3{
-                        margin-bottom: 0;
+                @media screen and (min-width: $min-840){
+                    &:last-child{
+                        h3{
+                            margin-bottom: 0;
+                        }
                     }
                 }
                 &:not(:last-child){

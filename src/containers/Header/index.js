@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {withRouter} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
@@ -37,6 +37,14 @@ const Header = ({ history, location }) => {
       TweenMax.delayedCall(0.2, () => setOpenMenu(false));
     }
   }
+
+  useEffect(() => {
+    if(openMenu){
+      document.documentElement.style.overflow = 'hidden';
+    }else{
+      document.documentElement.style.overflow = 'initial';
+    }
+  }, [openMenu])
 
   return(
     <Media queries={{
