@@ -1,74 +1,41 @@
 import React, {useEffect} from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import TweenMax from 'gsap';
+import { cursor } from 'animations/cursor';
+
 import './style.scss';
 
-const Cursor = ({isVideo, location}) => {
-
+const Cursor = ({location, video}) => {
   useEffect(() => {
-    let $bigBall = document.querySelector('.cursor__ball--big');
-    let $smallBall = document.querySelector('.cursor__ball--small');
-    let $hoverables = document.querySelectorAll('.hoverable');
-    let $homelinkhover = document.querySelectorAll('.homelinkhover');
-    
-    function onMouseMove(e) {
-      TweenMax.to($bigBall, .4, {
-        x: e.pageX - 15,
-        y: e.pageY - 15
-      });
-      
-      TweenMax.to($smallBall, .1, {
-        x: e.pageX - 5,
-        y: e.pageY - 7
-      });
-    }
-      
-    function onMouseHover() {
-      TweenMax.to($bigBall, .3, {
-        scale: 4
-      });
-    }
-    function onMouseHoverOut() {
-      TweenMax.to($bigBall, .3, {
-        scale: 1
-      });
-    }
-    if(!isVideo){
-      document.body.addEventListener('mousemove', onMouseMove);
-      for (let i = 0; i < $hoverables.length; i++) {
-        $hoverables[i].addEventListener('mouseenter', onMouseHover);
-        $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-      }
-      document.body.addEventListener('mousemove', onMouseMove);
-      for (let j = 0; j < $homelinkhover.length; j++) {
-        $homelinkhover[j].addEventListener('mouseenter', onMouseHover);
-        $homelinkhover[j].addEventListener('mouseleave', onMouseHoverOut);
-      }
-    }
-  }, [location.pathname, isVideo]);
+    const bigBall = document.querySelector('.cursor__ball--big');
+    const smallBall = document.querySelector('.cursor__ball--small');
+    const hoverables = document.querySelectorAll('.hoverable');
+
+    cursor(bigBall, smallBall, hoverables);
+  }, [location.pathname, video]);
+
   return(
     <div className="cursor">
       <div className="cursor__ball cursor__ball--big ">
-        <svg height="30" width="30">
-          <circle cx="15" cy="15" r="12" strokeWidth="0"></circle>
+        <svg height="100" width="100">
+          <circle cx="50" cy="50" r="45" />
         </svg>
       </div>
       <div className="cursor__ball cursor__ball--small">
         <svg height="10" width="10">
-          <circle cx="5" cy="5" r="4" strokeWidth="0"></circle>
+          <circle cx="5" cy="5" r="4" strokeWidth="0" shapeRendering="geometricPrecision"/>
         </svg>
       </div>
     </div>
   )}
 
 Cursor.propTypes = {
-  isVideo: PropTypes.any,
   location: PropTypes.any.isRequired,
+  video: PropTypes.any
 };
 
 Cursor.defaultProps = {
-  video: null,
-}
+  video: null
+};
 
 export default withRouter(Cursor);

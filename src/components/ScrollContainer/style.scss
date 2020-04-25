@@ -1,0 +1,50 @@
+@import "~styles/config";
+
+.container-scroll,
+.container-scroll-bar,
+.container-scroll-bar-white{
+    position: relative;
+    .scrollBar{
+        @include scroll-bar;
+    }
+    .wrapper-scroll{
+        @media screen and (min-width: $min-840){
+            overflow-y: scroll;
+            height: 100%;
+            @include scroll-bar-default;
+            padding-right: 5px;
+        }
+    }
+}
+
+.container-scroll-bar-white{
+    .scrollBar{
+        background-color: transparent;
+        opacity: 0;
+    }
+    .wrapper-scroll{
+        @include scroll-bar-white;
+    }
+}
+
+.container-scroll{
+    &:hover 
+    .scrollBar{
+        @include scroll-bar-display;
+    }
+}
+
+.container-scroll-bar{
+    .scrollBar{
+        @include scroll-bar-display;
+    }
+}
+
+.container-scroll-bar-white{
+    &:hover
+    .wrapper-scroll{
+        &::-webkit-scrollbar-thumb {
+            visibility: initial;
+        }
+    }
+}

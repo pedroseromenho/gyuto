@@ -1,0 +1,244 @@
+{
+   "contact":{
+       "name": "Filipa Cardoso",
+       "images":[{
+           "low": "./assets/credits/1-credits-low.jpg",
+           "high": "./assets/credits/1-credits.jpg" 
+       },
+        {
+            "low": "./assets/credits/2-credits-low.jpg",
+            "high": "./assets/credits/2-credits.jpg" 
+        }],
+       "email": "gyuto.movie.com@gmail.com",
+       "facebook": "https://www.facebook.com/Gyuto-movie-761195010728271/",
+       "bio": {
+           "fr":"Je suis née à Lisbonne en 1971. A 18 ans je quitte mes racines pour aller en France faire des études de danse. Je parcours le monde comme danseuse et découvre une passion pour la photographie. Quand je m'installe à Bruxelles, je fonde une famille et développe ma passion pour l’image en réalisant mes premiers films, consacrés au monde du théâtre et de la danse, puis en co-réalisant des documentaires, notamment sur le cinéaste Satyajit Ray en Inde. Depuis, j’enrichis en continu mon expérience, en travaillant sur toutes les étapes de la réalisation, de la photographie au montage final.",
+           "en": "I was born in Lisbon in 1971. At the age of 18, I left my homeland to go to France to study dance. I travelled the world as a dancer and discovered a passion for photography. After moving to Brussels, where I started a family, I became interested in film. My first films were devoted to the world of theatre and dance, as well as co-directing documentaries, notably about the film director Satyajit Ray in India. Since then, I have continued to enrich my experience by working on all stages of production, from photography to final editing."
+       }
+   },
+   "credits": [{
+       "what": {
+           "fr": "Films",
+           "en": "Films"
+       },
+       "whatelse":{
+        "fr": "Réalisation, photographie, montage, étalonnage, édition musicale",
+        "en": "Direction, photography, editing, color grading, musical edition"
+       },
+       "who": [{
+           "fr": "Filipa Cardoso",
+           "en": "Filipa Cardoso"
+       }]
+       },
+   {
+    "what": {
+        "fr": "Musique",
+        "en": "Music"
+    },
+    "who": [{
+        "fr": "Bo van der Werf, Jozef Dumoulin, Dré Pallemaerts, Fabian Fiorini",
+        "en": "Bo van der Werf, Jozef Dumoulin, Dré Pallemaerts, Fabian Fiorini"
+    },
+    {
+        "fr": "Octurn",
+        "en": "Octurn"
+    }]
+},
+{
+    "what": {
+        "fr": "Moines chanteurs",
+        "en": "Singing monks"
+    },
+    "who":[{
+        "fr": "Topgyal Tsering, Tenzin Passang, Lobsang Ngawang, Dorge Tsering, Gedung Nyandak, Phuntsok Ngawang, Lhundup Tenzing, Lobsang Phenden",
+        "en": "Topgyal Tsering, Tenzin Passang, Lobsang Ngawang, Dorge Tsering, Gedung Nyandak, Phuntsok Ngawang, Lhundup Tenzing, Lobsang Phenden"
+    }]
+},
+{
+    "what": {
+        "fr": "Enregistrement",
+        "en": "Recording"
+    },
+    "who":[{
+        "fr": "Dré Pallemaerts",
+        "en": "Dré Pallemaerts"
+    }]
+},
+{
+    "what": {
+        "fr": "Mixage et bruitage",
+        "en": "Sound mixing and foley"
+    },
+    "who":[{
+        "fr": "Patrick Ghislain",
+        "en": "Patrick Ghislain"
+    }]
+},
+{
+    "what": {
+        "fr": "Interviews",
+        "en": "Interviews"
+    },
+    "who":[{
+        "fr": "Tenzin Gungnay (abbé)",
+        "en": "Tenzin Gungnay (abbot)"
+    },
+    {
+        "fr": "Thupten Tenzing (vice-abbé)",
+        "en": "Thupten Tenzing (vice-abbot)"
+    },
+    {
+        "fr": "Lobsang Thinlay (maître de discipline)",
+        "en": "Lobsang Thinlay (disciplinary master)"
+    },
+    {
+        "fr": "Guéshé Lobsang Yonten",
+        "en": "Geshe Lobsang Yonten"
+    },
+    {
+        "fr": "Phuntsok Ngawang (moine chanteur)",
+        "en": "Phuntsok Ngawang (singing monk)"
+    },
+    {
+        "fr": "Thupten Jigmé (maître de chant)",
+        "en": "Thupten Jigmé (chant master)"
+    }]
+},
+{
+    "what": {
+        "fr": "Voix off",
+        "en": "Voix off"
+    },
+    "who":[{
+        "fr": "Gaia, Nemo et Yuna van der Werf",
+        "en": "Gaia, Nemo et Yuna van der Werf"
+    }]
+},
+{
+    "what": {
+        "fr": "Traductions",
+        "en": "Translations"
+    },
+    "who":[{
+        "fr": "Nadia Nino, Nadine Ganase, Xavier Huguet",
+        "en": "Nadia Nino, Nadine Ganase, Xavier Huguet"
+    }]
+},
+{
+    "what": {
+        "fr": "Références",
+        "en": "Quotes"
+    },
+    "who":[{
+        "fr": "“Où est le nouveau-né ?” - Nicolas de Cues",
+        "en": "“Where's the newborn?“ - Nicolas de Cues"
+    },
+    {
+        "fr": "“Le bouddhisme, une philosophie du bonheur“ - Philippe Cornu",
+        "en": "“Buddhism, a philosophy of happiness” - Philippe Cornu"
+    },
+    {
+        "fr": "“Le Bouddha” - Alexandra David-Néel",
+        "en": "“The Buddha” - Alexandra David-Néel"
+    },
+    {
+        "fr": "“La reine des prières d'aspiration” - Samantabhadra",
+        "en": "“The queen of aspirational Prayers” - Samantabhadra"
+    },
+    {
+        "fr": "“Nouvelle réalité / HH Dalaï-Lama” - Sofia Stril-Rever",
+        "en": "“New reality / HH Dalaï-Lama” - Sofia Stril-Rever"
+    },
+    {
+        "fr": "Contes bouddhistes zen",
+        "en": "Zen buddhism tales"
+    }]
+},
+{
+    "what": {
+        "fr": "Design et développement du site-web",
+        "en": "Design and development of the website"
+    },
+    "who":[{
+        "fr": "Pedro Seromenho",
+        "en": "Pedro Seromenho",
+        "link": "https://pedroseromenho.com"
+    }]
+},
+{
+    "what": {
+        "fr": "Illustrations",
+        "en": "Illustrations"
+    },
+    "who":[{
+        "fr": "Mandala dessiné par Firma 103",
+        "en": "Mandala designed by Firma 103"
+    },
+    {
+        "fr": "Shrivatsa dessiné par Alexandre Plennevaux",
+        "en": "Shrivatsa designed by Alexandre Plennevaux"
+    }]
+},
+{
+    "what": {
+        "fr": "Remerciements spéciaux à",
+        "en": "Special thanks to"
+    },
+    "who":[{
+        "fr": "Lobsang Dorjee et l’administration du monastère tantrique de Gyütö",
+        "en": "Lobsang Dorjee, and the administration of the Gyüto tantric monastery"
+    },
+    {
+        "fr": "Tashi et tous les moines de Gyütö",
+        "en": "Tashi and all the monks of Gyütö"
+    },
+    {
+        "fr": "Patrick Ghislain, Nicolas van Achter, Pedro Seromenho et Bo",
+        "en": "Patrick Ghislain, Nicolas van Achter, Pedro Seromenho and Bo"
+    }]
+},
+{
+    "what": {
+        "fr": "Merci à",
+        "en": "Thanks to"
+    },
+    "who":[{
+        "fr": "Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin",
+        "en": "Xavier Lucy, Marc-Henri Wajnberg, Nicole Mora, Paul-Jean Vranken, Alexandre Plennevaux, Claude Panier, Isabelle Parisod, Ofélia and Manuel, Balou and Malou, Anne Recour, Isabelle Dumont, Paul Aron, Sophie van Stratum, Jean-Luc Peers, Luiza Queiroz, Sofia Stril-Rever, Jorge Leon, Bridie Nathanson, Jozef Dumoulin"
+    }]
+},
+{
+    "what": {
+        "fr": "Merci aux kiss kiss bankers (pré-production)",
+        "en": "Thanks to the kiss kiss bankers (pre-production)"
+    },
+    "who":[{
+        "fr": "Antonella Simonelli, Stéphane Savelli, Jean Van Kerchove, Rafael Rodrigues, Isabelle Berlanger, Félicette Chazerand, Patrice Bonnafoux, François Brice, Isabelle Maes, Yael O’Hayon, Alessandro Filippini, Filipe Jesus, Pedro Roiz, Arnauld de Battice, Marie-Rose Meysman, J-P Pecto, Nicolas Thys, David Grynberg, Nadine Ganase, Marc Gilmant, Laurent Blondiau, Ogyen Wangmo Van Eecke, Eminé Meyrem, Samuel Ber, Wout Gooris, Serge Lazarevitch, Ofélia Cardoso, Christelle Cornil, Michel Thuns, Xavier Huguet, Koen van Meel, Marie-Rose de Poorter, Denis Mpunga, Gwen Vamos-Ancellin, Marie France Brice, Caroline Verbruggen, Philippe Duplat, Nel Blok, Julius Proost, David Dony, Alexandre von Sivers, Ariane Riveros",
+        "en": "Antonella Simonelli, Stéphane Savelli, Jean Van Kerchove, Rafael Rodrigues, Isabelle Berlanger, Félicette Chazerand, Patrice Bonnafoux, François Brice, Isabelle Maes, Yael O’Hayon, Alessandro Filippini, Filipe Jesus, Pedro Roiz, Arnauld de Battice, Marie-Rose Meysman, J-P Pecto, Nicolas Thys, David Grynberg, Nadine Ganase, Marc Gilmant, Laurent Blondiau, Ogyen Wangmo Van Eecke, Eminé Meyrem, Samuel Ber, Wout Gooris, Serge Lazarevitch, Ofélia Cardoso, Christelle Cornil, Michel Thuns, Xavier Huguet, Koen van Meel, Marie-Rose de Poorter, Denis Mpunga, Gwen Vamos-Ancellin, Marie France Brice, Caroline Verbruggen, Philippe Duplat, Nel Blok, Julius Proost, David Dony, Alexandre von Sivers, Ariane Riveros "
+    }]
+},
+{
+    "what": {
+        "fr": "Merci aux développeurs (site-web)",
+        "en": "Thanks to the developers (website)"
+    },
+    "who":[{
+        "fr": "Geoffrey Poelmans, Baptiste Firket, Liliane Mamane, Kevin Flabat",
+        "en": "Geoffrey Poelmans, Baptiste Firket, Liliane Mamane, Kevin Flabat"
+    },
+    {
+        "fr": "Becode",
+        "en": "Becode"
+    }]
+},
+{
+    "what": {
+        "fr": "Police de caractères",
+        "en": "Typeface"
+    },
+    "who":[{
+        "fr": "Begum, dessiné par Manushi Parikh, Indian Type Foudry",
+        "en": "Begum, designed by Manushi Parikh, Indian Type Foudry"
+    }]
+}
+]}

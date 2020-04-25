@@ -1,0 +1,22 @@
+@import "~styles/config";
+
+.nav-svg{
+    z-index: 2;
+    .svg-sectionName{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    .svg-sectionName-selected{
+        color: $color-cursor;
+    }
+}
+
+.load-svg{
+    background: $color-dark;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    z-index: 3;
+}

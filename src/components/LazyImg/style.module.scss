@@ -1,0 +1,36 @@
+@import "~styles/config";
+
+.background{
+    background-color: $color-gray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+    filter: blur(10px);
+    &__loaded{
+        animation: sharpen 1s both;
+    }
+}
+
+.img{
+    background-color: $color-gray;
+    width: 100%;
+    overflow: hidden;
+    &__load{
+        transform: scale(1.01);
+        filter: blur(10px);
+    }
+    &__loaded{
+        animation: sharpen 1s both;
+        transform: scale(1.01);
+    }
+}
+
+@keyframes sharpen {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter: blur(0);
+    }
+  }

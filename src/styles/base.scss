@@ -12,16 +12,23 @@
   
   html,
   body {
-    min-height: 100vh;
     background: $color-dark;
     color: $color-light;
-    cursor: none;
+    min-height: 100vh;
+    @media screen and (min-width: $min-840) {
+      height: 100%;
+      max-height: 100vh;
+      overflow: hidden;
+      cursor: none;
+    }
+    @media screen and (max-width: $max-840) {
+      cursor: auto;
+    }
   }
   
   html {
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
-    overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -39,6 +46,7 @@
     font-family: $regular;
     counter-reset: heading-counter;
     text-size-adjust: 100%;
+    overflow-x: hidden;
   }
   
   img {
@@ -63,4 +71,8 @@
 
 ul{
   @include reset-ul;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $medium;
 }

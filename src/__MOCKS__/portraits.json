@@ -1,0 +1,233 @@
+
+{
+  "title": "Portraits",
+  "backgroundImg":{
+    "low":"/assets/portraits/0_background-low.jpg",
+    "high": "/assets/portraits/0_background.jpg"
+  },
+  "text": {
+    "fr": " <p>Très vite, les moines sont devenus comme nos “grands frères“, et on a eu l'envie de tirer leurs portraits. Profitant de cette proche intimité, ils nous ont raconté  leur voyage périlleux depuis leur terre natale, le Tibet, et leur traversée de l'Himalaya, jusqu'au nord de l'Inde.</p><p>“Je voulais devenir moine quand j'étais enfant, je voulais lire et apprendre les textes sacrés. J'aimais la vie des moines que je voyais dans mon village au Tibet. Mes parents travaillaient dur toute la journée pour nous nourrir, mes frères, mes soeurs, et moi. Vu que mon grand frère les aidait déjà dans les champs avec les animaux, ma maman a décidé que j'allais devenir moine. A cette période les chinois brûlaient les monastères et les textes sacrés, et mes parents ont décidé que je devais fuir en Inde. J’avais seulement 8 ans quand j’ai traversé à pied l’Himalaya. Le voyage a duré un mois. Quand j'étais trop fatigué et que je ne savais plus marcher, les plus grands nous portaient sur leur dos, mais le matin certains enfants étaient morts de froid. On devait marcher pendant la nuit, parce que pendant la journée les gardes chinois nous tiraient dessus. On avait seulement un peu de tsampa à manger pour tout le voyage. Mon oncle qui m'accompagnait est mort en arrivant en Inde. Le nouveau climat pour nous était très dur, beaucoup de moines sont tombés malade, ils sont morts peu après. J’ai revu mes parents une seule fois, quand j’avais 20 ans, et depuis, je reste au monastère. Je suis très heureux d'être moine. Mes parents sont morts maintenant, et je regrette de ne pas les avoir mieux connus”</p><p>A chacun son expérience, mais leurs histoires sont incroyablement similaires: pour fuir la persécution du régime chinois et pouvoir vivre librement leur dévouement, une seule solution: la traversée de l'Himalaya, à pied, au péril de leur vie.</p>",
+    "en": "<p>Very quickly, the monks became like our “big brothers”, and we wanted to take their portraits. Taking advantage of this close intimacy, they told us about their perilous journey from their native land, Tibet, and their crossing of the Himalayas, to the north of India.</p><p>“I wanted to become a monk when I was a child, I wanted to read and learn the sacred texts. I loved the life of the monks I saw in my village in Tibet. My parents worked hard all day to feed us, my brothers, my sisters, and me. Since my older brother was already helping them in the fields with the animals, my mum decided that I would be a monk. During this period the Chinese were burning the monasteries and the sacred texts, and so my parents decided that I should flee to India. I was only 8 years old when I crossed the Himalayas on foot. The trip lasted a month. When I was too tired to walk, the older children carried us on their backs, but in the morning some children had died of cold. We had to walk during the night, because during the day the Chinese guards shot at us. We only had a little tsampa to eat for the whole trip. My uncle who accompanied me, died on arrival in India. The new climate for us was very harsh, many monks fell ill, they died soon after. I saw my parents only once, when I was 20 years old, and since then I have stayed at the monastery. I am very happy to be a monk. My parents are dead now, and I wish I had known them better”</p><p>Everyone has their own experience, but their stories are incredibly similar: to flee the persecution of the Chinese regime and to be able to live their devotion freely, there was only one solution: crossing the Himalayas on foot and risking their lives.</p>"
+  },
+  "credits": {
+    "fr": "Photos prises par Gaia, Nemo et Yuna",
+    "en": "Photos made by Gaia, Nemo and Yuna"
+  },
+  "gallery": [{
+        "url": "assets/portraits/0_Intro.jpg",
+        "name":"Gaia"
+      },
+      {
+        "url": "assets/portraits/Chakdor.jpg",
+        "name":"Chakdor"
+      },
+      {
+        "url": "assets/portraits/Chomsnor.jpg",
+        "name":"Chomsnor"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Gyaltsen.jpg",
+        "name":"Dakpa Gyaltsen"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Gylasten.jpg",
+        "name":"Dakpa Gylasten"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Kelsang.jpg",
+        "name":"Dakpa Kelsang"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Tenzin-1.jpg",
+        "name":"Dakpa Tenzin"
+      },
+      {
+        "url": "assets/portraits/Dakpa_Tenzin-2.jpg",
+        "name":"Dakpa Tenzin"
+      },
+      {
+        "url": "assets/portraits/Dawa_Gaia.jpg",
+        "name":"Dawa & Gaia"
+      },
+      {
+        "url": "assets/portraits/Dawa_Tsering.jpg",
+        "name":"Dawa Tsering"
+      },
+      {
+        "url": "assets/portraits/Dorjee_Khandu.jpg",
+        "name":"Dorjee Khandu"
+      },
+      {
+        "url": "assets/portraits/Dorjee_Tsehap.jpg",
+        "name":"Dorjee Tsehap"
+      },
+      {
+        "url": "assets/portraits/family.jpg",
+        "name":"family"
+      },
+      {
+        "url": "assets/portraits/Jampa_Sonam.jpg",
+        "name":"Jampa_Sonam"
+      },
+      {
+        "url": "assets/portraits/Jampa_Thardoe.jpg",
+        "name":"Jampa Thardoe"
+      },
+      {
+        "url": "assets/portraits/Jampa_Thaye.jpg",
+        "name":"Jampa Thaye"
+      },
+      {
+        "url": "assets/portraits/Jampa.jpg",
+        "name":"Jampa"
+      },
+      {
+        "url": "assets/portraits/Jamphel_Tsering.jpg",
+        "name":"Jamphel Tsering"
+      },
+      {
+        "url": "assets/portraits/Kelsang_Norbu.jpg",
+        "name":"Kelsang Norbu"
+      },
+      {
+        "url": "assets/portraits/Kelsang.jpg",
+        "name":"Kelsang"
+      },
+      {
+        "url": "assets/portraits/Kunchok.jpg",
+        "name":"Kunchok"
+      },
+      {
+        "url": "assets/portraits/Lablen.jpg",
+        "name":"Lablen"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Ngawang.jpg",
+        "name":"Lobsang Ngawang"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Palden-1.jpg",
+        "name":"Lobsang Palden"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Palden-2.jpg",
+        "name":"Lobsang Palden"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Tanzing.jpg",
+        "name":"Lobsang Tanzing"
+      },
+      {
+        "url": "assets/portraits/Lobsang_Tsering.jpg",
+        "name":"Lobsang Tsering"
+      },
+      {
+        "url": "assets/portraits/Nyima_Tsering.jpg",
+        "name":"Nyima Tsering"
+      },
+      {
+        "url": "assets/portraits/Phuntsok_Ngawang.jpg",
+        "name":"Phuntsok Ngawang"
+      },
+      {
+        "url": "assets/portraits/Rangdol.jpg",
+        "name":"Rangdol"
+      },
+      {
+        "url": "assets/portraits/Sangyal_Dhondup.jpg",
+        "name":"Sangyal Dhondup"
+      },
+      {
+        "url": "assets/portraits/Sonam_Chonpal.jpg",
+        "name":"Sonam Chonpal"
+      },
+      {
+        "url": "assets/portraits/Sonam_Dakpa.jpg",
+        "name":"Sonam Dakpa"
+      },
+      {
+        "url": "assets/portraits/Sonam_Dorjee.jpg",
+        "name":"Sonam Dorjee"
+      },
+      {
+        "url": "assets/portraits/Sonam_Jampa.jpg",
+        "name":"Sonam Jampa"
+      },
+      {
+        "url": "assets/portraits/Sonam_Kherap.jpg",
+        "name":"Sonam Kherap"
+      },
+      {
+        "url": "assets/portraits/Sonam_Tashi.jpg",
+        "name":"Sonam Tashi"
+      },
+      {
+        "url": "assets/portraits/Sonam_Tsokney.jpg",
+        "name":"Sonam Tsokney"
+      },
+      {
+        "url": "assets/portraits/Sonam.jpg",
+        "name":"Sonam"
+      },
+      {
+        "url": "assets/portraits/Tanam_Gyal.jpg",
+        "name":"Tanam Gyal"
+      },
+      {
+        "url": "assets/portraits/Tashi_Gyatso.jpg",
+        "name":"Tashi Gyatso"
+      },
+      {
+        "url": "assets/portraits/Tashi_Topgyal.jpg",
+        "name":"Tashi Topgyal"
+      },
+      {
+        "url": "assets/portraits/Tashi-1.jpg",
+        "name":"Tashi "
+      },
+      {
+        "url": "assets/portraits/Tashi-2.jpg",
+        "name":"Tashi"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Dawa.jpg",
+        "name":"Tenzin Dawa"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Jigme.jpg",
+        "name":"Tenzin Jigme"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Kunchok.jpg",
+        "name":"Tenzin Kunchok"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Namdak.jpg",
+        "name":"Tenzin Namdak"
+      },
+      {
+        "url": "assets/portraits/Tenzin_Tsultrim.jpg",
+        "name":"Tenzin Tsultrim"
+      },
+      {
+        "url": "assets/portraits/Thupten_Norbu_Jangchup.jpg",
+        "name":"Thupten Norbu Jangchup"
+      },      
+      {
+        "url": "assets/portraits/Tsering_Topgyal.jpg",
+        "name":"Tsering Topgyal"
+      },      
+      {
+        "url": "assets/portraits/Tsewa_Palgon.jpg",
+        "name":"Tsewa Palgon"
+      },      
+      {
+        "url": "assets/portraits/Yeshi.jpg",
+        "name":"Yeshi"
+      },      
+      {
+        "url": "assets/portraits/Yuna_Dawa_Nemo.jpg",
+        "name":"Yuna & Dawa & Nemo"
+      }
+    ]
+}

@@ -1,0 +1,141 @@
+@import "~styles/config";
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+    position: relative;
+    @media screen and (min-width: $min-840){
+        height: 100%;
+    }
+    @media screen and (max-width: $max-840){
+        margin-bottom: 50px;
+    }
+    &__wrapper{
+        display: flex;
+        @media screen and (max-width: $max-840){
+            flex-direction: column;
+        }
+        &__video{
+            flex: 2;
+            h2{
+                border-bottom: 2px solid $color-light;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: $max-840){
+                h2{
+                    margin-top: 0;
+                }
+            }
+            &__iframe{
+                margin-top: 15px;
+                &__link{
+                    margin-top: 15px;
+                    @media screen and (max-width: $max-840){
+                        font-size: $font-size-nano;
+                    }
+                    a{
+                        color: $color-light;
+                        text-decoration: underline;
+                        cursor: none;
+                    }
+                }
+            }
+        }
+        &__text{
+            flex: 2;
+            @media screen and (min-width: $min-840){
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            &__box{
+                padding-top: 15px;
+                @media screen and (min-width: $min-840){
+                    height: calc(100vh - 280px);
+                }
+                @media screen and (max-height: 700px) and (min-width: $min-840){
+                    height: calc(100vh - 250px);
+                }
+                &__content{
+                    @media screen and (min-width: $min-840){
+                        padding-right: 20px !important;
+                    }
+                    p{
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                    }
+                    span{
+                        font-size: $font-size-nano;
+                    }
+                }
+            }
+        }
+        &__albums{
+            flex: 1;
+            &__box{
+                @media screen and (min-width: $min-840){
+                    height: calc(100vh - 280px);
+                }
+                @media screen and (max-height: 700px) and (min-width: $min-840){
+                    height: calc(100vh - 250px);
+                }
+                &__content{
+                    padding-right: 0 !important;
+
+                    @media screen and (max-width: $max-840){
+                        display: flex;
+                        &__album{
+                            flex: 1;
+                            &:first-child{
+                                margin-right: 5px;
+                            }
+                            &:last-child{
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+                &__img{
+                    margin-top: 15px;
+                }
+                &__order{
+                    margin-top: 5px;
+                    line-height: 15px;
+                    a{
+                        color: $color-light;
+                        text-decoration: underline;
+                        cursor: none; 
+                        font-size: $font-size-nano;
+                    }
+                }
+            }
+        }
+        &__toogle{
+            @include flex-row;
+            justify-content: space-between;
+            border-bottom: 2px solid $color-light;
+            h2{
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+            svg{
+                margin-bottom: -10px;
+            }
+        }
+    }
+    &__player{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        @media screen and (max-width: $max-840){
+            position: fixed;
+        }
+        &__title{
+            position: absolute;
+            bottom: 18px;
+            right: 130px;
+        }
+    }
+}

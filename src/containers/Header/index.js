@@ -1,89 +1,89 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import {withRouter} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
-import Nav from '../Nav';
-import { FiMenu, FiX } from "react-icons/fi";
+import { routes } from "utils/routes";
+import { navLeave } from 'animations/menuMobile';
+import { TweenMax } from 'gsap';
+
+import Nav from 'containers/Nav';
+import Burger from 'components/Burger';
+
 import s from './style.module.scss';
 
 const Header = ({ history, location }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('translation');
   const [openMenu, setOpenMenu] = useState(false);
 
-  const MenuBurger = () => {
-    if(!openMenu){
-      return (
-        <FiMenu
-          onClick={() => setOpenMenu(!openMenu)}
-          onKeyPress={() => setOpenMenu(!openMenu)}
-          role='presentation'
-        />
-      )
-    } return (
-      <FiX
-        onClick={() => setOpenMenu(!openMenu)}
-        onKeyPress={() => setOpenMenu(!openMenu)}
-        role='presentation'
-      />
-    )
-  }
+  const filteredRoutes = routes(t).filter(r => r.pathname !== '/');
+  const matchRoute = filteredRoutes.filter(f => f.pathname === location.pathname);
 
-  const getPageTitle = () => {
-    switch(location.pathname){
-    case '/info':
-      return t('info');
-    case '/music':
-      return t('music');
-    case '/images':
-      return t('images');
-    case '/doclist':
-      return t('docList');
-    case '/credits':
-      return t('credits');
-    default:
-      return null;
+  const handleOpenMenu = () => {
+    const nav = document.querySelector('.tweenMax-navMobile');
+    if(openMenu){
+      navLeave(nav);
+      TweenMax.delayedCall(0.2, () => setOpenMenu(false));
+    }else{
+      setOpenMenu(true)
     }
   }
 
+  const homePageButton = (mobile) => {
+    const nav = document.querySelector('.tweenMax-navMobile');
+    history.push('/');
+    if(mobile && openMenu){
+      navLeave(nav);
+      TweenMax.delayedCall(0.2, () => setOpenMenu(false));
+    }
+  }
+
+  useEffect(() => {
+    if(openMenu){
+      document.documentElement.style.overflow = 'hidden';
+    }else{
+      document.documentElement.style.overflow = 'initial';
+    }
+  }, [openMenu])
+
   return(
-    <div 
-      className={classNames(
-        s.container,
-        location.pathname !== '/' ? s.container__background : undefined
-      )}
-    >
-      <div className={s.container__wrapper}>
-        <h1
-          onClick={() => history.push('/')}
-          onKeyPress={() => history.push('/')}
-          role="presentation"
-          className="hoverable"
-        >
-          {t('title')}
-        </h1>
-        {location.pathname !== '/' && (
-          <h2>{getPageTitle()}</h2>
-        )}
-      </div>
-      <Media queries={{
-        small: "(max-width: 719px)"
-      }}>
-        {matches => (
-          <>
-            {matches.small 
-              ? (
-                <MenuBurger/>
-              )
-              : <Nav />}
-            {openMenu && matches.small && (
-              <Nav isMobile closeMenu={() => setOpenMenu(false)}/>
+    <Media queries={{
+      small: "(max-width: 839px)"
+    }}>
+      {matches => (
+        <div className={s.container}>
+          <div className={s.container__wrapper}>
+            <h1
+              onClick={() => homePageButton(matches.small)}
+              onKeyPress={() => homePageButton(matches.small)}
+              role="presentation"
+              className="hoverable"
+            >
+              {t('title')}
+            </h1>
+            {matchRoute.length > 0 && (
+              <h2>
+                {routes(t)
+                  .filter(i => i.pathname === location.pathname)
+                  .filter(i => matches.small ? i.displayMobile : i.displayDesktop)
+                  .map(i => i.name)}
+              </h2>
             )}
-          </>
-        )}
-      </Media>
-    </div>
+          </div>
+          {matches.small 
+            ? (
+              <Burger 
+                isOpen={openMenu}
+                toggle={() => handleOpenMenu()}
+              />
+            )
+            : <Nav />}
+          {(openMenu && matches.small && (
+            <Nav closeMenu={() => setOpenMenu(false)} openMenu={openMenu}/>
+          ))}
+        </div>
+      )}
+    </Media>
   )}
 
 Header.propTypes = {

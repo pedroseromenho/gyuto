@@ -8,12 +8,8 @@
         padding-left: 2%;
         padding-right: 2%;
     }
-    &__background {
-        @media screen and (min-width: $max-720) {
-            background-color: $color-dark;
-        }
-    }
-    ul{
+    &__list{
+        @include flex-row;
         li{
             margin-right: 10px;
             font-size: $font-size-min;

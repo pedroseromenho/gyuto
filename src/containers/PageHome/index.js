@@ -1,84 +1,91 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { withTranslation } from 'react-i18next';
-import Media from 'react-media';
-import Mandala from '../../components/Mandala';
-import {videos} from '../../data/videos';
+import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
+import  videos from '__MOCKS__/videos';
+import { selectedLang } from 'utils/lang';
+import { TweenMax } from 'gsap';
+import { infoEnter, infoLeave } from 'animations/home';
+
+import Mandala from 'components/Mandala';
+
 import s from './style.module.scss';
 
-class PageHome extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedId: "",
-    }
-  }
+const PageHome = () => {
+  const [selectedId, setSelectedId] = useState(null);
+  const { i18n } = useTranslation();
 
-  getSelectedId(id) {
-    const { selectedId } = this.state;
+  useEffect(() => {
+    const title = document.querySelector('.tweenMax-video-title');
+    const quote = document.querySelector('.tweenMax-video-quote');
+    const legend = document.querySelector('.tweenMax-video-legend');
+    const img = document.querySelector(`.tweenMax-video-img`);
+    infoEnter(title, quote, legend, img);
+  }, [selectedId])
+
+  const getSelectedId = (id) => {
     if(selectedId !== id){
-      this.setState({
-        selectedId: id
-      })
+      setSelectedId(id);
     }
   }
 
-  getSelectedVideo(params) {
-    const { openModalVideo } = this.props;
-    openModalVideo(params);
-  }
+  const hideInfo = () => {
+    const title = document.querySelector('.tweenMax-video-title');
+    const quote = document.querySelector('.tweenMax-video-quote');
+    const legend = document.querySelector('.tweenMax-video-legend');
+    const img = document.querySelector(`.tweenMax-video-img`);
+    if(setSelectedId !== null ){
+      infoLeave(title, quote, legend, img);
+      TweenMax.delayedCall(0.5, () => setSelectedId(null));
+    }
+  };
 
-  render() {
-    const { selectedId } = this.state;
-    const { i18n } = this.props;
-    const isEnglish = (i18n.language === 'en');
-    return (
-      <div className={s.container}>
-        <Media queries={{
-          small: "(max-width: 719px)"
-        }}>
-          {matches => (
-            matches.small 
-              ? (
-                <div>Mobile</div>
-              ) : (
-                <>
-                  <div className={s.container__legend}>
-                    {selectedId !== "" && (
-                      <>
-                        <h2>{isEnglish ? videos[selectedId].title.en : videos[selectedId].title.fr}</h2>
-                        <h4>{isEnglish ? videos[selectedId].quote.en : videos[selectedId].quote.fr}</h4>
-                        <p>{isEnglish ? videos[selectedId].legend.en : videos[selectedId].legend.fr} / {videos[selectedId].duration}</p>
-                      </>
-                    )}
-                  </div>
-                  <div className={s.container__mandala}>
-                    <Mandala
-                      getSelectedVideo={this.getSelectedVideo.bind(this)}
-                      getSelectedId={this.getSelectedId.bind(this)}
-                      videos={videos}
-                    />
-                  </div>
-                  <div className={s.container__img}>
-                    {selectedId !== "" && (
-                      <img 
-                        src={videos[selectedId].img} 
-                        alt={isEnglish ? videos[selectedId].title.fr : videos[selectedId].title.fr} 
-                      />
-                    )}
-                  </div>
-                </>
-              )
-          )}
-        </Media>
+  return (
+    <div className={s.container}>
+      <div className={s.container__legend}>
+        {selectedId !== null && (
+          <>
+            <h2 className="tweenMax-video-title">
+              {selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}
+            </h2>
+            <h4 className="tweenMax-video-quote">
+              {`"${selectedLang(i18n, videos[selectedId].quote.en, videos[selectedId].quote.fr)}"`}
+            </h4>
+            <p className="tweenMax-video-legend">
+              {`${selectedLang(i18n, videos[selectedId].legend.en, videos[selectedId].legend.fr)} / ${videos[selectedId].duration}`}
+            </p>
+          </>
+        )}
       </div>
-    );
-  }
+      <div 
+        className={s.container__background}
+        onMouseOver={() => hideInfo()}
+      />
+      <div className={classNames(s.container__mandala, "tweenMax-mandala")}>
+        <Mandala
+          getSelectedId={getSelectedId}
+          videosList={videos}
+          selectedId={selectedId}
+        />
+      </div>
+      <div className={s.container__img}>
+        {selectedId !== null && (
+          <img 
+            src={videos[selectedId].img.medium} 
+            alt={selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)} 
+            className="tweenMax-video-img"
+          />
+        )}
+      </div>
+    </div>
+  );
 }
-
 PageHome.propTypes = {
-  openModalVideo: PropTypes.func.isRequired,
-  i18n: PropTypes.any.isRequired,
+  i18n: PropTypes.any,
 };
 
-export default withTranslation()(PageHome);
+PageHome.defaultProps = {
+  i18n: null,
+};
+
+export default PageHome;

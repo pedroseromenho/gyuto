@@ -5,38 +5,58 @@
     @include flex-row;
     justify-content: space-between;
     background-color: $color-dark;
-    button{
+    z-index: 10;
+    cursor: initial;
+    &__buttons{
+        @include flex-row;
         position: fixed;
-        top: 15px;
-        left: 15px;
+        top: 0;
+        left: 0;
         z-index: 1;
-    }
-    svg{
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        font-size: 2rem;
-        background-color: $color-gray;
-        border-radius: 100%;
-        padding: 5px;
-        opacity: 0.9;
-        cursor: pointer;
-        z-index: 1;
-        &:hover{
-            opacity: 0.7;
+        padding: 20px;
+        justify-content: space-between;
+        width: 115px;
+        svg{
+            font-size: 2rem;
+            background-color: $color-gray;
+            border-radius: 100%;
+            padding: 5px;
+            opacity: 0.9;
+            cursor: pointer;
+            z-index: 1;
+            &:hover{
+                opacity: 0.7;
+            }
         }
+    }
+    &__buttonsMinimized{
+        flex-direction: column;
+        left: -60px;
+        justify-content: center;
+        height: 100%;
+        svg{
+            margin: 5px;
+        }
+    }
+    &__minimized{
+        width: 500px;
+        bottom: 0;
+        right: 0;
+        top: inherit;
+        left: inherit;
+    }
+    &__maximized{
+        overflow-y: auto;
+    }
+    &__skip{
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1;
+        font-size: 1.2rem;
+        padding: 3px 8px;
     }
     &__video{
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+        @include video-responsive;
     }
 }

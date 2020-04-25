@@ -1,0 +1,42 @@
+@import "~styles/config";
+
+.container{
+   max-width: 650px;
+   margin: auto;
+   @media screen and (min-width: $min-840){
+    height: calc(100vh - 150px);
+    }
+    @media screen and (max-width: $max-840){
+       margin-bottom: 20px;
+    }
+   a{
+       color: $color-light;
+       text-decoration: underline;
+       cursor: none;
+       font-size: $font-size-nano;
+   }
+   &__email{
+        display: flex;
+        flex-direction: column;
+   }
+   h3{
+        margin-bottom: 5px;
+   }
+   h4{
+       margin-top: 50px;
+       font-size: 1.5rem;
+       border-bottom: 1px solid;
+       margin-bottom: 10px;
+   }
+   &__credits{
+       h5{
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+       }
+       h6{
+        font-size: 0.9rem;
+        margin-top: 5px; 
+        margin-bottom: 5px;
+       }
+   }
+}

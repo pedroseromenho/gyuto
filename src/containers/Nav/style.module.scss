@@ -1,7 +1,7 @@
 @import "~styles/config";
 
 .container{
-    @media screen and (max-width: $min-720){
+    @media screen and (max-width: $max-840){
         @include flex-row;
         position: fixed;
         top: 0;
@@ -11,23 +11,26 @@
         margin: auto;
         background-color: $color-gray;
         justify-content: center;
+        transform: translate(1000px, 0px);
     }
     ul{
         @include flex-row;
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             flex-direction: column;
         }
         li{
             font-size: 1.3rem;
             margin-left: 10px;
-            @media screen and (max-width: $min-720){
+            @media screen and (max-width: $max-840){
                 padding: 5px 0;
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
         }
     }
-}
-
-.background{
-    background-color: $color-dark;
+    &__footerMobile{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }

@@ -1,27 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withRouter} from 'react-router-dom';
-import classNames from 'classnames';
-import Lang from '../Lang';
+import { useTranslation } from 'react-i18next';
+import { FaFacebook } from "react-icons/fa";
+import { routes } from "utils/routes";
 import Media from 'react-media';
-import Nav from '../Nav';
+import credits from '__MOCKS__/credits';
+
+import Lang from 'components/Lang';
+import ListItem from 'components/ListItem';
+
 import s from './style.module.scss';
 
-const Footer = ({location}) => {
+const Footer = ({ history}) => {
+  const { t } = useTranslation('translation');
   return(
     <Media queries={{
-      small: "(max-width: 719px)"
+      small: "(max-width: 839px)"
     }}>
       {matches => (
-        <div 
-          className={classNames(
-            s.container,
-            location.pathname !== '/' ? s.container__background : undefined
-          )}
-        >
+        <div className={s.container}>
           <Lang />
-          {matches.small ? null : <Nav isFooter />}
-          {matches.small && <Nav isSocialMobile />}
+          <ul className={s.container__list}>
+            {!matches.small && routes(t).map(((r) => 
+              r.isFooter && (
+                <ListItem
+                  value={r.name}
+                  handleClick={() => history.push(r.pathname)}
+                  key={r.name}
+                />
+              )))}
+            <ListItem 
+              value={<FaFacebook />}
+              handleClick={() => window.open(credits.contact.facebook)}
+            /> 
+          </ul>
         </div>
       )}
     </Media>
@@ -29,6 +42,7 @@ const Footer = ({location}) => {
 
 Footer.propTypes = {
   location: PropTypes.any.isRequired,
+  history: PropTypes.any.isRequired,
 };
 
 export default withRouter(Footer);

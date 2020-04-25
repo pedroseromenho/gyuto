@@ -1,0 +1,29 @@
+@import "~styles/config";
+.swiper-container{
+    flex: 1;
+    border-radius: 2px;
+    @media screen and (min-width: $min-840){
+        margin-right: 10px;
+    }
+    @media screen and (max-width: $max-840){
+        z-index: 0;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        color: $color-light;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        cursor: none;
+        outline: none;
+        @media screen and (max-width: $max-840){
+            height: 0;
+        }
+    } 
+    &:hover .swiper-button-next,
+    &:hover .swiper-button-prev{
+        opacity: 0.7;
+        @media screen and (max-width: $max-840){
+            opacity: 0.3;
+        }
+    }
+}

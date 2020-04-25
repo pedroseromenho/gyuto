@@ -4,17 +4,12 @@
     @include flex-row;
     justify-content: space-between;
     padding: 15px;
-    &__background {
-        @media screen and (min-width: $max-720) {
-            background-color: $color-dark;
-        }
-    }
     &__wrapper{
         display: flex;
         align-items: baseline;
         h1, h2{
             margin: 0;
-            @media screen and (max-width: $min-720){
+            @media screen and (max-width: $max-840){
                 z-index: 1;
             }
         }
@@ -29,7 +24,7 @@
     }
     svg{
         font-size: 1.8rem;
-        @media screen and (max-width: $min-720){
+        @media screen and (max-width: $max-840){
             z-index: 1;
         }
     }

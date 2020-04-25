@@ -2,27 +2,86 @@
 
 .container{
     @include flex-row;
+    padding-top: 10px;
+    @media screen and (min-width: $min-840){
+        padding-top: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 100%;
+    }
     &__wrapper{
         flex: 1;
-        position: relative;
-        margin: 0 auto;
-        &__list{
-            @include fit;
+        @media screen and (min-width: $min-840){
+            margin: 0 auto;
+            padding-right: 15px;
             height: 100%;
-            overflow-y: scroll;
+        }
+        &__list{
+            @media screen and (min-width: $min-840){
+                @include fit;
+                padding-right: 5px;
+                height: 100%;
+            }
             &__item{
-                border-bottom: 1px solid $color-light;
-                &__wrapper{
-                    @include flex-row;
-                    justify-content: space-between;
-                    h3{
-    
+                &__info{
+                    &__title{
+                        @include flex-row;
+                        justify-content: space-between;
+                        &:first-child,
+                        &:last-child{
+                            align-items: baseline; 
+                        }
+                        h3{
+                            font-size: 1.4rem;
+                        }
+                        span{
+                            svg{
+                                margin-bottom: -2px;
+                            }
+                        }
                     }
+                }
+                &:first-child{
+                    h3{
+                        margin-top: 0;
+                    }
+                }
+                @media screen and (min-width: $min-840){
+                    &:last-child{
+                        h3{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-light;
                 }
             }
         }
     }
     &__preview{
         flex: 1;
+        display: flex;
+        align-self: baseline;
+        padding-left: 15px;
+        &__info{
+            @media screen and (min-width: $min-840){
+                height: 100%;
+            }
+            &__text{
+                h5{
+                    font-size: $font-size;
+                    margin: 15px 0 10px 0;
+                }
+                p{
+                    font-size: $font-size-min;
+                }
+            }
+            &__img{
+                @media screen and (max-width: $max-840){
+                    margin-top: -10px;
+                }
+            }
+        }
     }
 }

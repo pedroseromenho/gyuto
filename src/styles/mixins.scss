@@ -31,7 +31,56 @@
     bottom: 0;
     left: 0;
   }
+
+  @mixin scroll-bar-default {
+    &::-webkit-scrollbar {
+      width: .4em;
+      overflow: visible;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        overflow: visible;
+        border-radius: 4px;
+        background: $color-cursor;
+    }
+  }
+
+  @mixin scroll-bar {
+    position: absolute;
+    background: $color-dark;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: .4em;
+    transition: all .5s;
+    opacity: 1;
+  }
+
+  @mixin scroll-bar-white {
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: $color-light, $alpha: 0.2);
+      visibility: hidden;
+    }
+  }
+
+  @mixin scroll-bar-display {
+    opacity: 0;
+    transition: all .5s;
+  }
   
+  @mixin video-responsive{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }
   @mixin sr {
     position: absolute;
     padding: 0;

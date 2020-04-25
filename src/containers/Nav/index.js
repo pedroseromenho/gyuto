@@ -1,94 +1,82 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ListItem from '../../components/ListItem';
+import Media from 'react-media';
 import { useTranslation } from 'react-i18next';
-import { FaFacebook } from "react-icons/fa";
+import { routes } from "utils/routes";
+import classNames from 'classnames';
+import { navEnter } from 'animations/menuMobile';
+
+import ListItem from 'components/ListItem';
+import Footer from 'containers/Footer';
+
 import s from './style.module.scss';
 
 const Nav = ({ 
   history, 
-  isFooter, 
-  isMobile, 
-  isSocialMobile, 
-  closeMenu
+  closeMenu,
+  openMenu
 }) => {
-  const { t } = useTranslation('common');
-
-  const social = (
-    <ListItem 
-      value={<FaFacebook />}
-      handleClick={undefined}
-    />
-  );
+  const { t } = useTranslation('translation');
 
   const displayPage = (page) => {
     history.push(page);
-    if(isMobile){
-      closeMenu();
-    }
+    closeMenu();
   }
 
-  if(isSocialMobile){
-    return(
-      <ul>
-        {social}
-      </ul>
-    )
-  }
+  useEffect(() => {
+    const nav = document.querySelector('.tweenMax-navMobile');
+    if(openMenu){
+      navEnter(nav);
+    }
+  }, [openMenu])
+
   return(
-    <nav 
-      className={s.container}
-    >
-      <ul>
-        {!isFooter && (
-          <>
-            <ListItem
-              value={t('info')}
-              handleClick={() => displayPage('/info')}
-            />
-            <ListItem
-              value={t('music')}
-              handleClick={() => displayPage('/music')}
-            />
-            <ListItem
-              value={t('images')}
-              handleClick={() => displayPage('/images')}
-            />
-          </>
-        )}
-        {(isFooter || isMobile) && (
-          <>
-            <ListItem 
-              value={t('docList')}
-              handleClick={() => displayPage('/doclist')}
-            />
-            <ListItem 
-              value={t('credits')}
-              handleClick={() => displayPage('/credits')}
-            />
-          </>
-        )}
-        {isFooter && (
-          social
-        )}
-      </ul>
-    </nav>
+    <Media queries={{
+      small: "(max-width: 839px)"
+    }}>
+      {matches => (
+        <nav className={classNames(
+          s.container,
+          matches.small ? 'tweenMax-navMobile' : undefined)}>
+          <ul>
+            {routes(t).map((r) => 
+              matches.small ? (
+                r.displayMobile 
+                  ? (
+                    <ListItem
+                      value={r.name}
+                      handleClick={() => displayPage(r.pathname)}
+                      key={r.name}
+                    />
+                  ) : null
+              ) : !r.isFooter && r.displayDesktop && (
+                <ListItem
+                  value={r.name}
+                  handleClick={() => history.push(r.pathname)}
+                  key={r.name}
+                />
+              ))}
+            {matches.small && (
+              <div className={s.container__footerMobile}>
+                <Footer />
+              </div>
+            )}
+          </ul>
+        </nav>
+      )}
+    </Media>
   )}
 
 Nav.defaultProps = {
-  isFooter: false,
-  isMobile: false,
-  isSocialMobile: false,
   closeMenu: undefined,
+  openMenu: false
 } 
 
 Nav.propTypes = {
   history: PropTypes.any.isRequired,
-  isFooter: PropTypes.bool,
-  isMobile: PropTypes.bool,
-  isSocialMobile: PropTypes.bool,
   closeMenu: PropTypes.any,
+  openMenu: PropTypes.bool,
 };
 
 export default withRouter(Nav);
