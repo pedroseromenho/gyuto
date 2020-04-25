@@ -2,9 +2,9 @@
   "video": {
     "url": "WiW_xVVr6b8",
     "img": {
-      "medium": "./assets/music/img.png",
-      "high": "./assets/music/img-medium.png",
-      "low": "./assets/music/img-low.png"
+      "medium": "./assets/music/img.jpg",
+      "high": "./assets/music/img-medium.jpg",
+      "low": "./assets/music/img-low.jpg"
     }
   },
   "info": {
@@ -30,8 +30,8 @@
     "title": "Kailash",
     "url_order": "http://octurn.com/#/album/kailash",
     "cover": {
-      "high": "./assets/music/kailash/kailash.png",
-      "low": "./assets/music/kailash/kailash-low.png"
+      "high": "./assets/music/kailash/kailash.jpg",
+      "low": "./assets/music/kailash/kailash-low.jpg"
     },
     "musics": [{
       "url": "./assets/music/kailash/kailash.mp3",
@@ -53,8 +53,8 @@
     "title": "Tantric college",
     "url_order": "http://octurn.com/#/album/tantric-college-nbsp-octurn-and-the-tibetan-monks-of-gyuto",
     "cover": {
-      "high": "./assets/music/tantric-college/cover-tantric-college.png",
-      "low": "./assets/music/tantric-college/cover-tantric-college.png"
+      "high": "./assets/music/tantric-college/cover-tantric-college.jpg",
+      "low": "./assets/music/tantric-college/cover-tantric-college-low.jpg"
   },
     "musics": [{
       "url": "./assets/music/tantric-college/dalai-lama-long-life.mp3",

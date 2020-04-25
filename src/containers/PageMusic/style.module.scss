@@ -53,6 +53,9 @@
                 @media screen and (min-width: $min-840){
                     height: calc(100vh - 280px);
                 }
+                @media screen and (max-height: 700px) and (min-width: $min-840){
+                    height: calc(100vh - 250px);
+                }
                 &__content{
                     @media screen and (min-width: $min-840){
                         padding-right: 20px !important;
@@ -73,6 +76,9 @@
             &__box{
                 @media screen and (min-width: $min-840){
                     height: calc(100vh - 280px);
+                }
+                @media screen and (max-height: 700px) and (min-width: $min-840){
+                    height: calc(100vh - 250px);
                 }
                 &__content{
                     padding-right: 0 !important;

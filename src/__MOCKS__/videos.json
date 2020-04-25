@@ -17,9 +17,9 @@
       "en": "TxoYtay1lHE"
     },
     "img": {
-      "low":"./assets/videos/1-becoming_budhha_1-low.png",
-      "medium": "./assets/videos/1-becoming_budhha_1-medium.png",
-      "high": "./assets/videos/1-becoming_budhha_1.png"
+      "low":"./assets/videos/1-becoming_budhha_1-low.jpg",
+      "medium": "./assets/videos/1-becoming_budhha_1-medium.jpg",
+      "high": "./assets/videos/1-becoming_budhha_1.jpg"
     },
     "duration": "3'14"
   },
@@ -42,9 +42,9 @@
       "en": "YCihbUdKoGU"
     },
     "img": {
-      "low":"./assets/videos/2-becoming_buddha_2-low.png",
-      "medium": "./assets/videos/2-becoming_buddha_2-medium.png",
-      "high": "./assets/videos/2-becoming_buddha_2.png"
+      "low":"./assets/videos/2-becoming_buddha_2-low.jpg",
+      "medium": "./assets/videos/2-becoming_buddha_2-medium.jpg",
+      "high": "./assets/videos/2-becoming_buddha_2.jpg"
     },
     "duration": "3'02"
   },
@@ -67,9 +67,9 @@
       "en": "jWrcRtPI3DA"
     },
     "img": {
-      "low": "./assets/videos/3-becoming_buddha_3-low.png",
-      "medium": "./assets/videos/3-becoming_buddha_3-medium.png",
-      "high": "./assets/videos/3-becoming_buddha_3.png"
+      "low": "./assets/videos/3-becoming_buddha_3-low.jpg",
+      "medium": "./assets/videos/3-becoming_buddha_3-medium.jpg",
+      "high": "./assets/videos/3-becoming_buddha_3.jpg"
     },
     "duration": "4'09"
   },
@@ -92,9 +92,9 @@
       "en": "Kw6BYCNNirY"
     },
     "img": {
-      "low": "./assets/videos/4-becoming_buddha_4-low.png",
-      "medium": "./assets/videos/4-becoming_buddha_4-medium.png",
-      "high": "./assets/videos/4-becoming_buddha_4.png"
+      "low": "./assets/videos/4-becoming_buddha_4-low.jpg",
+      "medium": "./assets/videos/4-becoming_buddha_4-medium.jpg",
+      "high": "./assets/videos/4-becoming_buddha_4.jpg"
     },
     "duration": "3'09"
   },
@@ -117,9 +117,9 @@
       "en": "cPun4cNM-3w"
     },
     "img": {
-      "low": "./assets/videos/5-transmission-low.png",
-      "medium": "./assets/videos/5-transmission-medium.png",
-      "high": "./assets/videos/5-transmission.png"
+      "low": "./assets/videos/5-transmission-low.jpg",
+      "medium": "./assets/videos/5-transmission-medium.jpg",
+      "high": "./assets/videos/5-transmission.jpg"
     },
     "duration": "4'32"
   },
@@ -142,9 +142,9 @@
       "en": "7iNtuaFUpkg"
     },
     "img": {
-      "low": "./assets/videos/6-ant_without_shadow-low.png",
-      "medium": "./assets/videos/6-ant_without_shadow-medium.png",
-      "high": "./assets/videos/6-ant_without_shadow.png"
+      "low": "./assets/videos/6-ant_without_shadow-low.jpg",
+      "medium": "./assets/videos/6-ant_without_shadow-medium.jpg",
+      "high": "./assets/videos/6-ant_without_shadow.jpg"
     },
     "duration": "2'52"
   },
@@ -167,9 +167,9 @@
       "en": "kov6n4j8YWw"
     },
     "img": {
-      "low": "./assets/videos/7-ultimate_happiness_1-low.png",
-      "medium": "./assets/videos/7-ultimate_happiness_1-medium.png",
-      "high": "./assets/videos/7-ultimate_happiness_1.png"
+      "low": "./assets/videos/7-ultimate_happiness_1-low.jpg",
+      "medium": "./assets/videos/7-ultimate_happiness_1-medium.jpg",
+      "high": "./assets/videos/7-ultimate_happiness_1.jpg"
     },
     "duration": "2'58"
   },
@@ -194,7 +194,7 @@
     "img": {
       "low": "./assets/videos/8-ultimate_hapiness_2-low.jpg",
       "medium": "./assets/videos/8-ultimate_hapiness_2-medium.jpg",
-      "high": "./assets/videos/8-ultimate_hapiness_2.JPG"
+      "high": "./assets/videos/8-ultimate_hapiness_2.jpg"
     },
     "duration": "4'55"
   },
@@ -217,9 +217,9 @@
       "en": "9gsaRn6Fk48"
     },
     "img": {
-      "low": "./assets/videos/9-ultimate_happiness_3-low.png",
-      "medium": "./assets/videos/9-ultimate_happiness_3-medium.png",
-      "high": "./assets/videos/9-ultimate_happiness_3.png"
+      "low": "./assets/videos/9-ultimate_happiness_3-low.jpg",
+      "medium": "./assets/videos/9-ultimate_happiness_3-medium.jpg",
+      "high": "./assets/videos/9-ultimate_happiness_3.jpg"
     },
     "duration": "2'19"
   },
@@ -242,9 +242,9 @@
       "en": "fSDB3btGLN4"
     },
     "img": {
-      "low": "./assets/videos/10-ultimate_happiness_4-low.png",
-      "medium": "./assets/videos/10-ultimate_happiness_4-medium.png",
-      "high": "./assets/videos/10-ultimate_happiness_4.png"
+      "low": "./assets/videos/10-ultimate_happiness_4-low.jpg",
+      "medium": "./assets/videos/10-ultimate_happiness_4-medium.jpg",
+      "high": "./assets/videos/10-ultimate_happiness_4.jpg"
     },
     "duration": "4'50"
   },
@@ -267,9 +267,9 @@
       "en": "xw7XdJ8A3bk"
     },
     "img": {
-      "low": "./assets/videos/11-Kundun-low.png",
-      "medium": "./assets/videos/11-Kundun-medium.png",
-      "high": "./assets/videos/11-Kundun.png"
+      "low": "./assets/videos/11-Kundun-low.jpg",
+      "medium": "./assets/videos/11-Kundun-medium.jpg",
+      "high": "./assets/videos/11-Kundun.jpg"
     },
     "duration": "10'43"
   },
@@ -292,9 +292,9 @@
       "en": "94yceioOHFg"
     },
     "img": {
-      "low": "./assets/videos/12-New_reality-low.png",
-      "medium": "./assets/videos/12-New_reality-medium.png",
-      "high": "./assets/videos/12-New_reality.png"
+      "low": "./assets/videos/12-New_reality-low.jpg",
+      "medium": "./assets/videos/12-New_reality-medium.jpg",
+      "high": "./assets/videos/12-New_reality.jpg"
     },
     "duration": "2'57"
   },
@@ -317,9 +317,9 @@
       "en": "qYZA0BVVBlk"
     },
     "img": {
-      "low": "./assets/videos/13-the_samsara_beings_1-low.png",
-      "medium": "./assets/videos/13-the_samsara_beings_1-medium.png",
-      "high": "./assets/videos/13-the_samsara_beings_1.png"
+      "low": "./assets/videos/13-the_samsara_beings_1-low.jpg",
+      "medium": "./assets/videos/13-the_samsara_beings_1-medium.jpg",
+      "high": "./assets/videos/13-the_samsara_beings_1.jpg"
     },
     "duration": "4'14"
   },
@@ -342,9 +342,9 @@
       "en": "Klui7ZLNzX4"
     },
     "img": {
-      "low": "./assets/videos/14-the_samsara_beings_2-low.png",
-      "medium": "./assets/videos/14-the_samsara_beings_2-medium.png",
-      "high": "./assets/videos/14-the_samsara_beings_2.png"
+      "low": "./assets/videos/14-the_samsara_beings_2-low.jpg",
+      "medium": "./assets/videos/14-the_samsara_beings_2-medium.jpg",
+      "high": "./assets/videos/14-the_samsara_beings_2.jpg"
     },
     "duration": "4'19"
   },
@@ -367,9 +367,9 @@
       "en": "fWQhtkqnihQ"
     },
     "img": {
-      "low": "./assets/videos/15-the_samsara_beings_3-low.png",
-      "medium": "./assets/videos/15-the_samsara_beings_3-medium.png",
-      "high": "./assets/videos/15-the_samsara_beings_3.png"
+      "low": "./assets/videos/15-the_samsara_beings_3-low.jpg",
+      "medium": "./assets/videos/15-the_samsara_beings_3-medium.jpg",
+      "high": "./assets/videos/15-the_samsara_beings_3.jpg"
     },
     "duration": "5'30"
   },
@@ -393,9 +393,9 @@
       "en": "Vv1RrMZjgco"
     },
     "img": {
-      "low": "./assets/videos/16-the_samsara_beings_4-low.png",
-      "medium": "./assets/videos/16-the_samsara_beings_4-medium.png",
-      "high": "./assets/videos/16-the_samsara_beings_4.png"
+      "low": "./assets/videos/16-the_samsara_beings_4-low.jpg",
+      "medium": "./assets/videos/16-the_samsara_beings_4-medium.jpg",
+      "high": "./assets/videos/16-the_samsara_beings_4.jpg"
     },
     "duration": "2'55"
   },
@@ -418,9 +418,9 @@
       "en": "adFmW6lrA-o"
     },
     "img": {
-      "low": "./assets/videos/17-Interdependence-low.png",
-      "medium": "./assets/videos/17-Interdependence-medium.png",
-      "high": "./assets/videos/17-Interdependence.png"
+      "low": "./assets/videos/17-Interdependence-low.jpg",
+      "medium": "./assets/videos/17-Interdependence-medium.jpg",
+      "high": "./assets/videos/17-Interdependence.jpg"
     },
     "duration": "8'09"
   },
@@ -445,7 +445,7 @@
     "img": {
       "low": "./assets/videos/18-Dkhyl_khor-low.jpg",
       "medium": "./assets/videos/18-Dkhyl_khor-medium.jpg",
-      "high": "./assets/videos/18-Dkhyl_khor.JPG"
+      "high": "./assets/videos/18-Dkhyl_khor.jpg"
     },
     "duration": "5'45"
   },
@@ -468,9 +468,9 @@
       "en": "kAkjj-GgNS0"
     },
     "img": {
-      "low": "./assets/videos/19-Renki-low.png",
-      "medium": "./assets/videos/19-Renki-medium.png",
-      "high": "./assets/videos/19-Renki.png"
+      "low": "./assets/videos/19-Renki-low.jpg",
+      "medium": "./assets/videos/19-Renki-medium.jpg",
+      "high": "./assets/videos/19-Renki.jpg"
     },
     "duration": "7'02"
   },
@@ -493,9 +493,9 @@
       "en": "PQH1Xd2pXRI"
     },
     "img": {
-      "low": "./assets/videos/20-Heart_Sutra-low.png",
-      "medium": "./assets/videos/20-Heart_Sutra-medium.png",
-      "high": "./assets/videos/20-Heart_Sutra.png"
+      "low": "./assets/videos/20-Heart_Sutra-low.jpg",
+      "medium": "./assets/videos/20-Heart_Sutra-medium.jpg",
+      "high": "./assets/videos/20-Heart_Sutra.jpg"
     },
     "duration": "8'16"
   }

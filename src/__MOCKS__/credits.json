@@ -2,8 +2,8 @@
    "contact":{
        "name": "Filipa Cardoso",
        "images":[{
-           "low": "./assets/credits/1-credits-low.png",
-           "high": "./assets/credits/1-credits.png" 
+           "low": "./assets/credits/1-credits-low.jpg",
+           "high": "./assets/credits/1-credits.jpg" 
        },
         {
             "low": "./assets/credits/2-credits-low.jpg",
