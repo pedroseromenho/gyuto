@@ -13,14 +13,15 @@ import s from './style.module.scss';
 
 const PageHome = () => {
   const [selectedId, setSelectedId] = useState(null);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('translation');
 
   useEffect(() => {
+    const tooltip = document.querySelector('.tweenMax-video-tooltip');
     const title = document.querySelector('.tweenMax-video-title');
     const quote = document.querySelector('.tweenMax-video-quote');
     const legend = document.querySelector('.tweenMax-video-legend');
     const img = document.querySelector(`.tweenMax-video-img`);
-    infoEnter(title, quote, legend, img);
+    infoEnter(tooltip, title, quote, legend, img);
   }, [selectedId])
 
   const getSelectedId = (id) => {
@@ -30,12 +31,13 @@ const PageHome = () => {
   }
 
   const hideInfo = () => {
+    const tooltip = document.querySelector('.tweenMax-video-tooltip');
     const title = document.querySelector('.tweenMax-video-title');
     const quote = document.querySelector('.tweenMax-video-quote');
     const legend = document.querySelector('.tweenMax-video-legend');
     const img = document.querySelector(`.tweenMax-video-img`);
     if(setSelectedId !== null ){
-      infoLeave(title, quote, legend, img);
+      infoLeave(tooltip, title, quote, legend, img);
       TweenMax.delayedCall(0.5, () => setSelectedId(null));
     }
   };
@@ -45,6 +47,7 @@ const PageHome = () => {
       <div className={s.container__legend}>
         {selectedId !== null && (
           <>
+            <p className={classNames(s.container__legend__tooltip, "tweenMax-video-tooltip")}>{t('watch')}</p>
             <h2 className="tweenMax-video-title">
               {selectedLang(i18n, videos[selectedId].title.en, videos[selectedId].title.fr)}
             </h2>
