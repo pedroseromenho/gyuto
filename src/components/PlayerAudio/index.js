@@ -19,16 +19,19 @@ const PlayerAudio = ({
 
   const bars = new Array(5).fill('');
 
-  useEffect(() => {
-    const buttons = document.querySelectorAll('button[type="button"]');
-    const volume = document.querySelector(".rhap_volume-indicator");
-    const progress = document.querySelector(".rhap_progress-indicator");
-    buttons.forEach(b => {
-      b.classList.add("hoverable")
-    })
-    volume.classList.add("hoverable");
-    progress.classList.add("hoverable");
-  }, [])
+  // TODO: Not working in old browsers
+  // useEffect(() => {
+  //   const buttons = document.querySelectorAll('button[type="button"]');
+  //   const volume = document.querySelector(".rhap_volume-indicator");
+  //   const progress = document.querySelector(".rhap_progress-indicator");
+  //   if(buttons){
+  //     buttons.forEach(b => {
+  //       b.classList.add("hoverable")
+  //     })
+  //   }
+  //   volume.classList.add("hoverable");
+  //   progress.classList.add("hoverable");
+  // }, [])
 
   useEffect(() => {
     const audio = document.querySelector('audio');
