@@ -45,7 +45,7 @@ const PageCredits = () => {
               <div key={w.en}>
                 {selectedLang(i18n, w.en, w.fr)}
                 {w.link && (
-                  <div>
+                  <div className={s.container__link}>
                     <a 
                       className="hoverable"
                       href={w.link}
